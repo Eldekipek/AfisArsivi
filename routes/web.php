@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\front\DesignerController;
+use App\Http\Controllers\front\PosterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,19 +15,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+    //front routes start
 
-Route::get('/home', function () {
-    return view('front.home.home');
-});
+    Route::get('/', function () {
+        return view('front.home.home');
+    });
 
-Route::get('/layout', function () {
-    return view('front.layout');
-});
+    Route::get('/layout', function () {
+        return view('front.layout');
+    });
 
-Route::get('/designers', function () {
-    return view('front.detailPages.designers');
-});
+    Route::group(['prefix' => 'poster'], function () {
+        Route::controller(PosterController::class)->group(function () {
+
+        });
+    });
+
+    Route::group(['prefix' => 'designer'], function () {
+        Route::controller(DesignerController::class)->group(function () {
+            Route::get('/','index')->name('designer.index');
+
+        });
+    });
+
+    //front routes finish
+    //
+    //
+    //panel routes start
+
+
+
+    //panel routes finish
 
