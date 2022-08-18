@@ -32,95 +32,244 @@
             </a>
         </div>
         <div class="menu">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Hakkında</a>
+                <a href="#">Poster Arşivi</a>
+                <a href="#">Yazarlar</a>
+            </div>
 
+            <div id="main">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+            </div>
         </div>
+
     </div>
 </div>
 
 
-<div class="container"  >
-    <div class="row mb-3">
+<div class="container mt-5"  >
+        <div class="row mb-3">
+        <div class="col-1">
+            <a href="" class="poster-items-link w-imgs">
+                <div>
+                    <picture>
+                         <img src="{{asset('https://images.typographicposters.com/search-2x-p3/erich-brechbuhl/filmpreis-2019.jpg')}}" alt="">
+                    </picture>
+                </div>
+            </a>
+        </div>
     <div class="col-1">
-        <a href="">
-            <img src="https://picsum.photos/id/237/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/babyinktwice/babyinktwice-poster-60f7f5b4d2cbd5f4b3e12570.jpg')}}" alt="">
+                </picture>
+            </div>
         </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/243/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/erich-brechbuhl/filmpreis-2019.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/242/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/babyinktwice/babyinktwice-poster-60f7f5b4d2cbd5f4b3e12570.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/221/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/erich-brechbuhl/filmpreis-2019.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/243/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/erich-brechbuhl/filmpreis-2019.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/239/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/erich-brechbuhl/filmpreis-2019.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/238/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/babyinktwice/babyinktwice-poster-60f7f5b4d2cbd5f4b3e12570.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/236/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/erich-brechbuhl/filmpreis-2019.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/235/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/erich-brechbuhl/filmpreis-2019.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/232/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/babyinktwice/babyinktwice-poster-60f7f5b4d2cbd5f4b3e12570.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/231/100/120" alt="">
-    </div>
-    <div class="col-1">
-        <img src="https://picsum.photos/id/234/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/erich-brechbuhl/filmpreis-2019.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
 </div>
-
-    <div class="row">
+        <div class="row">
     <div class="col-1">
-        <img src="https://picsum.photos/id/237/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/neue-gestaltung/neue-gestaltung-poster-6239e6d4850c208d65a7f013.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/243/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/neue-gestaltung/neue-gestaltung-poster-6239e6d4850c208d65a7f013.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/242/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/neue-gestaltung/neue-gestaltung-poster-6239e6d4850c208d65a7f013.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/221/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/neue-gestaltung/neue-gestaltung-poster-6239e6d4850c208d65a7f013.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/243/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/neue-gestaltung/neue-gestaltung-poster-6239e6d4850c208d65a7f013.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/239/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/neue-gestaltung/neue-gestaltung-poster-6239e6d4850c208d65a7f013.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/238/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/neue-gestaltung/neue-gestaltung-poster-6239e6d4850c208d65a7f013.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/236/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/neue-gestaltung/neue-gestaltung-poster-6239e6d4850c208d65a7f013.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/235/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/neue-gestaltung/neue-gestaltung-poster-6239e6d4850c208d65a7f013.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/232/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/neue-gestaltung/neue-gestaltung-poster-6239e6d4850c208d65a7f013.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/231/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/neue-gestaltung/neue-gestaltung-poster-6239e6d4850c208d65a7f013.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
     <div class="col-1">
-        <img src="https://picsum.photos/id/234/100/120" alt="">
+        <a href="" class="poster-items-link w-imgs">
+            <div>
+                <picture>
+                    <img src="{{asset('https://images.typographicposters.com/search-2x-p3/neue-gestaltung/neue-gestaltung-poster-6239e6d4850c208d65a7f013.jpg')}}" alt="">
+                </picture>
+            </div>
+        </a>
     </div>
 </div>
-
-
-</div>
+    </div>
 
 <div class="module-profiles gray-theme mt-5" >
 <div class="row" style="display: flex">
@@ -1344,8 +1493,7 @@
                 </div>
             </a>
             <div class="poster-item-info">
-                <span class="common-links"><h2 class="title"><strong>
-                              <span class="common-links">
+                <span class="common-links">
                     <h2 class="title"><strong> <!--Tasarımcı adı--->
                             <span><a href="/apeloig" class="">İpek Eldek</a></span></strong>
                     </h2>
@@ -1365,10 +1513,32 @@
                         <i class="fa-solid fa-folder-plus"></i>
                     </div>
                 </div>
+
             </div>
         </article>
     </div>
 </div>
 
+<div class="footer">
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-linkedin"></i>
+
+</div>
+
+
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mySidenav").style.right = 0;
+        document.getElementById("mySidenav").style.left = 'auto';
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
 </body>
 </html>
