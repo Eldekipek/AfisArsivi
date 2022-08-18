@@ -25,7 +25,7 @@ Route::get('/layout', function () {
     return view('front.layout');
 });
 
-Route::get('/authors', function () {
-    return view('front.detailPages.authors');
+Route::get('/designers', function () {
+    return view('front.detailPages.designers');
 });
 
