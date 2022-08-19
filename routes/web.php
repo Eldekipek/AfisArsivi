@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\front\DesignerController;
+use App\Http\Controllers\front\FrontController;
 use App\Http\Controllers\front\PosterController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,17 +17,22 @@ use Illuminate\Support\Facades\Route;
 */
 
     //front routes start
-
-    Route::get('/', function () {
-        return view('front.home.home');
-    });
-
     Route::get('/layout', function () {
-        return view('front.layout');
+     return view('front.layout');
+        });
+
+    Route::group(['prefix' => '/'], function () {
+         Route::controller(FrontController::class)->group(function () {
+             Route::get('/','home')->name('front.home');
+
+        });
     });
 
     Route::group(['prefix' => 'poster'], function () {
         Route::controller(PosterController::class)->group(function () {
+            Route::get('/culture','culture')->name('poster.culture');
+            Route::get('/social','social')->name('poster.social');
+            Route::get('/advertisement','advertisement')->name('poster.advertisement');
 
         });
     });
@@ -37,22 +43,6 @@ use Illuminate\Support\Facades\Route;
 
         });
     });
-
-    Route::get('/about', function () {
-        return view('front.detailPages.about');
-    });
-
-Route::get('/culture', function () {
-    return view('front.detailPages.culture');
-});
-
-Route::get('/social', function () {
-    return view('front.detailPages.social');
-});
-
-Route::get('/advertisement', function () {
-    return view('front.detailPages.advertisement');
-});
 
     //front routes finish
     //

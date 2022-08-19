@@ -11,8 +11,14 @@ class FrontController extends Controller
         return view('front.layout');
     }
 
-  public function home(){
-      return view('front.home.home');
-  }
+    public function home(){
+        return view('front.home.home');
 
-}
+    }
+
+    public function about(){
+        return view('front.detailPages.about');
+
+    }
+
+  }
