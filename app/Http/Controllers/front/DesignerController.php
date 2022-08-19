@@ -10,9 +10,9 @@ class DesignerController extends Controller
         return view('front.detailPages.designers');
     }
 
-    public function profile($id){
+    public function profile(){
 
-        return view('front.detailPages.profile', compact('id'));
+        return view('front.detailPages.profile');
 
     }
 
