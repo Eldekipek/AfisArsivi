@@ -42,6 +42,18 @@ use Illuminate\Support\Facades\Route;
         return view('front.detailPages.about');
     });
 
+Route::get('/culture', function () {
+    return view('front.detailPages.culture');
+});
+
+Route::get('/social', function () {
+    return view('front.detailPages.social');
+});
+
+Route::get('/advertisement', function () {
+    return view('front.detailPages.advertisement');
+});
+
     //front routes finish
     //
     //

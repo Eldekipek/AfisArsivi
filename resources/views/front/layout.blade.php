@@ -35,7 +35,9 @@
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="#">Hakkında</a>
-                <a href="#">Poster Arşivi</a>
+                <a href="#">Reklam Arşivi</a>
+                <a href="#">Sosyal Arşiv</a>
+                <a href="#">Kültürel Arşiv</a>
                 <a href="#">Yazarlar</a>
             </div>
 
