@@ -40,13 +40,11 @@ use Illuminate\Support\Facades\Route;
     Route::group(['prefix' => 'designer'], function () {
         Route::controller(DesignerController::class)->group(function () {
             Route::get('/','index')->name('designer.index');
+            Route::get('/profile','profile')->name('designer.profile');
 
         });
     });
 
-Route::get('/profile', function () {
-    return view('front.detailPages.profile');
-});
 
     //front routes finish
     //
