@@ -51,7 +51,28 @@ use Illuminate\Support\Facades\Route;
     //
     //panel routes start
 
+        Route::group(['prefix' => 'admin'], function () {
+            Route::controller(\App\Http\Controllers\Back\DashboardController::class)->group(function () {
+                Route::get('/panel' , 'index')->name("admin.panel");
+            });
+                Route::controller(\App\Http\Controllers\Back\PosterController::class)->group(function () {
+                    Route::get('/poster', 'index')->name("poster.index");
+                    Route::get('/poster/create' , 'create')->name("poster.create.index");
+                    Route::post('/poster/create' , 'store')->name("poster.create");
+                    Route::get('/poster/delete/{id}','delete')->name("delete.poster");
+                    Route::get('/poster/update/{id}', 'edit')->name("poster.update.index");
+                });
+                Route::controller(\App\Http\Controllers\Back\CategoryController::class)->group(function () {
+                    Route::get('/category', 'index')->name("category.index");
+                    Route::post('/category/create', 'create')->name("category.create");
+                    Route::post('/category/update','update')->name('category.update');
+                    Route::post('/category/delete','delete')->name('category.delete');
+                    Route::get('/category/getData','getData')->name('category.getdata');
+                    Route::get('/category/status','switch')->name('category.switch');
 
 
+
+                });
+        });
     //panel routes finish
 

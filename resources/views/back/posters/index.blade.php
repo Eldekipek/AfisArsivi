@@ -5,7 +5,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary"><strong>{{$articles->count()}} makale bulundu.</strong> <span style="float: right"> <a href="{{route('admin.trashed.article')}}" class="btn btn-warning btn-sm"> <i class="fa fa-trash"></i> Silinen Makaleler </a></span></h6>
+            <h6 class="m-0 font-weight-bold text-primary"><strong>{{$posters->count()}} makale bulundu.</strong> <span style="float: right"> <a href="#" class="btn btn-warning btn-sm"> <i class="fa fa-trash"></i> Silinen Makaleler </a></span></h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -15,28 +15,33 @@
                         <th>Fotoğraf</th>
                         <th>Poster Başlığı</th>
                         <th>Kategori</th>
-                        <th>Hit</th>
+                        <th>Baskı Tekniği</th>
+                        <th>Ebat</th>
+                        <th>Kullanıldığı Yer</th>
+                        <th>Açıklama</th>
                         <th>Oluşturma Tarihi</th>
                         <th>Durum</th>
                         <th>İşlemler</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($articles as $article)
+                    @foreach($posters as $poster)
                     <tr>
                         <td>
-                            <img src="{{asset($article->image)}}" width="200" alt="">
+                            <img src="{{asset($poster->image)}}" width="200" alt="">
                         </td>
-                        <td>{{$article->title}}</td>
-                        <td>{{$article->getCategory->name}}</td>
-                        <td>{{$article->hit}}</td>
-                        <td>{{$article->created_at->diffForHumans()}}</td>
+                        <td>{{$poster->title}}</td>
+                        <td>Kategori</td>
+                        <td>{{$poster->printing_technique}}</td>
+                        <td>{{$poster->dimensions}}</td>
+                        <td>{{$poster->country}}</td>
+                        <td>{{$poster->explanation}}</td>
+                        <td>{{$poster->created_at->diffForHumans()}}</td>
                         <td>
-                            <input class="switch" article-id="{{$article->id}}" type="checkbox" data-on="Aktif" data-off="Pasif" data-onstyle="success" data-offstyle="danger" @if($article->status==1) checked @endif data-toggle="toggle">
+                            <input class="switch" article-id="{{$poster->id}}" type="checkbox" data-on="Aktif" data-off="Pasif" data-onstyle="success" data-offstyle="danger" @if($poster->status==1) checked @endif data-toggle="toggle">
                         <td>
-                            <a target="_blank" href="{{route('single',[$article->getCategory->slug,$article->slug])}}" title="Görüntüle" class="btn btn-sm btn-success"><i class="fa fa-eye"></i></a>
-                            <a href="{{route('admin.makaleler.edit',$article->id)}}" title="Düzenle" class="btn btn-sm btn-primary"><i class="fa fa-pen"></i></a>
-                            <a href="{{route('admin.delete.article',$article->id)}}" title="Sil" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
+                            <a href="{{route("poster.update.index", $poster->id)}}" title="Düzenle" class="btn btn-sm btn-primary"><i class="fa fa-pen"></i></a>
+                            <a href="{{route("delete.poster", $poster->id)}}" title="Sil" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
 
 
                         </td>
@@ -59,7 +64,7 @@
             $('.switch').change(function () {
                 id = $(this)[0].getAttribute('article-id');
                 statu = $(this).prop('checked');
-                $.get("{{route('admin.switch')}}", {id:id,statu:statu}, function (data, status){});
+                $.get("#", {id:id,statu:statu}, function (data, status){});
             })
         })
     </script>

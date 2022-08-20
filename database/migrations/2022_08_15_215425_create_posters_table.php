@@ -16,11 +16,17 @@ return new class extends Migration
         Schema::create('posters', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('name');
-            $table->string('photo');
+            $table->string('title');
+            $table->string('printing_technique');
+            $table->string("dimensions");
+            $table->string('country');
+            $table->date('date');
             $table->text('explanation');
             $table->integer('category');
             $table->integer('top_category');
+            $table->string('image');
+            $table->integer('status')->default(0)->comment('0:pasif 1:aktif');
+            $table->integer('hit')->default(0);
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });

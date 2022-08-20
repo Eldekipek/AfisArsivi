@@ -16,7 +16,7 @@
                     @endforeach
                 </div>
             @endif
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form action="{{route('poster.create')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="">Tasarımcı Adı</label>

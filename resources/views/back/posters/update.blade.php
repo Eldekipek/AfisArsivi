@@ -1,11 +1,11 @@
 @extends('back.layouts.master')
-@section('title',$article->title.'makalesini güncelle')
+@section('title',$poster->title.' posterini güncelle')
 @section('content')
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3 text-primary font-weight-bold">
-            Makale Oluştur
+            Poster Güncelle
         </div>
 
         <div class="card-body">
@@ -16,34 +16,43 @@
                     @endforeach
                 </div>
             @endif
-            <form action="{{route('admin.makaleler.update',$article->id)}}" method="post" enctype="multipart/form-data">
+            <form action="#" method="post" enctype="multipart/form-data">
                 @method('PUT')
                 @csrf
                 <div class="form-group">
-                    <label for="">Makale Başlığı</label>
-                    <input type="text" name="title" class="form-control" value="{{$article->title}}" required>
+                    <label for="">Tasarımcı Adı</label>
+                    <!-- otomatik alinacak -->
+                    <input type="text" name="tasarimci" class="form-control" required placeholder="otomatik doldurulacak">
+                    <label for="">Poster Başlığı</label>
+                    <input type="text" name="title" class="form-control" required value="{{$poster->title}}">
+                    <div class="form-group">
+                        <label for="">Poster Kategorisi</label>
+                        <select class="form-control" name="category">
+                            <option value="">Seçim Yapınız</option>
+
+                        </select>
+                    </div>
+                    <label for="">Baskı Tekniği</label>
+                    <input type="text" name="baski" class="form-control" required value="{{$poster->printing_technique}}">
+                    <label for="">Ebat</label>
+                    <input type="text" name="ebat" class="form-control" required value="{{$poster->dimensions}}">
+                    <label for="">Kullanıldığı Yer</label>
+                    <input type="text" name="yer" class="form-control" required value="{{$poster->country}}">
+                    <label for="">Tarih</label>
+                    <input type="date" name="tarih" class="form-control" required value="{{$poster->date}}">
                 </div>
                 <div class="form-group">
-                    <label for="">Makale Kategorisi</label>
-                    <select class="form-control" name="category">
-                        <option value="">Seçim Yapınız</option>
-                        @foreach($categories as $category)
-                            <option @if($article->category_id==$category->id) selected @endif value="{{$category->id}}">{{$category->name}}</option>
-                        @endforeach
-                    </select>
+                    <label for="">Poster İçeriği</label>
+                    <textarea id="editor" name="contentt" class="form-control" rows="6">{!! $poster->content !!} </textarea>
                 </div>
                 <div class="form-group">
-                    <label for="">Makale İçeriği</label>
-                    <textarea id="editor" name="contentt" class="form-control" rows="6">{!! $article->content !!}</textarea>
-                </div>
-                <div class="form-group">
-                    <label for="">Makale Fotoğrafı</label><br>
-                    <img src="{{asset($article->image)}}" class="img-thumbnail rounded" width="300" alt="">
+                    <label for="">Poster Fotoğrafı</label><br>
+                    <img src="{{asset($poster->image)}}" class="img-thumbnail rounded" width="300" alt="">
                     <input type="file" name="image" class="form-control">
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block">Makaleyi Güncelle</button>
+                    <button type="submit" class="btn btn-primary btn-block">Poster Güncelle</button>
                 </div>
             </form>
         </div>
