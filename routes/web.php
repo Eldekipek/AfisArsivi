@@ -45,6 +45,10 @@ use Illuminate\Support\Facades\Route;
         });
     });
 
+Route::get('/loginregister', function () {
+    return view('front.detailPages.loginRegister');
+});
+
 
     //front routes finish
     //

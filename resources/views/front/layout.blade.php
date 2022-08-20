@@ -39,6 +39,7 @@
                 <a href="#">Sosyal Arşiv</a>
                 <a href="#">Kültürel Arşiv</a>
                 <a href="#">Yazarlar</a>
+                <a href="#">Giriş Yap | Kayıt ol</a>
             </div>
 
             <div id="main">
