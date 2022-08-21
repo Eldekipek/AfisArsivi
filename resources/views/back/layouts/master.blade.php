@@ -1,4 +1,5 @@
 @include('back.layouts.header')
+@include('flash-message')
 @include('back.layouts.menu')
 @yield('content')
 @include('back.layouts.footer')

@@ -24,8 +24,10 @@ use Illuminate\Support\Facades\Route;
     Route::group(['prefix' => '/'], function () {
          Route::controller(FrontController::class)->group(function () {
              Route::get('/','home')->name('front.home');
-
-        });
+             Route::get('/loginregister' , 'loginregister')->name("login.register.index");
+             Route::get('/about', 'about')->name("about.index");
+             Route::get('/designers' , 'designerpage')->name('designers.index');
+         });
     });
 
     Route::group(['prefix' => 'poster'], function () {
@@ -37,6 +39,11 @@ use Illuminate\Support\Facades\Route;
         });
     });
 
+    Route::controller(\App\Http\Controllers\Back\ConfigController::class)->group(function (){
+        Route::get('/ayarlar','App\Http\Controllers\Back\ConfigController@index')->name('config.index');
+        Route::post('/ayarlar/update','App\Http\Controllers\Back\ConfigController@update')->name('config.update');
+    });
+
     Route::group(['prefix' => 'designer'], function () {
         Route::controller(DesignerController::class)->group(function () {
             Route::get('/','index')->name('designer.index');
@@ -44,10 +51,6 @@ use Illuminate\Support\Facades\Route;
 
         });
     });
-
-Route::get('/loginregister', function () {
-    return view('front.detailPages.loginRegister');
-});
 
 
     //front routes finish

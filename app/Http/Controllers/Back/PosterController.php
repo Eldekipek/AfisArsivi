@@ -64,7 +64,7 @@ class PosterController extends Controller
             $poster->image='uploads/'.$imageName;
         }
         $poster->save();
-        toastr()->success('Başarılı' , 'Poster başarıyla oluşturuldu');
+        return back()->with('success','Poster başarıyla oluşturuldu');
 
     }
 
@@ -125,6 +125,8 @@ class PosterController extends Controller
             $poster->image='uploads/'.$imageName;
         }
         $poster->save();
+        return back()->with('success','Poster başarıyla güncellendi');
+
     }
 
     /**
@@ -136,10 +138,11 @@ class PosterController extends Controller
     public function destroy($id)
     {
         Poster::find($id)->delete();
+
     }
 
     public function delete($id){
         Poster::find($id)->delete();
-        return redirect("admin/poster");
+        return back()->with('success','Poster başarıyla silindi');
     }
 }

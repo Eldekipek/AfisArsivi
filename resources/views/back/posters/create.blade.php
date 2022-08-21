@@ -21,13 +21,16 @@
                 <div class="form-group">
                     <label for="">Tasarımcı Adı</label>
                        <!-- otomatik alinacak -->
-                    <input type="text" name="tasarimci" class="form-control" required placeholder="otomatik doldurulacak">
+                    <input type="text" name="user_id" class="form-control" required placeholder="otomatik doldurulacak">
                     <label for="">Poster Başlığı</label>
                     <input type="text" name="title" class="form-control" required>
                     <div class="form-group">
                         <label for="">Poster Kategorisi</label>
                         <select class="form-control" name="category">
                             <option value="">Seçim Yapınız</option>
+                            <option value="2">Reklam</option>
+                            <option value="3">Kültür</option>
+                            <option value="4">Sosyal</option>
 
                         </select>
                     </div>

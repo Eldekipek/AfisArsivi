@@ -21,7 +21,7 @@
 <body>
 <div class="header">
     <div class="title">
-        <a href="">
+        <a href="{{route("front.home")}}">
             <h4>typo/graphic posters</h4>
         </a>
     </div>
@@ -34,12 +34,12 @@
         <div class="menu">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">Hakkında</a>
+                <a href="{{route("about.index")}}">Hakkımda</a>
                 <a href="#">Reklam Arşivi</a>
                 <a href="#">Sosyal Arşiv</a>
                 <a href="#">Kültürel Arşiv</a>
-                <a href="#">Yazarlar</a>
-                <a href="#">Giriş Yap | Kayıt ol</a>
+                <a href="{{route("designers.index")}}">Yazarlar</a>
+                <a href="{{route("login.register.index")}}">Giriş Yap | Kayıt ol</a>
             </div>
 
             <div id="main">

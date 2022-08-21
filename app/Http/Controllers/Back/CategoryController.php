@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Back;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use function Termwind\renderUsing;
 
 class CategoryController extends Controller
 {
@@ -28,15 +29,14 @@ class CategoryController extends Controller
     {
         $isExist=Category::where('name', $request->category)->first();
         if ($isExist){
-//            toastr()->error($request->category.' adında bir kategori zaten mevcut!');
-//            return redirect()->back();
-            //HATA EKRANA BASILACAK
+            return back()->with('error', 'Aynı isimde bir kategori bulunmakta');
 
         }
         $category=new Category;
         $category->name=$request->category;
         $category->save();
-        return redirect("admin/category");
+        return back()->with('success','Kategori başarıyla oluşturuldu');
+
 
     }
 
@@ -84,15 +84,14 @@ class CategoryController extends Controller
     {
         $isName=Category::where('name', $request->category)->whereNotIn('id',[$request->id])->first();
         if ($isName){
-//            toastr()->error($request->category.' adında bir kategori zaten mevcut!');
-//            return redirect()->back();
+            toastr()->error('Aynı isimde bir kategori bulunmakta');
+            return redirect()->back();
         }
         $category= Category::find($request->id);
         $category->name=$request->category;
         $category->save();
-//        toastr()->success('Kategori Başarıyla Güncellendi');
-//        return redirect()->back();
-        return redirect("admin/category");
+        toastr()->success('Kategori başarıyla güncellendi');
+        return redirect()->back();
 
     }
 
@@ -124,7 +123,7 @@ class CategoryController extends Controller
     {
         $category=Category::findOrFail($request->id);
         $category->delete();
-        return redirect("admin/category");
+        return back()->with('success','Kategori başarıyla silindi');
 
 
     }

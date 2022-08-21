@@ -21,4 +21,11 @@ class FrontController extends Controller
 
     }
 
+    public function loginregister(){
+        return view('front.detailPages.loginRegister');
+    }
+
+    public function designerpage(){
+        return view('front.detailPages.designers');
+    }
   }
