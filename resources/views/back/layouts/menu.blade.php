@@ -54,15 +54,15 @@
 
         </li>
         <li class="nav-item">
-            <a class="nav-link @if(Request::segment(2)=='sayfalar') in @else collapsed @endif" href="#" data-toggle="collapse" data-target="#collapsePage"
+            <a class="nav-link @if(Request::segment(2)=='kullanıcılar') in @else collapsed @endif" href="#" data-toggle="collapse" data-target="#collapsePage"
                aria-expanded="true" aria-controls="collapsePage">
                 <i class="fas fa-fw fa-folder"></i>
                 <span>Kullanıcılar</span>
             </a>
-            <div id="collapsePage" class="collapse @if(Request::segment(2)=='sayfalar') show @endif" aria-labelledby="headingPage" data-parent="#accordionSidebar">
+            <div id="collapsePage" class="collapse @if(Request::segment(2)=='kullanıcılar') show @endif" aria-labelledby="headingPage" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Sayfa İşlemleri:</h6>
-                    <a class="collapse-item @if(Request::segment(2)=='sayfalar' and !Request::segment(3)) active @endif" href="#">Tüm Kullanıcılar</a>
+                    <a class="collapse-item @if(Request::segment(2)=='kullanıcılar' and !Request::segment(3)) active @endif" href="{{route("users.index")}}">Tüm Kullanıcılar</a>
 {{--                    <a class="collapse-item @if(Request::segment(2)=='sayfalar' and Request::segment(3)=='create') active @endif"  href="#"></a>--}}
                 </div>
             </div>

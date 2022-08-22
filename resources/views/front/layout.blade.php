@@ -15,6 +15,7 @@
 
     <title>Poster</title>
 </head>
+
 <style>
 
 </style>
@@ -22,7 +23,7 @@
 <div class="header">
     <div class="title">
         <a href="{{route("front.home")}}">
-            <h4>typo/graphic posters</h4>
+            <h4>{{$config->title}}</h4>
         </a>
     </div>
     <div class="right-header">
@@ -53,10 +54,11 @@
 @yield("content")
 
 <div class="footer">
-    <i class="fa-brands fa-twitter"></i>
-    <i class="fa-brands fa-facebook"></i>
-    <i class="fa-brands fa-instagram"></i>
-    <i class="fa-brands fa-linkedin"></i>
+    <a href="{{$config->twitter}}"><i class="fa-brands fa-twitter"></i></a>
+    <a href="{{$config->facebook}}"><i class="fa-brands fa-facebook"></i></a>
+    <a href="{{$config->instagram}}"><i class="fa-brands fa-instagram"></i></a>
+    <a href="{{$config->linkedin}}"><i class="fa-brands fa-linkedin"></i></a>
+
 </div>
 
 

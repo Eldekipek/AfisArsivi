@@ -161,6 +161,41 @@
 
 
 </style>
+@if ($message = Session::get('success'))
+    <div class="alert alert-success alert-block">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>{{ $message }}</strong>
+    </div>
+@endif
+
+@if ($message = Session::get('error'))
+    <div class="alert alert-danger alert-block">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>{{ $message }}</strong>
+    </div>
+@endif
+
+@if ($message = Session::get('warning'))
+    <div class="alert alert-warning alert-block">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>{{ $message }}</strong>
+    </div>
+@endif
+
+@if ($message = Session::get('info'))
+    <div class="alert alert-info alert-block">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>{{ $message }}</strong>
+    </div>
+@endif
+
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        Please check the form below for errors
+    </div>
+@endif
+
 <div class="login-reg-panel">
     <div class="login-info-box">
         <h2>Hesabın Var Mı?</h2>
@@ -185,11 +220,15 @@
             <a href="">Şifreni mi unuttun?</a>
         </div>
         <div class="register-show">
+            <form action="{{route("register.user.create")}}" method="post">
+                @csrf
             <h2>Kayıt Ol</h2>
-            <input type="text" placeholder="Email">
-            <input type="password" placeholder="Şifre">
-            <input type="password" placeholder="Şifreyi onayla">
-            <input type="button" value="Kayıt Ol">
+            <input type="text" name="name" id="name" placeholder="İsim">
+            <input type="text" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Şifre">
+            <input type="password" for="password-confirmation" id="password-confirmation" name="password_confirmation" placeholder="Şifreyi Doğrula">
+            <input type="submit" value="Kayıt Ol">
+            </form>
         </div>
     </div>
 </div>

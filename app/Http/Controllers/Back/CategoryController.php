@@ -124,7 +124,5 @@ class CategoryController extends Controller
         $category=Category::findOrFail($request->id);
         $category->delete();
         return back()->with('success','Kategori başarıyla silindi');
-
-
     }
 }

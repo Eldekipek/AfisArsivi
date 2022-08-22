@@ -29,6 +29,7 @@
 @if ($errors->any())
     <div class="alert alert-danger">
         <button type="button" class="close" data-dismiss="alert">×</button>
-        Please check the form below for errors
+        <strong>{{ $errors }}</strong>
+        <strong>Lütfen Form Bilgilerini Uygun Giriniz</strong>
     </div>
 @endif

@@ -27,8 +27,10 @@ use Illuminate\Support\Facades\Route;
              Route::get('/loginregister' , 'loginregister')->name("login.register.index");
              Route::get('/about', 'about')->name("about.index");
              Route::get('/designers' , 'designerpage')->name('designers.index');
+             Route::post('/loginregister' ,'registerUser')->name("register.user.create");
          });
     });
+
 
     Route::group(['prefix' => 'poster'], function () {
         Route::controller(PosterController::class)->group(function () {
@@ -76,9 +78,10 @@ use Illuminate\Support\Facades\Route;
                     Route::post('/category/delete','delete')->name('category.delete');
                     Route::get('/category/getData','getData')->name('category.getdata');
                     Route::get('/category/status','switch')->name('category.switch');
-
-
-
+                });
+                Route::controller(\App\Http\Controllers\Back\UserController::class)->group(function() {
+                    Route::get('/users', 'listUsers')->name("users.index");
+                    Route::post('users/delete', 'delete')->name("users.delete");
                 });
         });
     //panel routes finish
