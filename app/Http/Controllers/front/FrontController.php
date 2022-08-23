@@ -4,6 +4,7 @@ namespace App\Http\Controllers\front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Config;
+use App\Models\Designer;
 use App\Models\Poster;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -21,7 +22,8 @@ class FrontController extends Controller
     public function home(){
         $config = Config::find(1);
         $posters=Poster::all();
-        return view('front.home.home', compact('config', 'posters'));
+        $designers=Designer::orderBy('created_at', 'DESC')->get()->take(1);
+        return view('front.home.home', compact('config', 'posters', 'designers'));
 
     }
 
