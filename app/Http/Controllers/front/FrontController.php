@@ -22,8 +22,8 @@ class FrontController extends Controller
     public function home(){
         $config = Config::find(1);
         $posters=Poster::all();
-        $designers=Designer::orderBy('created_at', 'DESC')->get()->take(1);
-        return view('front.home.home', compact('config', 'posters', 'designers'));
+/*        $designers=Designer::orderBy('created_at', 'DESC')->get()->take(1);*/
+        return view('front.home.home', compact('config', 'posters'));
 
     }
 
