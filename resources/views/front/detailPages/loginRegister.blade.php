@@ -161,6 +161,7 @@
 
 
 </style>
+<title>Giriş Yap</title>
 @if ($message = Session::get('success'))
     <div class="alert alert-success alert-block">
         <button type="button" class="close" data-dismiss="alert">×</button>
@@ -223,8 +224,8 @@
             <form action="{{route("register.user.create")}}" method="post">
                 @csrf
             <h2>Kayıt Ol</h2>
-            <input type="text" name="name" id="name" placeholder="İsim">
-            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="name" id="name" placeholder="İsim Soyisim">
+            <input type="email" name="email" placeholder="Email">
             <input type="password" name="password" placeholder="Şifre">
             <input type="password" for="password-confirmation" id="password-confirmation" name="password_confirmation" placeholder="Şifreyi Doğrula">
             <input type="submit" value="Kayıt Ol">
