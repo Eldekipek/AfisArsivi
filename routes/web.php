@@ -37,6 +37,7 @@ use Illuminate\Support\Facades\Route;
             Route::get('/culture','culture')->name('poster.culture');
             Route::get('/social','social')->name('poster.social');
             Route::get('/advertisement','advertisement')->name('poster.advertisement');
+            Route::get('/archive','archive')->name('poster.archive');
 
         });
     });
@@ -49,7 +50,7 @@ use Illuminate\Support\Facades\Route;
     Route::group(['prefix' => 'designer'], function () {
         Route::controller(DesignerController::class)->group(function () {
             Route::get('/','index')->name('designer.index');
-            Route::get('/profile','profile')->name('designer.profile');
+            Route::get('/profile{id}','profile')->name('designer.profile');
 
         });
     });

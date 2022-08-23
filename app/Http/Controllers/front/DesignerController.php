@@ -4,6 +4,8 @@ namespace App\Http\Controllers\front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Config;
+use App\Models\Designer;
+use App\Models\Video;
 
 class DesignerController extends Controller
 {
@@ -13,10 +15,12 @@ class DesignerController extends Controller
         return view('front.detailPages.designers', compact('config'));
     }
 
-    public function profile(){
+    public function profile($id){
         $config = Config::find(1);
+        $designers = Designer::find($id);
 
-        return view('front.detailPages.profile', compact('config'));
+
+        return view('front.detailPages.profile', compact('config', 'designers'));
 
     }
 

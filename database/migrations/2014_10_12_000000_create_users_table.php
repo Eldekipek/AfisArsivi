@@ -18,6 +18,12 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('image');
+            $table->string('country');
+            $table->string('website');
+            $table->unsignedBigInteger('country_id');
+            $table->date('birthday');
+            $table->foreign('country_id')->references('id')->on('countries');
             $table->rememberToken();
             $table->timestamps();
         });
