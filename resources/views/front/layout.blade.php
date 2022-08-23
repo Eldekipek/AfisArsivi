@@ -13,7 +13,7 @@
     <script src="{{asset('jquery/wow.min.js')}}"></script>
 
 
-    <title>Poster</title>
+    <title>Afiş Arşivi</title>
 </head>
 
 <style>

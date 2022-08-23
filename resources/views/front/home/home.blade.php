@@ -53,7 +53,7 @@
                             <div class="module-profiles-name">
                                 <div style="color: #1c1f23">
                                     <h1>{{$designer->name}}</h1>
-                                    <h6>{{$designer->country_id}}</h6>
+                                    <h6>{{$designer->getCountry->name}}</h6>
                                 </div>
                                 <div>
                                     <div class="profile-icon large">

@@ -9,4 +9,9 @@ class Poster extends Model
 {
     use HasFactory;
     protected $table = 'posters';
+    protected $guarded=['id'];
+
+    public function getCategory(){
+        return $this->belongsTo('App\Models\Category','category_id','id');
+    }
 }

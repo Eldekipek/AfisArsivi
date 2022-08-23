@@ -42,4 +42,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function gerCountry(){
+        return $this->belongsTo('App\Models\Country','country_id','id');
+    }
 }
