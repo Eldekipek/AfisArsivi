@@ -24,16 +24,20 @@ class FrontController extends Controller
     }
 
     public function about(){
-        return view('front.detailPages.about');
+        $config = Config::find(1);
+
+        return view('front.detailPages.about', compact('config'));
 
     }
 
     public function loginregister(){
+
         return view('front.detailPages.loginRegister');
     }
 
     public function designerpage(){
-        return view('front.detailPages.designers');
+        $config = Config::find(1);
+        return view('front.detailPages.designers', compact('config'));
     }
 
     public function registerUser(Request $request){
