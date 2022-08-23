@@ -162,39 +162,29 @@
 
 </style>
 <title>Giriş Yap</title>
-@if ($message = Session::get('success'))
+
+@if ($message = Session::get('message'))
     <div class="alert alert-success alert-block">
         <button type="button" class="close" data-dismiss="alert">×</button>
         <strong>{{ $message }}</strong>
     </div>
 @endif
 
-@if ($message = Session::get('error'))
-    <div class="alert alert-danger alert-block">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-        <strong>{{ $message }}</strong>
-    </div>
-@endif
-
-@if ($message = Session::get('warning'))
-    <div class="alert alert-warning alert-block">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-        <strong>{{ $message }}</strong>
-    </div>
-@endif
-
-@if ($message = Session::get('info'))
-    <div class="alert alert-info alert-block">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-        <strong>{{ $message }}</strong>
-    </div>
-@endif
-
 @if ($errors->any())
-    <div class="alert alert-danger">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-        Please check the form below for errors
+    <div class="w-100" style="position:absolute;">
+        <div class="alert alert-danger">
+
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <ul>
+                @foreach($errors->all() as $err)
+
+                    <li>{{$err}}</li>
+                @endforeach
+            </ul>
+
+        </div>
     </div>
+
 @endif
 
 <div class="login-reg-panel">
@@ -212,7 +202,7 @@
         <input type="radio" name="active-log-panel" id="log-login-show">
     </div>
 
-    <div class="white-panel">
+    <div class="white-panel" >
         <div class="login-show">
             <h2>Giriş Yap</h2>
             <input type="text" placeholder="Email">

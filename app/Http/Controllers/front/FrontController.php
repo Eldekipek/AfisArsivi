@@ -42,20 +42,37 @@ class FrontController extends Controller
 
     public function registerUser(Request $request){
 
-        $request->validate([
+        $validatedData = $request->validate([
             'name' => 'required|min:3|max:255',
             'email' => 'required|min:3|max:255|email|unique:users',
             'password' => 'required|min:8|max:255|confirmed'
-        ]);
+            ],
+            [
+                'name.required' => 'İsim alanı boş bırakılamaz.',
+                'email.required' => 'Email alanı boş bırakılamaz.',
+                'password.required' => 'Şifre Alanı boş bırakılamaz.',
+                'name.min' => 'İsim alanı en az 3 karakterli olmalıdır.',
+                'email.unique' => 'Bu email daha önce kullanılmıştır.',
+                'password.min' => 'Şifre alanı en az 8 karakterli olmalıdır.',
 
+            ]
+
+        );
+
+        if($validatedData){
             $user = new User();
             $user->name = $request->name;
             $user->email = $request->email;
             $user->password = bcrypt($request->password);
             $user->save();
             if ($user->save()){
-                return back()->with('success','Kayıt başarılı, lütfen giriş yapınız');
+                return back()->with('message','Kayıt başarılı, lütfen giriş yapınız');
             }
+        }else{
+            return back()->with('error');
+        }
+
+
     }
 
   }
