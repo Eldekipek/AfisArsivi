@@ -28,18 +28,17 @@
     </div>
     <div class="right-header">
         <div class="profile">
-            <a href="" style="color:black">
+            <a href="{{route("designers.index")}}" style="color:black">
                 <i class="fa-solid fa-user"></i>
             </a>
         </div>
         <div class="menu">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="{{route("about.index")}}">Hakkımda</a>
-                <a href="#">Reklam Arşivi</a>
-                <a href="#">Sosyal Arşiv</a>
-                <a href="#">Kültürel Arşiv</a>
-                <a href="{{route("designers.index")}}">Yazarlar</a>
+                <a href="{{route("about.index")}}">Hakkımızda</a>
+                <a href="{{route('poster.advertisement')}}">Reklam Arşivi</a>
+                <a href="{{route('poster.social')}}">Sosyal Arşiv</a>
+                <a href="{{route('poster.culture')}}">Kültürel Arşiv</a>
                 <a href="{{route("login.register.index")}}">Giriş Yap | Kayıt ol</a>
             </div>
 
