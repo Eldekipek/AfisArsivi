@@ -41,7 +41,8 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($users as $user)
+                            @if(isset($users)&&!is_null($users))
+                                @foreach($users as $user)
                                 <tr>
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->email}}</td>
@@ -55,7 +56,7 @@
                                     </td>
                                 </tr>
                             @endforeach
-
+                            @endif
                             </tbody>
                         </table>
                     </div>
