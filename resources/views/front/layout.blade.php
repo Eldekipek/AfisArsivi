@@ -15,9 +15,6 @@
     <title>Afiş Arşivi</title>
 </head>
 
-<style>
-
-</style>
 <body>
 <div class="header">
     <div class="title">
