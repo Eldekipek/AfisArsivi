@@ -209,7 +209,7 @@
                 <h2>Giriş Yap</h2>
                 <input type="text" name="email" id="email" required placeholder="Email">
                 <input type="password" name="password" id="password" required placeholder="Şifre">
-                <input type="submit" value="Giriş Yap">
+                <input type="submit" style="cursor: pointer;border:none; border-radius: 10px; background-color: #2a778a; color: white" value="Giriş Yap">
                 <a href="">Şifreni mi unuttun?</a>
             </form>
         </div>
@@ -218,10 +218,15 @@
                 @csrf
             <h2>Kayıt Ol</h2>
             <input type="text" name="name" id="name" placeholder="İsim Soyisim">
-            <input type="email" name="email" placeholder="Email">
+            <input type="email" style="    width: 100%;
+    display: block;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #b5b5b5;
+    outline: none;" name="email" placeholder="Email">
             <input type="password" name="password" placeholder="Şifre">
             <input type="password" for="password-confirmation" id="password-confirmation" name="password_confirmation" placeholder="Şifreyi Doğrula">
-            <input type="submit" value="Kayıt Ol">
+            <input type="submit" style="border:none; border-radius: 10px; background-color: #2a778a; color: white;cursor: pointer;" value="Kayıt Ol">
             </form>
         </div>
     </div>

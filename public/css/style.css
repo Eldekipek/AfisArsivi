@@ -87,6 +87,7 @@ h1.big{
 }
 .module-collection{
     padding:30px;
+    width: 100%;
 }
 .collection-titles{
     width: calc(100vw * 4 / 12 - 24px);
@@ -101,10 +102,7 @@ h1.big{
     display: block;
     position: relative;
 }
-.w-imgs img{
-    width: 100%;
-    height: auto;
-}
+
 .poster-item-info{
     padding: 11px 0 0;
     margin-bottom: 40px;
@@ -232,8 +230,56 @@ h1.big{
     display: flex;
     justify-content: space-between;
 }
+.poster-inner{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.poster-inner .poster-items-link{
+    width: calc((100% - 60px) / 10);
+    overflow: hidden;
+    box-shadow: 0 0 15px 1px #00000012;
+    text-decoration: none !important;
+    transition: 400ms all;
+    position: relative;
+}
+.poster-inner .poster-items-link picture>img{
+    width: 100%;
+    object-fit: cover;
+    height: 100px;
+}
+.posters-top{
+    padding: 60px 20px 20px 20px;
+}
+.poster-item{
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.poster-item .poster-items-{
+    width: calc((100% - 60px) / 5);
+    overflow: hidden;
+    box-shadow: 0 0 15px 1px #00000012;
+    text-decoration: none !important;
+    transition: 400ms all;
+    position: relative;
+}
+.poster-item .poster-items- .poster-card-top picture>img{
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+}
+.poster-item .poster-items- .poster-card-top{
+    width: 100%;
+    overflow: hidden;
+}
+.poster-item-info{
 
-
+}
+.poster-article{
+    padding: 20px;
+}
 
 
 
