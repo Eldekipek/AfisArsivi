@@ -1,5 +1,5 @@
 .header{
-    height: 50px;
+
     background-color: #dfdfdf;
     padding: 10px 20px;
     font-size: 22px;
@@ -10,7 +10,7 @@
     font-weight: 600;
 }
 .right-header{
-    margin-top: -35px;
+    margin-top: -50px;
     display: flex;
     float: right;
 }
@@ -206,6 +206,27 @@ h1.big{
 }
 .profile-birth{
     display: flex;
+}
+
+/*Responsive*/
+@media only screen and (max-width: 992px){
+    .module-profiles{
+        height: 270px;
+
+    }
+}
+@media only screen and (max-width: 550px){
+    .collection-description{
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px){
+    .list-row{
+        flex-direction: column;
+    }
+}
+.icons a{
+    color: #51585e;
 }
 
 

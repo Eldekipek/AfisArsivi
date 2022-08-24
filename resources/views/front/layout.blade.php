@@ -23,7 +23,7 @@
 <div class="header">
     <div class="title">
         <a href="{{route("front.home")}}">
-            <h4>{{$config->title}}</h4>
+            <img src="{{asset('./images/afislogo2.png')}}" style="width: 400px; height: 60px" alt="">
         </a>
     </div>
     <div class="right-header">
@@ -54,11 +54,20 @@
 @yield("content")
 
 <div class="footer">
-    <a href="{{$config->twitter}}"><i class="fa-brands fa-twitter"></i></a>
-    <a href="{{$config->facebook}}"><i class="fa-brands fa-facebook"></i></a>
-    <a href="{{$config->instagram}}"><i class="fa-brands fa-instagram"></i></a>
-    <a href="{{$config->linkedin}}"><i class="fa-brands fa-linkedin"></i></a>
-
+    <div class="container">
+        <div class="row">
+            <div class="footer-img col-12 col-lg-6" >
+                <img src="{{asset('./images/afisfooterimg.png')}}" style="width: 400px; height: 80px;" alt="">
+            </div>
+            <div class="icons col-12 col-lg-6" style="display: flex;
+            align-items: center;">
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
 </div>
 
 
