@@ -22,7 +22,7 @@
 <div class="header">
     <div class="title">
         <a href="{{route("front.home")}}">
-            <img src="{{asset('./images/afislogo2.png')}}" style="width: 400px; height: 60px" alt="">
+            <img src="{{asset('./images/afislogo2.png')}}" style="width: 357px; height: 55px;" alt="">
         </a>
     </div>
     <div class="right-header">
