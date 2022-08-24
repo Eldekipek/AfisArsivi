@@ -19,8 +19,10 @@
             <form action="{{route('poster.create')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
+                    @if(isset($user)&&!is_null($user))
                     <label for="">Tasarımcı Adı</label>
                     <input type="text" name="user_id" class="form-control" required readonly value="{{$user->name}}">
+                    @endif
                     <label for="">Poster Başlığı</label>
                     <input type="text" name="title" class="form-control" required>
                     <div class="form-group">
@@ -58,7 +60,6 @@
                 </div>
             </form>
         </div>
-
     </div>
 @endsection
 @section('css')
