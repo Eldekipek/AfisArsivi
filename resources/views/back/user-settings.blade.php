@@ -30,8 +30,9 @@
                         <div class="form-group">
                             <label>Ülke</label><br>
                             <select name="country_id" id="country_id">
-                                @foreach($countries as $country)
-                                <option value="{{$country->id}}">{{$country->name}}</option>
+                                <option disabled selected>Seçiniz</option>
+                            @foreach($countries as $country)
+                                    <option value="{{$country->id}}">{{$country->name}}</option>
                                 @endforeach
                             </select>
                         </div>
