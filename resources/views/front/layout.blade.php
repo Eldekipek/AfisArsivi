@@ -38,10 +38,15 @@
                 <a href="{{route('poster.advertisement')}}">Reklam Arşivi</a>
                 <a href="{{route('poster.social')}}">Sosyal Arşiv</a>
                 <a href="{{route('poster.culture')}}">Kültürel Arşiv</a>
+                @if(\Illuminate\Support\Facades\Auth::check())
+                    <a href="{{route("login.index")}}">Çıkış Yap</a>
+                    <a href="{{route("admin.panel")}}" target="_blank">Panel</a>
+                @else()
                 <a href="{{route("login.index")}}">Giriş Yap</a>
                 <a href="{{route("register.index")}}">Kayıt ol</a>
-            </div>
+                @endif
 
+            </div>
             <div id="main">
                 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
             </div>
