@@ -1,11 +1,11 @@
 @extends('back.layouts.master')
-@section('title','Poster Oluştur')
+@section('title','Afiş Oluştur')
 @section('content')
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3 text-primary font-weight-bold">
-            Poster Oluştur
+            Afiş Oluştur
         </div>
 
         <div class="card-body">
@@ -23,10 +23,10 @@
                     <label for="">Tasarımcı Adı</label>
                     <input type="text" name="user_id" class="form-control" required readonly value="{{$user->name}}">
                     @endif
-                    <label for="">Poster Başlığı</label>
+                    <label for="">Afiş Başlığı</label>
                     <input type="text" name="title" class="form-control" required>
                     <div class="form-group">
-                        <label for="">Poster Kategorisi</label>
+                        <label for="">Afiş Kategorisi</label>
                         <select class="form-control" name="category_id">
                             <option selected>Seçim Yapınız</option>
                             @foreach($categories as $category)
@@ -46,17 +46,17 @@
 
 
                 <div class="form-group">
-                    <label for="">Poster Fotoğrafı</label>
+                    <label for="">afiş Fotoğrafı</label>
                     <input type="file" name="image" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="">Poster Tematik Bilgisi</label>
+                    <label for="">Afiş Tematik Bilgisi</label>
                     <textarea id="editor" name="contentt" class="form-control" rows="6"></textarea>
                 </div>
 
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block">Posteri Oluştur</button>
+                    <button type="submit" class="btn btn-primary btn-block">Afişi Oluştur</button>
                 </div>
             </form>
         </div>

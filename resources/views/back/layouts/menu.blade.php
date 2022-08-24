@@ -34,13 +34,13 @@
             <a class="nav-link @if(Request::segment(2)=='posterler') in @else collapsed @endif" href="#" data-toggle="collapse" data-target="#collapseTwo"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-edit"></i>
-                <span>Posterler</span>
+                <span>Afişler</span>
             </a>
             <div id="collapseTwo" class="collapse @if(Request::segment(2)=='posterler') show @endif" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Poster İşlemleri:</h6>
-                    <a class="collapse-item @if(Request::segment(2)=='posterler' and !Request::segment(3)) active @endif" href="{{route("poster.index")}}">Tüm Posterler</a>
-                    <a class="collapse-item @if(Request::segment(2)=='posterler' and Request::segment(3)=='create') active @endif"  href="{{route("poster.create.index")}}">Poster Oluştur</a>
+                    <h6 class="collapse-header">Afiş İşlemleri:</h6>
+                    <a class="collapse-item @if(Request::segment(2)=='posterler' and !Request::segment(3)) active @endif" href="{{route("poster.index")}}">Tüm Afişler</a>
+                    <a class="collapse-item @if(Request::segment(2)=='posterler' and Request::segment(3)=='create') active @endif"  href="{{route("poster.create.index")}}">Afiş Oluştur</a>
                 </div>
             </div>
         </li>

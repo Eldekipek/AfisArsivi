@@ -36,7 +36,6 @@
                                 <th>Adı</th>
                                 <th>Email</th>
                                 <th>Rol</th>
-                                <th>Durum</th>
                                 <th>İşlemler</th>
                             </tr>
                             </thead>
@@ -49,7 +48,6 @@
                                     <td>ROL</td>
 
                                     <td>
-                                        <input class="switch" user-id="{{$user->id}}" type="checkbox" data-on="Aktif" data-off="Pasif" data-onstyle="success" data-offstyle="danger" @if($user->status==1) checked @endif data-toggle="toggle">
                                     <td>
 {{--                                        <a user-id="{{$user->id}}" class="btn btn-sm btn-primary edit-click" title="Kullanıcı Ayarları"><i class="fa fa-edit text-white"></i></a>--}}
                                         <a user-id="{{$user->id}}" user-name="{{$user->name}}" class="btn btn-sm btn-danger remove-click" title="Kullanıcıyı Sil"><i class="fa fa-times text-white"></i></a>

@@ -15,16 +15,12 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Site Başlığı</label>
-                                <input type="text" name="title" required class="form-control" value="{{$config->title}}">
+                                <input type="text" name="title" required class="form-control" >
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Site Aktiflik Durumu</label>
-                                <select name="active" class="form-control">
-                                    <option @if($config->active==1) selected @endif value="1">Açık</option>
-                                    <option @if($config->active==0) selected @endif value="0">Kapalı</option>
-                                </select>
+
                             </div>
                         </div>
                     </div>
@@ -46,13 +42,13 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Twitter</label>
-                                <input type="text" class="form-control" name="twitter" value="{{$config->twitter}}">
+                                <input type="text" class="form-control" name="twitter" value="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Instagram</label>
-                                <input type="text" class="form-control" name="instagram" value="{{$config->instagram}}">
+                                <input type="text" class="form-control" name="instagram" value="">
                             </div>
                         </div>
                     </div>
@@ -60,13 +56,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Github</label>
-                                        <input type="text" class="form-control" name="github" value="{{$config->github}}">
+                                        <input type="text" class="form-control" name="github" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>LinkedIn</label>
-                                        <input type="text" class="form-control" name="linkedin" value="{{$config->linkedin}}">
+                                        <input type="text" class="form-control" name="linkedin" value="">
                             </div>
                         </div>
                     </div>

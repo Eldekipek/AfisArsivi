@@ -10,7 +10,7 @@
                  <div class="card-body">
                      <div class="row no-gutters align-items-center">
                          <div class="col mr-2">
-                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Toplam Poster Sayısı</div>
+                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Toplam Afiş Sayısı</div>
                              <div class="h5 mb-0 font-weight-bold text-gray-800">{{count(\App\Models\Poster::all())}}</div>
                          </div>
                          <div class="col-auto">
@@ -27,7 +27,7 @@
                  <div class="card-body">
                      <div class="row no-gutters align-items-center">
                          <div class="col mr-2">
-                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Poster Görüntülenme Sayısı</div>
+                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Afiş Görüntülenme Sayısı</div>
                              <div class="h5 mb-0 font-weight-bold text-gray-800">467</div>
                          </div>
                          <div class="col-auto">
@@ -72,8 +72,8 @@
                  <div class="card-body">
                      <div class="row no-gutters align-items-center">
                          <div class="col mr-2">
-                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Yazar Sayısı</div>
-                             <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Tasarımcı Sayısı</div>
+                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{count(\App\Models\User::all())}}</div>
                          </div>
                          <div class="col-auto">
                              <i class="fas fa-user fa-2x text-gray-300"></i>

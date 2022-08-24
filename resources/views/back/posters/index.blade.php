@@ -14,7 +14,7 @@
                     <tr>
                         <th>Fotoğraf</th>
                         <th>Oluşturan</th>
-                        <th>Poster Başlığı</th>
+                        <th>Afiş Başlığı</th>
                         <th>Kategori</th>
                         <th>Baskı Tekniği</th>
                         <th>Ebat</th>
