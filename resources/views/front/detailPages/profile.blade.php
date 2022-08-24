@@ -1,7 +1,7 @@
 @extends("front.layout")
 @section("content")
     <div class="container mb-5">
-        <div class="row">
+        <div class="row" style="width: 100%">
             <div class="col-12 m-4" style="
     display: flex;
     flex-direction: column;
