@@ -31,7 +31,12 @@
                 <i class="fa-solid fa-user"></i>
             </a>
         </div>
-        <div class="menu">
+        <div class="archive ">
+            <a href=""  style="color:black;">
+                <i class="fa-solid fa-box-archive"></i>
+            </a>
+        </div>
+        <div class="menu ml-2">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="{{route("about.index")}}">Hakkımızda</a>
