@@ -39,7 +39,8 @@
                 <a href="{{route('poster.advertisement')}}">Reklam Arşivi</a>
                 <a href="{{route('poster.social')}}">Sosyal Arşiv</a>
                 <a href="{{route('poster.culture')}}">Kültürel Arşiv</a>
-                <a href="{{route("login.register.index")}}">Giriş Yap | Kayıt ol</a>
+                <a href="{{route("login.index")}}">Giriş Yap</a>
+                <a href="{{route("register.index")}}">Kayıt ol</a>
             </div>
 
             <div id="main">

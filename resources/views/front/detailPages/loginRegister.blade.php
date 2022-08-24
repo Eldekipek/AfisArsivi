@@ -204,11 +204,14 @@
 
     <div class="white-panel" >
         <div class="login-show">
-            <h2>Giriş Yap</h2>
-            <input type="text" placeholder="Email">
-            <input type="password" placeholder="Şifre">
-            <input type="button" value="Giriş Yap">
-            <a href="">Şifreni mi unuttun?</a>
+            <form action="{{route("login.post")}}" method="post">
+                @csrf
+                <h2>Giriş Yap</h2>
+                <input type="text" name="email" id="email" required placeholder="Email">
+                <input type="password" name="password" id="password" required placeholder="Şifre">
+                <input type="submit" value="Giriş Yap">
+                <a href="">Şifreni mi unuttun?</a>
+            </form>
         </div>
         <div class="register-show">
             <form action="{{route("register.user.create")}}" method="post">

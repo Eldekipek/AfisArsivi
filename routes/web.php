@@ -22,13 +22,18 @@ use Illuminate\Support\Facades\Route;
         });
 
     Route::group(['prefix' => '/'], function () {
-         Route::controller(FrontController::class)->group(function () {
-             Route::get('/','home')->name('front.home');
-             Route::get('/loginregister' , 'loginregister')->name("login.register.index");
-             Route::get('/about', 'about')->name("about.index");
-             Route::get('/designers' , 'designerpage')->name('designers.index');
-             Route::post('/loginregister' ,'registerUser')->name("register.user.create");
-         });
+        Route::controller(FrontController::class)->group(function () {
+            Route::get('/','home')->name('front.home');
+            Route::get('/login' , 'loginregister')->name("login.index");
+            Route::get('/register', 'loginregister')->name("register.index");
+            Route::get('/about', 'about')->name("about.index");
+            Route::get('/designers' , 'designerpage')->name('designers.index');
+            Route::post('/register' ,'registerUser')->name("register.user.create");
+        });
+
+    });
+    Route::controller(\App\Http\Controllers\Back\AuthController::class)->group(function () {
+        Route::post('/login', 'loginPost')->name("login.post");
     });
 
 
@@ -47,6 +52,8 @@ use Illuminate\Support\Facades\Route;
         Route::post('/ayarlar/update','App\Http\Controllers\Back\ConfigController@update')->name('config.update');
     });
 
+
+
     Route::group(['prefix' => 'designer'], function () {
         Route::controller(DesignerController::class)->group(function () {
             Route::get('/','index')->name('designer.index');
@@ -64,6 +71,8 @@ use Illuminate\Support\Facades\Route;
         Route::group(['prefix' => 'admin'], function () {
             Route::controller(\App\Http\Controllers\Back\DashboardController::class)->group(function () {
                 Route::get('/panel' , 'index')->name("admin.panel");
+                Route::get('/user/settings', 'userSettingsIndex')->name("user.settings.index");
+                Route::post('/user/settings', 'userSettingsUpdate')->name("user.settings.update");
             });
                 Route::controller(\App\Http\Controllers\Back\PosterController::class)->group(function () {
                     Route::get('/poster', 'index')->name("poster.index");

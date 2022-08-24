@@ -20,18 +20,16 @@
                 @csrf
                 <div class="form-group">
                     <label for="">Tasarımcı Adı</label>
-                       <!-- otomatik alinacak -->
-                    <input type="text" name="user_id" class="form-control" required placeholder="otomatik doldurulacak">
+                    <input type="text" name="user_id" class="form-control" required readonly value="{{$user->name}}">
                     <label for="">Poster Başlığı</label>
                     <input type="text" name="title" class="form-control" required>
                     <div class="form-group">
                         <label for="">Poster Kategorisi</label>
-                        <select class="form-control" name="category">
-                            <option value="">Seçim Yapınız</option>
-                            <option value="2">Reklam</option>
-                            <option value="3">Kültür</option>
-                            <option value="4">Sosyal</option>
-
+                        <select class="form-control" name="category_id">
+                            <option selected>Seçim Yapınız</option>
+                            @foreach($categories as $category)
+                                <option value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <label for="">Baskı Tekniği</label>

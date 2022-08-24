@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Back;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Poster;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use function Termwind\renderUsing;
 
 class PosterController extends Controller
@@ -17,8 +19,9 @@ class PosterController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
         $posters = Poster::orderBy('created_at', 'ASC')->get();
-        return view("back.posters.index", compact('posters'));
+        return view("back.posters.index", compact('posters' , 'user'));
     }
 
     /**
@@ -28,7 +31,9 @@ class PosterController extends Controller
      */
     public function create()
     {
-        return view("back.posters.create");
+        $categories = Category::all();
+        $user = Auth::user();
+        return view("back.posters.create", compact('user', 'categories'));
     }
 
     /**
@@ -39,7 +44,7 @@ class PosterController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+            $request->validate([
             'title'=>'required | min:3',
             'baski'=>'required | min:3',
             'ebat' =>'required | min:3',
@@ -50,12 +55,13 @@ class PosterController extends Controller
         ]);
 
         $poster=new Poster();
+        $poster->user_id = Auth::id();
         $poster->title=$request->title;
         $poster->printing_technique=$request->baski;
         $poster->dimensions=$request->ebat;
         $poster->country=$request->yer;
         $poster->date=$request->tarih;
-        $poster->category=$request->category;
+        $poster->category_id=$request->category_id;
         $poster->explanation=$request->contentt;
 
         if ($request->hasFile('image')){

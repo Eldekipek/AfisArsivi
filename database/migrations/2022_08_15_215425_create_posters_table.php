@@ -23,7 +23,6 @@ return new class extends Migration
             $table->date('date');
             $table->text('explanation');
             $table->unsignedBigInteger('category_id')->comment('1->Reklam Afiş| 2-> Kültürel Afişi| 3->Sosyal Afiş');
-            $table->integer('top_category');
             $table->string('image');
             $table->integer('status')->default(0)->comment('0:pasif 1:aktif');
             $table->integer('hit')->default(0);

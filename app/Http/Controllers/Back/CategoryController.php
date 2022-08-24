@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Back;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use function Termwind\renderUsing;
 
 class CategoryController extends Controller
@@ -16,8 +17,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
         $categories=Category::all();
-        return view('back.categories.index', compact('categories'));
+        return view('back.categories.index', compact('categories', 'user'));
     }
 
     /**

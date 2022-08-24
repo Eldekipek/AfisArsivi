@@ -5,7 +5,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary"><strong>{{$posters->count()}} makale bulundu.</strong> <span style="float: right"> <a href="#" class="btn btn-warning btn-sm"> <i class="fa fa-trash"></i> Silinen Makaleler </a></span></h6>
+            <h6 class="m-0 font-weight-bold text-primary"><strong>{{$posters->count()}} makale bulundu.</strong></h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
