@@ -113,18 +113,15 @@
             <div class="collection-info-heading">
                 <div class="collection-titles">
                     <div>
-                        <p class="collection-heading">collection</p>
+                        <br>
                         <h1 class="big">Reklam Afişleri</h1>
                     </div>
 
                 </div>
-                <div class="collection-description">
-                    <p>Borrowed from Greek théātron, from theā́omai, theâsthai "to gaze at, view, watch, contemplate"
-                        (derivative of théā "act of seeing, sight")</p>
-                </div>
+
             </div>
             <div class="collection-info-footer">
-                <small>56 posters</small>
+                <small>{{$advertisement_poster->count()}} Afiş</small>
             </div>
         </div>
     </div>
@@ -155,12 +152,7 @@
                 </span>
                     <div class="afis-buttons">
                         <div class="icons">
-                            <div class="like">
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
-                            <div class="add-collection">
-                                <i class="fa-solid fa-folder-plus"></i>
-                            </div>
+
                         </div>
                     <div class="afis-detail">
                         <!-- Button trigger modal -->
@@ -241,12 +233,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -274,12 +261,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -307,12 +289,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -340,12 +317,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -373,12 +345,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -411,12 +378,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -444,12 +406,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -477,12 +434,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -510,12 +462,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -543,12 +490,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -576,12 +518,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -593,7 +530,7 @@
             <div class="collection-info-heading">
                 <div class="collection-titles">
                     <div>
-                        <p class="collection-heading">collection</p>
+                        <br>
                         <h1 class="big">Kültürel Afişler</h1>
                     </div>
 
@@ -601,7 +538,7 @@
 
             </div>
             <div class="collection-info-footer">
-                <small>46 posters</small>
+                <small>{{$culture_poster->count()}} Afiş</small>
             </div>
         </div>
     </div>
@@ -631,12 +568,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -664,12 +596,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -697,12 +624,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -730,12 +652,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -763,12 +680,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -796,12 +708,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -833,12 +740,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -866,12 +768,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -899,12 +796,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -932,12 +824,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -965,12 +852,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -998,12 +880,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -1015,7 +892,7 @@
             <div class="collection-info-heading">
                 <div class="collection-titles">
                     <div>
-                        <p class="collection-heading">collection</p>
+                        <br>
                         <h1 class="big">Sosyal Afişler</h1>
                     </div>
 
@@ -1023,7 +900,7 @@
 
             </div>
             <div class="collection-info-footer">
-                <small>46 posters</small>
+                <small>{{$social_poster->count()}} Afiş</small>
             </div>
         </div>
     </div>
@@ -1053,12 +930,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -1086,12 +958,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -1119,12 +986,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -1152,12 +1014,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -1185,12 +1042,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -1218,12 +1070,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -1255,12 +1102,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -1288,12 +1130,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -1321,12 +1158,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -1354,12 +1186,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -1387,12 +1214,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
                 </div>
             </article>
@@ -1420,12 +1242,7 @@
                     <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                 </span>
                     <div class="icons">
-                        <div class="like">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="add-collection">
-                            <i class="fa-solid fa-folder-plus"></i>
-                        </div>
+
                     </div>
 
                 </div>

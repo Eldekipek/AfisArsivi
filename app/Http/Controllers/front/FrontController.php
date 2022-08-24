@@ -22,11 +22,11 @@ class FrontController extends Controller
     public function home(){
         $config = Config::find(1);
         $posters=Poster::all();
-/*        $designers=Designer::orderBy('created_at', 'DESC')->get()->take(1);*/
+        $designers=User::orderBy('created_at', 'DESC')->get()->take(1);
         $social_poster=Poster::where('category_id',3)->get();
         $culture_poster=Poster::where('category_id',2)->get();
         $advertisement_poster=Poster::where('category_id',1)->get();
-        return view('front.home.home', compact('config', 'posters','culture_poster','social_poster','advertisement_poster'));
+        return view('front.home.home', compact('config', 'posters','culture_poster','social_poster','advertisement_poster','designers'));
 
     }
 

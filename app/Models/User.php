@@ -43,7 +43,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function gerCountry(){
+    public function getCountry(){
         return $this->belongsTo('App\Models\Country','country_id','id');
+    }
+
+    public function getPoster(){
+        return $this->hasMany('App\Models\Poster','user_id','id');
     }
 }

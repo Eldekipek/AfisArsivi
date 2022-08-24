@@ -14,4 +14,8 @@ class Poster extends Model
     public function getCategory(){
         return $this->belongsTo('App\Models\Category','category_id','id');
     }
+
+    public function getUser(){
+        return $this->belongsTo('App\Models\User','user_id','id');
+    }
 }
