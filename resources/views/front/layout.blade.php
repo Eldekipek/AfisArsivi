@@ -27,7 +27,7 @@
     </div>
     <div class="right-header">
         <div class="profile">
-            <a href="{{route("designers.index")}}" style="color:black">
+            <a href="{{route("designer.index")}}" style="color:black">
                 <i class="fa-solid fa-user"></i>
             </a>
         </div>

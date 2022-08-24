@@ -19,24 +19,6 @@
                 </div>
         </div>
 
-        <div class="row">
-            @if(isset($posters)&&!is_null($posters))
-                @foreach($posters as $poster)
-            <div class="col-1">
-                <a href="{{route('poster.archive')}}" class="poster-items-link w-imgs">
-                    <div>
-                        <picture>
-                            <img
-                                src="{{$poster->image}}"
-                                alt="">
-                        </picture>
-                    </div>
-                </a>
-                @endforeach
-                @endif
-            </div>
-
-        </div>
     </div> <!--Giris sayfası--->
 
     <div class="module-profiles gray-theme mt-5">
