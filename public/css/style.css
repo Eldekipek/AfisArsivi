@@ -228,6 +228,11 @@ h1.big{
 .icons a{
     color: #51585e;
 }
+.afis-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 
 

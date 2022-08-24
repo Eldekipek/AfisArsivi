@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.css')}}">
     <script src="{{asset('jquery/jquery-3.6.0.js')}}"></script>
     <script src="{{asset('jquery/wow.min.js')}}"></script>
-
-
+    <script src="{{asset('bootstrap/js/bootstrap4.min.js')}}"></script>
     <title>Afiş Arşivi</title>
 </head>
 
