@@ -39,7 +39,7 @@
                 <a href="{{route('poster.social')}}">Sosyal Arşiv</a>
                 <a href="{{route('poster.culture')}}">Kültürel Arşiv</a>
                 @if(\Illuminate\Support\Facades\Auth::check())
-                    <a href="{{route("login.index")}}">Çıkış Yap</a>
+                    <a href="{{route("logout")}}">Çıkış Yap</a>
                     <a href="{{route("admin.panel")}}" target="_blank">Panel</a>
                 @else()
                 <a href="{{route("login.index")}}">Giriş Yap</a>

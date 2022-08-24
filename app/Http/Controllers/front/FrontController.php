@@ -10,6 +10,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Support\Facades\Auth;
 use function view;
 
 class FrontController extends Controller
@@ -78,8 +79,12 @@ class FrontController extends Controller
         }else{
             return back()->with('error');
         }
+        }
 
+        public function logout(){
+            Auth::logout();
+            return redirect()->route('front.home');
+        }
 
-    }
 
   }
