@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Config;
 use App\Models\Poster;
+use App\Models\User;
 
 class PosterController extends Controller
 {
@@ -33,7 +35,7 @@ class PosterController extends Controller
         $config = Config::find(1);
         $posters=Poster::all();
 
-        return view('front.detailPages.archive', compact('config','posters'));
+        return view('front.detailPages.archive-poster', compact('config','posters'));
 
     }
 }
