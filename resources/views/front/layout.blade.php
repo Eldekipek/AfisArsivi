@@ -32,7 +32,7 @@
             </a>
         </div>
         <div class="archive ">
-            <a href=""  style="color:black;">
+            <a href="{{route('poster.archive')}}"  style="color:black;">
                 <i class="fa-solid fa-box-archive"></i>
             </a>
         </div>
