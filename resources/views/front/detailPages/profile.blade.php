@@ -41,10 +41,10 @@
                 <div class="poster-item-info">
                   <span class="common-links">
                     <h2 class="title"><strong> <!--Tasarımcı adı--->
-                            <span><a href="/apeloig" class="">İpek Eldek</a></span></strong>
+                            <span><a href="" class="">İpek Eldek</a></span></strong>
                     </h2>
                     <h2 class="title"><strong> <!--Proje adı--->
-                            <span><a href="/apeloig" class="">Studio Philippe Apeloig</a></span></strong>
+                            <span><a class="">Studio Philippe Apeloig</a></span></strong>
                     </h2><!---->
                     <h1 class="title"> 2012-2013”, 2012</h1> <!--Tarih--->
                     <small class="caption lining-numbers">France |</small><!--Kullanıldığı yer-->

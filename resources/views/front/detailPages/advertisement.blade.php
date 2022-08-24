@@ -1,7 +1,7 @@
 @extends("front.layout")
 @section("content")
     <div class="about-title" style="margin:30px;border-bottom: 1px solid #0e0e0e;">
-        <h2>Reklam Arşivi</h2>
+        <h2>Reklam Afişleri Arşivi</h2>
     </div>
 
     <div class="poster-article">
@@ -17,10 +17,10 @@
                 <div class="poster-item-info">
                 <span class="common-links">
                     <h2 class="title"><strong> <!--Tasarımcı adı--->
-                            <span><a href="/apeloig" class="">İpek Eldek</a></span></strong>
+                            <span><a href="" class="">İpek Eldek</a></span></strong>
                     </h2>
                     <h2 class="title"><strong> <!--Proje adı--->
-                            <span><a href="/apeloig" class="">Studio Philippe Apeloig</a></span></strong>
+                            <span><a class="">Studio Philippe Apeloig</a></span></strong>
                     </h2><!---->
                     <h1 class="title"> 2012-2013”, 2012</h1> <!--Tarih--->
                     <small class="caption lining-numbers">France |</small><!--Kullanıldığı yer-->
@@ -66,14 +66,7 @@
                                             <small class="caption lining-numbers">Offset,</small><!--Baskı tekniği-->
                                             <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                                         </span>
-                                                <div class="icons">
-                                                    <div class="like">
-                                                        <i class="fa-solid fa-heart"></i>
-                                                    </div>
-                                                    <div class="add-collection">
-                                                        <i class="fa-solid fa-folder-plus"></i>
-                                                    </div>
-                                                </div>
+
                                             </div>
                                         </div>
 

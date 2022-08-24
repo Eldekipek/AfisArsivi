@@ -111,7 +111,7 @@
     </div>
     <div class="poster-article">
     <article class="poster-item ">
-        <a href="" class="poster-items- w-imgs">
+        <a href="{{route('poster.advertisement')}}" class="poster-items- w-imgs">
             <div class="poster-card-top">
                 <picture>
                     <img
@@ -123,10 +123,10 @@
         <div class="poster-item-info">
                 <span class="common-links">
                     <h2 class="title"><strong> <!--Tasarımcı adı--->
-                            <span><a href="/apeloig" class="">İpek Eldek</a></span></strong>
+                            <span><a href="" class="">İpek Eldek</a></span></strong>
                     </h2>
                     <h2 class="title"><strong> <!--Proje adı--->
-                            <span><a href="/apeloig" class="">Studio Philippe Apeloig</a></span></strong>
+                            <span><a class="">Studio Philippe Apeloig</a></span></strong>
                     </h2><!---->
                     <h1 class="title"> 2012-2013”, 2012</h1> <!--Tarih--->
                     <small class="caption lining-numbers">France |</small><!--Kullanıldığı yer-->
@@ -158,7 +158,7 @@
     </div>
     <div class="poster-article">
     <article class="poster-item ">
-        <a href="" class="poster-items- w-imgs">
+        <a href="{{route('poster.culture')}}" class="poster-items- w-imgs">
             <div class="poster-card-top">
                 <picture>
                     <img
@@ -170,10 +170,10 @@
         <div class="poster-item-info">
                 <span class="common-links">
                     <h2 class="title"><strong> <!--Tasarımcı adı--->
-                            <span><a href="/apeloig" class="">İpek Eldek</a></span></strong>
+                            <span><a href="" class="">İpek Eldek</a></span></strong>
                     </h2>
                     <h2 class="title"><strong> <!--Proje adı--->
-                            <span><a href="/apeloig" class="">Studio Philippe Apeloig</a></span></strong>
+                            <span><a class="">Studio Philippe Apeloig</a></span></strong>
                     </h2><!---->
                     <h1 class="title"> 2012-2013”, 2012</h1> <!--Tarih--->
                     <small class="caption lining-numbers">France |</small><!--Kullanıldığı yer-->
@@ -206,7 +206,7 @@
     </div>
     <div class="poster-article">
     <article class="poster-item ">
-        <a href="" class="poster-items- w-imgs">
+        <a href="{{route('poster.social')}}" class="poster-items- w-imgs">
             <div class="poster-card-top">
                 <picture>
                     <img
@@ -218,10 +218,10 @@
         <div class="poster-item-info">
                 <span class="common-links">
                     <h2 class="title"><strong> <!--Tasarımcı adı--->
-                            <span><a href="/apeloig" class="">İpek Eldek</a></span></strong>
+                            <span><a href="" class="">İpek Eldek</a></span></strong>
                     </h2>
                     <h2 class="title"><strong> <!--Proje adı--->
-                            <span><a href="/apeloig" class="">Studio Philippe Apeloig</a></span></strong>
+                            <span><a class="">Studio Philippe Apeloig</a></span></strong>
                     </h2><!---->
                     <h1 class="title"> 2012-2013”, 2012</h1> <!--Tarih--->
                     <small class="caption lining-numbers">France |</small><!--Kullanıldığı yer-->
