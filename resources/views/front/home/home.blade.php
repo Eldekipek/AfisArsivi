@@ -241,8 +241,13 @@
                             <span><div class="">{{($social->title)}}</div></span></strong>
                     </h2><!---->
                     <h1 class="title"> {{($social->date)}}</h1> <!--Tarih--->
-                    <small class="caption lining-numbers">{{($social->country)}} |</small><!--Kullanıldığı yer-->
-                    <small class="caption lining-numbers">{{($social->printing_technique)}},</small><!--Baskı tekniği-->
+                    <div style="white-space:nowrap;
+                                            width: 200px;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;">
+                    <small  class="caption lining-numbers">{{($social->country)}} |</small><!--Kullanıldığı yer-->
+                    <small  class="caption lining-numbers">{{($social->printing_technique)}},</small><!--Baskı tekniği-->
+                    </div>
                     <small class="caption lining-numbers">{{($social->dimensions)}}</small><!--ebat-->
                 </span>
                     </div>
