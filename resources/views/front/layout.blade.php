@@ -19,17 +19,17 @@
 <div class="header">
     <div class="title">
         <a href="{{route("front.home")}}">
-            <img src="{{asset('./images/afislogo2.png')}}" style="width: 357px; height: 55px;" alt="">
+            <img class="header-img" src="{{asset('./images/afislogo2.png')}}"  alt="">
         </a>
     </div>
     <div class="right-header">
         <div class="profile">
-            <a href="{{route("designer.index")}}" style="color:black">
+            <a href="{{route("designer.index")}}" style="color: #007ca2;">
                 <i class="fa-solid fa-user"></i>
             </a>
         </div>
         <div class="archive ">
-            <a href="{{route('poster.archive')}}"  style="color:black;">
+            <a href="{{route('poster.archive')}}"  style="color: #007ca2;">
                 <i class="fa-solid fa-box-archive"></i>
             </a>
         </div>
@@ -50,7 +50,7 @@
 
             </div>
             <div id="main">
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+                <span style="color: #007ca2;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
             </div>
         </div>
 

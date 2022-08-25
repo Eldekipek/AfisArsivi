@@ -1,6 +1,5 @@
 .header{
-
-    background-color: #dfdfdf;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 10px 20px;
     font-size: 22px;
 }
@@ -30,10 +29,12 @@
 .module-profiles{
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #c8c8c8;
+    background-image: url(https://img.freepik.com/free-photo/grunge-wall-texture_1194-6326.jpg?w=1480&t=st=1661463248~exp=1661463848~hmac=dd65eb9…);
     width: 100%;
     height: 170px;
 }
+
+
 .module-profiles-link{
     text-decoration: none;
 }
@@ -282,6 +283,35 @@ h1.big{
 .archive i{
     width: 30px;
 }
+@media only screen and (max-width: 992px){
+    .poster-inner .poster-items-link{
+        width: calc((100% - 60px) / 5);
+    }
+    .poster-item .poster-items-{
+        width: calc((100% - 60px) / 3);
+    }
+}
+@media only screen and (max-width: 768px){
+    .poster-item .poster-items-{
+        width: calc((100% - 60px) / 2);
+    }
+}
+@media only screen and (max-width: 500px){
+    .poster-item .poster-items-{
+        width: calc((100% - 60px) / 1);
+    }
+    .poster-inner .poster-items-link{
+        width: calc((100% - 60px) / 3);
+    }
+    .title a .header-img{
+        width: 200px;
+    }
+}
+.title a .header-img{
+    width: 357px;
+    height: 55px;
+}
+
 
 
 

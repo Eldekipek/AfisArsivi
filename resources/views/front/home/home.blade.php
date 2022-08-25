@@ -26,7 +26,7 @@
     <div class="module-profiles gray-theme mt-5">
         <div class="row" style="display: flex">
             <div class="col-12 col-lg-2 pt-2">
-                <h1 class="big highlight tight side-title-home" style="color: white; font-size:50px">Yeni Tasarımcı</h1>
+                <h1 class="big highlight tight side-title-home" style=" color: #007ca2; font-size:50px">Yeni Tasarımcı</h1>
                 @if(isset($designers)&&!is_null($designers))
                     @foreach($designers as $designer)
             </div>
