@@ -16,13 +16,13 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Twitter</label>
-                                <input type="text" class="form-control" name="twitter" value="{{$config->twitter}}">
+                                <input type="text" class="form-control" name="twitter" value="@if(isset($config->twitter)) {{$config->twitter}} @else https://twitter.com/ @endif">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Instagram</label>
-                                <input type="text" class="form-control" name="instagram" value="{{$config->instagram}}">
+                                <input type="text" class="form-control" name="instagram" value="@if(isset($config->instagram)) {{$config->instagram}} @else https://www.instagram.com/ @endif">
                             </div>
                         </div>
                     </div>
@@ -30,13 +30,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Facebook</label>
-                                        <input type="text" class="form-control" name="facebook" value="{{$config->facebook}}">
+                                        <input type="text" class="form-control" name="facebook" value="@if(isset($config->facebook)) {{$config->facebook}} @else https://tr-tr.facebook.com/ @endif">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>LinkedIn</label>
-                                        <input type="text" class="form-control" name="linkedin" value="{{$config->linkedin}}">
+                                        <input type="text" class="form-control" name="linkedin" value="@if(isset($config->linkedin)) {{$config->linkedin}} @else https://www.linkedin.com/ @endif">
                             </div>
                         </div>
                     </div>

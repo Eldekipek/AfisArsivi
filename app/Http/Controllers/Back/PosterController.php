@@ -72,7 +72,7 @@ class PosterController extends Controller
             $poster->image='uploads/'.$imageName;
         }
         $poster->save();
-        return back()->with('success','Poster başarıyla oluşturuldu');
+        return back()->with('success','Afiş başarıyla oluşturuldu');
 
     }
 
@@ -95,8 +95,11 @@ class PosterController extends Controller
      */
     public function edit($id)
     {
+        $idd = Auth::id();
+        $user = User::findOrFail($idd);
         $poster = Poster::findOrFail($id);
-        return view("back.posters.update", compact('poster'));
+        $categories = Category::where('name' , 'not like' , "%{$poster->getCategory->name}%")->get();
+        return view("back.posters.update", compact('poster' , 'user' , 'categories'));
     }
 
     /**
@@ -124,7 +127,7 @@ class PosterController extends Controller
         $poster->dimensions=$request->ebat;
         $poster->country=$request->yer;
         $poster->date=$request->tarih;
-        $poster->category=$request->category;
+        $poster->category_id=$request->category_id;
         $poster->explanation=$request->contentt;
 
         if ($request->hasFile('image')){

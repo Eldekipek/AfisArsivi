@@ -53,6 +53,15 @@
             </a>
 
         </li>
+
+        <li class="nav-item">
+            <a class="nav-link" @if(Request::segment(2)=="hakkımızda") style="color:white !important;" @endif href="{{route("about.update.index")}}">
+                <i @if(Request::segment(2)=="hakkımızda") style="color:white !important;" @endif class="fas fa-fw fa-edit"></i>
+                <span>Hakkımızda Sayfası</span>
+            </a>
+
+        </li>
+
         <li class="nav-item">
             <a class="nav-link @if(Request::segment(2)=='kullanıcılar') in @else collapsed @endif" href="#" data-toggle="collapse" data-target="#collapsePage"
                aria-expanded="true" aria-controls="collapsePage">

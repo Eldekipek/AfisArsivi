@@ -72,6 +72,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/panel', 'index')->name("admin.panel");
         Route::get('/user/settings', 'userSettingsIndex')->name("user.settings.index");
         Route::post('/user/settings', 'userSettingsUpdate')->name("user.settings.update");
+        Route::get('/about/update/index' , 'aboutIndex')->name('about.update.index');
         Route::post('/about/update','aboutUpdate' )->name('about.page.update');
     });
     Route::controller(\App\Http\Controllers\Back\PosterController::class)->group(function () {
@@ -80,6 +81,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/poster/create', 'store')->name("poster.create");
         Route::get('/poster/delete/{id}', 'delete')->name("delete.poster");
         Route::get('/poster/update/{id}', 'edit')->name("poster.update.index");
+        Route::post('/poster/update/{id}', 'update')->name('poster.update');
         Route::get('/getDetail',  'getDetail')->name('poster.detail.get');
 
     });

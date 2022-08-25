@@ -51,7 +51,14 @@ class DashboardController extends Controller
 
     }
 
-    public function post(Request $request){
+    public function aboutIndex(){
+        $page = AboutPage::find(1);
+        $id = Auth::id();
+        $user = User::findOrFail($id);
+        return view('back.about.create', compact('user', 'page'));
+    }
+
+    public function aboutUpdate(Request $request){
         $request->validate([
             'contentt'=>'required',
             'title'=>'min:3',
@@ -63,13 +70,13 @@ class DashboardController extends Controller
         $page->content=$request->contentt;
 
         if ($request->hasFile('image')){
-            $imageName=str_slug($request->title).'.'.$request->image->getClientOriginalExtension();
+            $imageName=($request->title).'.'.$request->image->getClientOriginalExtension();
             $request->image->move(public_path('uploads'),$imageName);
             $page->image='uploads/'.$imageName;
         }
         $page->save();
         toastr()->success( 'Sayfa başarıyla güncellendi');
 
-        return redirect()->route('admin.page.index');
+        return redirect()->route('about.update.index');
     }
 }

@@ -16,20 +16,21 @@
                     @endforeach
                 </div>
             @endif
-            <form action="#" method="post" enctype="multipart/form-data">
-                @method('PUT')
+            <form action="{{route('poster.update' , $poster->id)}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="">Tasarımcı Adı</label>
                     <!-- otomatik alinacak -->
-                    <input type="text" name="tasarimci" class="form-control" required placeholder="otomatik doldurulacak">
+                    <input type="text" name="tasarimci" class="form-control" required value="{{$user->name}}">
                     <label for="">Poster Başlığı</label>
                     <input type="text" name="title" class="form-control" required value="{{$poster->title}}">
                     <div class="form-group">
                         <label for="">Poster Kategorisi</label>
-                        <select class="form-control" name="category">
-                            <option value="">Seçim Yapınız</option>
-
+                        <select class="form-control" name="category_id">
+                            <option value="{{$poster->getCategory->id}}">{{$poster->getCategory->name}}</option>
+                            @foreach($categories as $category)
+                                <option value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <label for="">Baskı Tekniği</label>
@@ -43,12 +44,12 @@
                 </div>
                 <div class="form-group">
                     <label for="">Poster İçeriği</label>
-                    <textarea id="editor" name="contentt" class="form-control" rows="6">{!! $poster->content !!} </textarea>
+                    <textarea id="editor" name="contentt" class="form-control" rows="6">{!! $poster->explanation !!} </textarea>
                 </div>
                 <div class="form-group">
                     <label for="">Poster Fotoğrafı</label><br>
                     <img src="{{asset($poster->image)}}" class="img-thumbnail rounded" width="300" alt="">
-                    <input type="file" name="image" class="form-control">
+                    <input type="file" name="image" value="{{asset($poster->image)}}" class="form-control">
                 </div>
 
                 <div class="form-group">
