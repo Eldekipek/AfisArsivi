@@ -92,7 +92,7 @@
                 data: {id: id},
                 success: function (data) {
                     $('#designerGet').html(data.name);
-                    $('#imageGet').html(data.image);
+                    $('#imageGet').prop('src',data.image);
                     $('#nameGet').html(data.title);
                     $('#tarihGet').html(data.tarih);
                     $('#yerGet').html(data.yer);
