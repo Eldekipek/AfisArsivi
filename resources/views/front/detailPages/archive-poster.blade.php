@@ -25,8 +25,13 @@
                             <span><a class="">{{$poster->title}}</a></span></strong>
                     </h2><!---->
                     <h1 class="title">{{$poster->date}}</h1> <!--Tarih--->
-                    <small class="caption lining-numbers">{{$poster->country}} |</small><!--Kullanıldığı yer-->
-                    <small class="caption lining-numbers" >{{$poster->printing_technique}},</small><!--Baskı tekniği-->
+                    <div style="white-space:nowrap;
+                        width: 200px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;">
+<small  class="caption lining-numbers">{{$poster->country}} |</small><!--Kullanıldığı yer-->
+<small class="caption lining-numbers">{{$poster->printing_technique}},</small><!--Baskı tekniği-->
+</div>
                     <small class="caption lining-numbers">{{$poster->dimensions}}</small><!--ebat-->
                 </span>
                         <div class="afis-detail">

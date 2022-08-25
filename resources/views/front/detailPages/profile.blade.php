@@ -51,8 +51,14 @@
                             <span><a class="">proje adı</a></span></strong>
                     </h2><!---->
                     <h1 class="title">tarih</h1> <!--Tarih--->
-                    <small class="caption lining-numbers">ülke |</small><!--Kullanıldığı yer-->
-                    <small class="caption lining-numbers">baskı tekniği,</small><!--Baskı tekniği-->
+                   <div style="white-space:nowrap;
+                        width: 200px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;">
+<small  class="caption lining-numbers">ülke |</small><!--Kullanıldığı yer-->
+<small  class="caption lining-numbers">baskı tekniği,</small><!--Baskı tekniği-->
+</div>
+
                     <small class="caption lining-numbers">ebat</small><!--ebat-->
                 </span>
                             <div class="afis-detail">

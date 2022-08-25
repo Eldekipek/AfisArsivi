@@ -1,7 +1,12 @@
 @extends("front.layout")
 @section("content")
-    <div class="about-title" style="margin:30px;border-bottom: 1px solid #0e0e0e;">
-        <h2>Kültürel Afişler Arşivi</h2>
+    <div class="about-title" style="display:flex;justify-content: space-between;margin:30px;border-bottom: 1px solid #0e0e0e;">
+        <div class="advertisement-title ">
+            <h2>Kültürel Afişler Arşivi</h2>
+        </div>
+        <div class="advertisement-poster-title ">
+            <p> 3 poster</p>
+        </div>
     </div>
 
 
@@ -27,9 +32,14 @@
                                 <span><a class="">{{($culture->title)}}</a></span></strong>
                                 </h2><!---->
                                 <h1 class="title"> {{($culture->date)}}</h1> <!--Tarih--->
-                                <small class="caption lining-numbers">{{($culture->country)}} |</small><!--Kullanıldığı yer-->
-                                <small class="caption lining-numbers">{{($culture->printing_technique)}},</small>
-                                <!--Baskı tekniği-->
+                                <div style="white-space:nowrap;
+            width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;">
+    <small  class="caption lining-numbers">{{($culture->country)}} |</small><!--Kullanıldığı yer-->
+    <small  class="caption lining-numbers">{{($culture->printing_technique)}},</small>
+                                    <!--Baskı tekniği-->
+</div>
                                 <small class="caption lining-numbers">{{($culture->dimensions)}}</small><!--ebat-->
                             </span>
 
