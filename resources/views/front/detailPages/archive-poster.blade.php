@@ -5,7 +5,7 @@
             <h2>Afiş Arşivi</h2>
         </div>
         <div class="advertisement-poster-title ">
-            <p> 3 poster</p>
+          <strong><p> {{$posters->count()}} Afiş</p></strong>
         </div>
     </div>
 
@@ -24,7 +24,7 @@
                 <div class="poster-item-info" style="padding: 15px;">
                 <span class="common-links">
                     <h2 class="title"><strong> <!--Tasarımcı adı--->
-                            <span><a href="" class="">{{$poster->getUser->name}}</a></span></strong>
+                            <span><a href="{{route('designer.profile',$poster->getUser->id)}}" class="">{{$poster->getUser->name}}</a></span></strong>
                     </h2>
                     <h2 class="title"><strong> <!--Proje adı--->
                             <span><a class="">{{$poster->title}}</a></span></strong>
@@ -80,6 +80,10 @@
                                             <small class="caption lining-numbers" id="yerGet">France |</small><!--Kullanıldığı yer-->
                                             <small class="caption lining-numbers" id="baskıGet">Offset,</small><!--Baskı tekniği-->
                                             <small class="caption lining-numbers" id="ebatGet">1000 x 700</small><!--ebat-->
+                                            <div class="culture-explanation" id="açıklamaGet">
+                                                <p>açıklamaq açıklama açıklama açıklama çıklamaq açıklama açıklama açıklama
+                                                çıklamaq açıklama açıklama açıklama</p>
+                                            </div>
                                         </span>
 
                     </div>
@@ -104,6 +108,7 @@
                     $('#yerGet').html(data.yer);
                     $('#ebatGet').html(data.ebat);
                     $('#baskıGet').html(data.baski);
+                    $('#açıklamaGet').html(data.contentt);
 
 
                     $('#detail-poster').modal('toggle');

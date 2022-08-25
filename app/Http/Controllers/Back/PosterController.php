@@ -159,7 +159,7 @@ class PosterController extends Controller
         $posters = Poster::where('id', $request->id)->first();
         $user = User::find($posters->user_id);
         return response()->json(['image' => $posters->image,'designer_name' => $posters->user_id, 'title' => $posters->title, 'name' => $user->name, 'user_id' => $user->id,
-            'yer' => $posters->country,'baski' => $posters->printing_technique,'ebat' => $posters->dimensions, 'tarih' => $posters->date]);
+            'yer' => $posters->country,'baski' => $posters->printing_technique,'ebat' => $posters->dimensions, 'tarih' => $posters->date,'contentt' => $posters->explanation]);
 
     }
 }

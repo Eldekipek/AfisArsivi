@@ -1,11 +1,11 @@
 @extends("front.layout")
 @section("content")
     <div class="about-title" style="display:flex;justify-content: space-between;margin:30px;border-bottom: 1px solid #0e0e0e;">
-        <div class="advertisement-title ">
+        <div class="culture-title ">
             <h2>Kültürel Afişler Arşivi</h2>
         </div>
-        <div class="advertisement-poster-title ">
-            <p> 3 poster</p>
+        <div class="culture-poster-title ">
+          <strong><p> {{$culture_poster->count()}} Afiş</p></strong>
         </div>
     </div>
 
@@ -85,7 +85,7 @@
                                             <small class="caption lining-numbers" id="yerGet">France |</small><!--Kullanıldığı yer-->
                                             <small class="caption lining-numbers" id="baskıGet">Offset,</small><!--Baskı tekniği-->
                                             <small class="caption lining-numbers" id="ebatGet">1000 x 700</small><!--ebat-->
-                                            <div class="culture-explanation">
+                                            <div class="culture-explanation" id="açıklamaGet">
                                                 <p>açıklamaq açıklama açıklama açıklama çıklamaq açıklama açıklama açıklama
                                                 çıklamaq açıklama açıklama açıklama</p>
                                             </div>
@@ -114,6 +114,7 @@
                     $('#yerGet').html(data.yer);
                     $('#ebatGet').html(data.ebat);
                     $('#baskıGet').html(data.baski);
+                    $('#açıklamaGet').html(data.contentt);
 
 
                     $('#detail-poster').modal('toggle');

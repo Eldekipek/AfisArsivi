@@ -5,7 +5,7 @@
             <h2>Reklam Afişleri Arşivi</h2>
         </div>
         <div class="advertisement-poster-title ">
-            <p> 3 poster</p>
+           <strong><p>{{$advertisement_poster->count()}} Afiş</p></strong>
         </div>
     </div>
 
@@ -88,6 +88,10 @@ text-overflow: ellipsis;">
                                             <small class="caption lining-numbers" id="yerGet">France |</small><!--Kullanıldığı yer-->
                                             <small class="caption lining-numbers" id="baskıGet">Offset,</small><!--Baskı tekniği-->
                                             <small class="caption lining-numbers" id="ebatGet">1000 x 700</small><!--ebat-->
+                                            <div class="culture-explanation" id="açıklamaGet">
+                                                <p>açıklamaq açıklama açıklama açıklama çıklamaq açıklama açıklama açıklama
+                                                çıklamaq açıklama açıklama açıklama</p>
+                                            </div>
                                         </span>
 
                     </div>
@@ -113,6 +117,7 @@ text-overflow: ellipsis;">
                     $('#yerGet').html(data.yer);
                     $('#ebatGet').html(data.ebat);
                     $('#baskıGet').html(data.baski);
+                    $('#açıklamaGet').html(data.contentt);
 
 
                     $('#detail-poster').modal('toggle');
