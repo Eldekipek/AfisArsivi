@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Back;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Device;
 use App\Models\Poster;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
@@ -150,5 +152,14 @@ class PosterController extends Controller
     public function delete($id){
         Poster::find($id)->delete();
         return back()->with('success','Poster başarıyla silindi');
+    }
+
+    function getDetail(Request $request)
+    {
+        $posters = Poster::where('id', $request->id)->first();
+        $user = User::find($posters->user_id);
+        return response()->json(['image' => $posters->image,'designer_name' => $posters->user_id, 'title' => $posters->title, 'name' => $user->name, 'user_id' => $user->id,
+            'yer' => $posters->country,'baski' => $posters->printing_technique,'ebat' => $posters->dimensions, 'tarih' => $posters->date]);
+
     }
 }

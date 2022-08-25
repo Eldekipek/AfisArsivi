@@ -79,6 +79,8 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/poster/create', 'store')->name("poster.create");
         Route::get('/poster/delete/{id}', 'delete')->name("delete.poster");
         Route::get('/poster/update/{id}', 'edit')->name("poster.update.index");
+        Route::get('/getDetail',  'getDetail')->name('poster.detail.get');
+
     });
     Route::controller(\App\Http\Controllers\Back\CategoryController::class)->group(function () {
         Route::get('/category', 'index')->name("category.index");

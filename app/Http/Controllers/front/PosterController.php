@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Config;
 use App\Models\Poster;
 use App\Models\User;
+use Illuminate\Http\Request;
 
 class PosterController extends Controller
 {
