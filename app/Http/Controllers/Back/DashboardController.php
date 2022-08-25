@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Back;
 
 use App\Http\Controllers\Controller;
+use App\Models\AboutPage;
 use App\Models\Country;
 use App\Models\User;
 use Carbon\Carbon;
@@ -48,5 +49,27 @@ class DashboardController extends Controller
         $user->save();
         return back()->with('success','Kullanıcı ayarları başarıyla güncellendi');
 
+    }
+
+    public function post(Request $request){
+        $request->validate([
+            'contentt'=>'required',
+            'title'=>'min:3',
+            'image'=>'required|image|mimes:jpeg,png,jpg|max:2048'
+        ]);
+
+        $page = AboutPage::find(1);
+        $page->title=$request->title;
+        $page->content=$request->contentt;
+
+        if ($request->hasFile('image')){
+            $imageName=str_slug($request->title).'.'.$request->image->getClientOriginalExtension();
+            $request->image->move(public_path('uploads'),$imageName);
+            $page->image='uploads/'.$imageName;
+        }
+        $page->save();
+        toastr()->success( 'Sayfa başarıyla güncellendi');
+
+        return redirect()->route('admin.page.index');
     }
 }
