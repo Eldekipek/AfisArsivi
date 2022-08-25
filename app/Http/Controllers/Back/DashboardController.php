@@ -41,7 +41,7 @@ class DashboardController extends Controller
         $user->birthday = $newDate;
 
         if ($request->hasFile('image')){
-        $imageName=$request->title.'.'.$request->image->getClientOriginalExtension();
+        $imageName=$request->name.'.'.$request->image->getClientOriginalExtension();
         $request->image->move(public_path('uploads'),$imageName);
         $user->image='uploads/'.$imageName;
         }
