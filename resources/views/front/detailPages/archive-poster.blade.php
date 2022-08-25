@@ -71,14 +71,7 @@
                                             <small class="caption lining-numbers">Offset,</small><!--Baskı tekniği-->
                                             <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
                                         </span>
-                        <div class="icons">
-                            <div class="like">
-                                <i class="fa-solid fa-heart"></i>
-                            </div>
-                            <div class="add-collection">
-                                <i class="fa-solid fa-folder-plus"></i>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 

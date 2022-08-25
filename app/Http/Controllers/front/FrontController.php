@@ -22,7 +22,7 @@ class FrontController extends Controller
 
     public function home(){
         $config = Config::find(1);
-        $posters=Poster::all();
+        $posters=Poster::all()->take(20);
         $designers=User::orderBy('created_at', 'DESC')->get()->take(1);
         $social_poster=Poster::where('category_id',3)->get()->take(8);
         $culture_poster=Poster::where('category_id',2)->get()->take(8);
