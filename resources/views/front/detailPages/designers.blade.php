@@ -1,6 +1,11 @@
 @extends("front.layout")
 @section("content")
     <div class="container">
+        <div class="about-title" style="display:flex;justify-content: space-between;margin:30px;border-bottom: 0.5px solid #0e0e0e;">
+            <div class="advertisement-title ">
+                <h2>Tasarımcılar</h2>
+            </div>
+            </div>
         <div class="designers-input m-5">
         <nav class="navbar navbar-light bg-light">
 
