@@ -2,20 +2,13 @@
 @section("content")
 
     <div class="about-title" style="margin:30px;border-bottom: 1px solid #0e0e0e;">
-        <h2>Hakkımızda</h2>
+        <h2>{{$page->title}}</h2>
     </div>
     <div class="container">
         <div class="about-content">
             @if($page->content) {!! $page->content !!} @else
-            <p>İnsanlığın bilgi paylaşımını sağlayan önemli hafızalarından biri arşivdir.</p>
-            <p> Teknoloji, insan hayatını ve insanlar arasındaki bilgi alışverişini kolaylaştırmıştır.</p>
-            <p> 19. yüzyıldan sonra bilgi ve iletişim teknolojilerinin gelişmesi, üretimi ve tüketimi hızla ve farkında olmadan artmıştır.</p>
-            <p> Zaman içerisinde gelişen ve dönüşen teknoloji, beraberinde dijitalleşmeyi getirmiştir.</p>
-            <p> Bu nedenle bilgi paylaşımları basılı materyallerden dijital ekranlara dönüşmüştür.</p>
-            <p> Bir tasarım geliştirme araştırması modeli olarak afişin dijital arşivinin uygulaması, afişin var olması ve araştırmalarda kullanılmasını doğru biçimde sağlamaya yönelik bir bir adımdır.</p>
             @endif
         </div>
-        <h2>Sergiler</h2>
         <p><img class="mr-1" loading="lazy" class="alignnone size-medium wp-image-105" src="/app/uploads/2021/01/typographicpostersexhibition1-424x283.jpg"
                 alt="" width="424" height="283" srcset="https://www.typographicposters.com/app/uploads/2021/01/typographicpostersexhibition1-424x283.jpg 424w,
                 https://www.typographicposters.com/app/uploads/2021/01/typographicpostersexhibition1-1000x667.jpg 1000w, https://www.typographicposters.com/app/uploads/2021/01/typographicpostersexhibition1-200x133.jpg 200w,

@@ -36,7 +36,7 @@ class FrontController extends Controller
         $config = Config::find(1);
         $page = AboutPage::find(1);
 
-        return view('front.detailPages.about', compact('config' , 'page'));
+        return view('back.about', compact('config' , 'page'));
 
     }
 

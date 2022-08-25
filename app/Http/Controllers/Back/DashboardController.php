@@ -55,7 +55,7 @@ class DashboardController extends Controller
         $request->validate([
             'contentt'=>'required',
             'title'=>'min:3',
-            'image'=>'required|image|mimes:jpeg,png,jpg|max:2048'
+            'image'=>'image|mimes:jpeg,png,jpg|max:2048'
         ]);
 
         $page = AboutPage::find(1);
