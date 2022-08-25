@@ -35,7 +35,7 @@
                         <div class="poster-card-top">
                             <picture>
                                 <img
-                                    src="{{asset(')}}"
+                                    src="{{asset('')}}"
                                     alt="">
                             </picture>
                         </div>
