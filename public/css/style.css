@@ -252,13 +252,12 @@ h1.big{
     padding: 60px 20px 20px 20px;
 }
 .poster-item{
-    flex-direction: column;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 .poster-item .poster-items-{
-    width: calc((100% - 60px) / 5);
+    width: calc((100% - 60px) / 4);
     overflow: hidden;
     box-shadow: 0 0 15px 1px #00000012;
     text-decoration: none !important;

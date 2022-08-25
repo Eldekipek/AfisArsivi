@@ -3,11 +3,15 @@
     <div class="about-title" style="margin:30px;border-bottom: 1px solid #0e0e0e;">
         <h2>Reklam Afişleri Arşivi</h2>
     </div>
-    @if(isset($advertisement_poster)&&!is_null($advertisement_poster))
-        @foreach($advertisement_poster as $adv)
-            <div class="poster-article">
+
+
+
+
+            <div class="container mb-5">
+                @if(isset($advertisement_poster)&&!is_null($advertisement_poster))
                 <article class="poster-item ">
-                    <a href="" class="poster-items- w-imgs">
+                    @foreach($advertisement_poster as $adv)
+                    <div href="" class="poster-items- w-imgs">
                         <div class="poster-card-top">
                             <picture>
                                 <img
@@ -15,21 +19,21 @@
                                     alt="">
                             </picture>
                         </div>
-                        <div class="poster-item-info">
-                <span class="common-links">
-                    <h2 class="title"><strong> <!--Tasarımcı adı--->
-                            <span><a href="{{route('designer.profile',$adv->getUser->id)}}"
+                        <div class="poster-item-info" style="padding: 15px;">
+                            <span class="common-links">
+                                <h2 class="title"><strong> <!--Tasarımcı adı--->
+                                    <span><a href="{{route('designer.profile',$adv->getUser->id)}}"
                                      class="">{{($adv->getUser->name)}}</a></span></strong>
-                    </h2>
-                    <h2 class="title"><strong> <!--Proje adı--->
-                            <span><a class="">{{($adv->title)}}</a></span></strong>
-                    </h2><!---->
-                    <h1 class="title"> {{($adv->date)}}</h1> <!--Tarih--->
-                    <small class="caption lining-numbers">{{($adv->country)}} |</small><!--Kullanıldığı yer-->
-                    <small class="caption lining-numbers">{{($adv->printing_technique)}},</small><!--Baskı tekniği-->
-                    <small class="caption lining-numbers">{{($adv->dimensions)}}</small><!--ebat-->
-                </span>
-                            <div class="afis-buttons">
+                                </h2>
+                                <h2 class="title"><strong> <!--Proje adı--->
+                                    <span><div class="">{{($adv->title)}}</div></span></strong>
+                                </h2><!---->
+                                <h1 class="title"> {{($adv->date)}}</h1> <!--Tarih--->
+                                <small class="caption lining-numbers">{{($adv->country)}} |</small><!--Kullanıldığı yer-->
+                                <small class="caption lining-numbers">{{($adv->printing_technique)}},</small><!--Baskı tekniği-->
+                                <small class="caption lining-numbers">{{($adv->dimensions)}}</small><!--ebat-->
+                            </span>
+
 
                                 <div class="afis-detail">
                                     <!-- Button trigger modal -->
@@ -37,8 +41,14 @@
                                             data-target="#exampleModal">
                                         Detay
                                     </button>
-                                @endforeach
-                                @endif
+                                </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </article>
+                @endif
+            </div>
+
                                 <!-- Modal -->
                                     <div class="modal fade" id="exampleModal" tabindex="-1"
                                          aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -84,12 +94,5 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                            </div>
-
-                        </div>
-                    </a>
-                </article>
-            </div>
 @endsection

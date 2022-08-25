@@ -92,7 +92,6 @@
         </div>
     </div>
 
-
     <div class="module-collection white-theme">
         <div class="collection-info">
             <div class="collection-info-heading">
@@ -111,43 +110,42 @@
             </div>
         </div>
     </div>
-    @if(isset($advertisement_poster)&&!is_null($advertisement_poster))
-        @foreach($advertisement_poster as $adv)
-            <div class="poster-article">
+            <div class="container">
+                @if(isset($advertisement_poster)&&!is_null($advertisement_poster))
 
-                <article class="poster-item ">
-                    <a href="{{route('poster.advertisement')}}" class="poster-items- w-imgs">
-                        <div class="poster-card-top">
-                            <picture>
-                                <img
-                                    src="{{asset($adv->image)}}"
-                                    alt="">
-                            </picture>
-                        </div>
-                    </a>
-                    <div class="poster-item-info">
-                <span class="common-links">
-                    <h2 class="title"><strong> <!--Tasarımcı adı--->
-                            <span><a href="{{route('designer.profile',$adv->getUser->id)}}"
-                                     class="">{{($adv->getUser->name)}}</a></span></strong>
-                    </h2>
-                    <h2 class="title"><strong> <!--Proje adı--->
-                            <span><a class="">{{($adv->title)}}</a></span></strong>
-                    </h2><!---->
-                    <h1 class="title"> {{($adv->date)}}</h1> <!--Tarih--->
-                    <small class="caption lining-numbers">{{($adv->country)}} |</small><!--Kullanıldığı yer-->
-                    <small class="caption lining-numbers">{{($adv->printing_technique)}},</small><!--Baskı tekniği-->
-                    <small class="caption lining-numbers">{{($adv->dimensions)}}</small><!--ebat-->
-                </span>
-                    </div>
+                    <article class="poster-item ">
+                        @foreach($advertisement_poster as $adv)
+                        <a href="{{route('poster.advertisement')}}" class="poster-items- w-imgs" style="color: #464646;  height: 470px;">
+                            <div class="poster-card-top">
+                                <picture>
+                                    <img
+                                        src="{{asset($adv->image)}}"
+                                        alt="">
+                                </picture>
+                            </div>
 
-                </article>
+                                <div class="poster-item-info" style="padding: 30px;">
+                            <span class="common-links">
+                                <h2 class="title"><strong> <!--Tasarımcı adı--->
+                                        <span><div href="{{route('designer.profile',$adv->getUser->id)}}"
+                                                 class="">{{($adv->getUser->name)}}</div></span></strong>
+                                </h2>
+                                <h2 class="title"><strong> <!--Proje adı--->
+                                        <span><div class="">{{($adv->title)}}</div></span></strong>
+                                </h2><!---->
+                                <h1 class="title"> {{($adv->date)}}</h1> <!--Tarih--->
+                                <small class="caption lining-numbers">{{($adv->country)}} |</small><!--Kullanıldığı yer-->
+                                <small class="caption lining-numbers">{{($adv->printing_technique)}},</small><!--Baskı tekniği-->
+                                <small class="caption lining-numbers">{{($adv->dimensions)}}</small><!--ebat-->
+                            </span>
+                            </div>
+                        </a>
+                        @endforeach
+                    </article>
+                @endif
             </div>
-        @endforeach
-    @endif
 
-
-            <div class="module-collection white-theme">
+    <div class="module-collection white-theme">
                 <div class="collection-info">
                     <div class="collection-info-heading">
                         <div class="collection-titles">
@@ -164,11 +162,13 @@
                     </div>
                 </div>
             </div>
-    @if(isset($culture_poster)&&!is_null($culture_poster))
-        @foreach($culture_poster as $culture)
-            <div class="poster-article">
+
+
+            <div class="container">
+                @if(isset($culture_poster)&&!is_null($culture_poster))
                 <article class="poster-item ">
-                    <a href="{{route('poster.culture')}}" class="poster-items- w-imgs">
+                    @foreach($culture_poster as $culture)
+                    <a href="{{route('poster.culture')}}" class="poster-items- w-imgs" style="color: #464646;  height: 470px;">
                         <div class="poster-card-top">
                             <picture>
                                 <img
@@ -176,14 +176,14 @@
                                     alt="">
                             </picture>
                         </div>
-                    </a>
-                    <div class="poster-item-info">
+
+                    <div class="poster-item-info" style="padding: 30px;">
                 <span class="common-links">
                     <h2 class="title"><strong> <!--Tasarımcı adı--->
-                            <span><a href="{{route('designer.profile',$culture->getUser->id)}}" class="">{{($culture->getUser->name)}}</a></span></strong>
+                            <span><div href="{{route('designer.profile',$culture->getUser->id)}}" class="">{{($culture->getUser->name)}}</div></span></strong>
                     </h2>
                     <h2 class="title"><strong> <!--Proje adı--->
-                            <span><a class="">{{($culture->title)}}</a></span></strong>
+                            <span><div class="">{{($culture->title)}}</div></span></strong>
                     </h2><!---->
                     <h1 class="title"> {{($culture->date)}}</h1> <!--Tarih--->
                     <small class="caption lining-numbers">{{($culture->country)}} |</small><!--Kullanıldığı yer-->
@@ -191,12 +191,13 @@
                     <small class="caption lining-numbers">{{($culture->dimensions)}}</small><!--ebat-->
                 </span>
                     </div>
-
+                    </a>
+                    @endforeach
                 </article>
-
+                @endif
             </div>
-        @endforeach
-    @endif
+
+
 
 
             <div class="module-collection white-theme">
@@ -216,11 +217,13 @@
                     </div>
                 </div>
             </div>
-    @if(isset($social_poster)&&!is_null($social_poster))
-        @foreach($social_poster as $social)
-            <div class="poster-article">
+
+
+            <div class="container mb-5">
+                @if(isset($social_poster)&&!is_null($social_poster))
                 <article class="poster-item ">
-                    <a href="{{route('poster.social')}}" class="poster-items- w-imgs">
+                    @foreach($social_poster as $social)
+                    <a href="{{route('poster.social')}}" class="poster-items- w-imgs" style="color: #464646;  height: 470px;">
                         <div class="poster-card-top">
                             <picture>
                                 <img
@@ -228,14 +231,14 @@
                                     alt="">
                             </picture>
                         </div>
-                    </a>
-                    <div class="poster-item-info">
+
+                    <div class="poster-item-info" style="padding: 30px;">
                 <span class="common-links">
                     <h2 class="title"><strong> <!--Tasarımcı adı--->
-                            <span><a href="{{route('designer.profile',$social->getUser->id)}}" class="">{{($social->getUser->name)}}</a></span></strong>
+                            <span><div href="{{route('designer.profile',$social->getUser->id)}}" class="">{{($social->getUser->name)}}</div></span></strong>
                     </h2>
                     <h2 class="title"><strong> <!--Proje adı--->
-                            <span><a class="">{{($social->title)}}</a></span></strong>
+                            <span><div class="">{{($social->title)}}</div></span></strong>
                     </h2><!---->
                     <h1 class="title"> {{($social->date)}}</h1> <!--Tarih--->
                     <small class="caption lining-numbers">{{($social->country)}} |</small><!--Kullanıldığı yer-->
@@ -243,11 +246,13 @@
                     <small class="caption lining-numbers">{{($social->dimensions)}}</small><!--ebat-->
                 </span>
                     </div>
-
+                    </a>
+                    @endforeach
                 </article>
+                @endif
             </div>
-        @endforeach
-    @endif
+
+
 
 @endsection
 
