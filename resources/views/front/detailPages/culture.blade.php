@@ -85,6 +85,10 @@
                                             <small class="caption lining-numbers" id="yerGet">France |</small><!--Kullanıldığı yer-->
                                             <small class="caption lining-numbers" id="baskıGet">Offset,</small><!--Baskı tekniği-->
                                             <small class="caption lining-numbers" id="ebatGet">1000 x 700</small><!--ebat-->
+                                            <div class="culture-explanation">
+                                                <p>açıklamaq açıklama açıklama açıklama çıklamaq açıklama açıklama açıklama
+                                                çıklamaq açıklama açıklama açıklama</p>
+                                            </div>
                                         </span>
 
                     </div>
