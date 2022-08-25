@@ -46,7 +46,7 @@
 
 
                 <div class="form-group">
-                    <label for="">afiş Fotoğrafı</label>
+                    <label for="">Afiş Fotoğrafı</label>
                     <input type="file" name="image" class="form-control" required>
                 </div>
                 <div class="form-group">

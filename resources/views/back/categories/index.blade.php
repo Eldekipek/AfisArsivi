@@ -33,8 +33,7 @@
                             <thead>
                             <tr>
                                 <th>Kategori Adı</th>
-                                <th>Poster Sayısı</th>
-                                <th>Durum</th>
+                                <th>Afiş Sayısı</th>
                                 <th>İşlemler</th>
                             </tr>
                             </thead>
@@ -42,10 +41,8 @@
                             @foreach($categories as $category)
                                 <tr>
                                     <td>{{$category->name}}</td>
-                                    <td>kategoriye ait makale sayısı</td>
+                                    <td>Kategoriye ait Afiş sayısı</td>
 
-                                    <td>
-                                        <input class="switch" category-id="{{$category->id}}" type="checkbox" data-on="Aktif" data-off="Pasif" data-onstyle="success" data-offstyle="danger" @if($category->status==1) checked @endif data-toggle="toggle">
                                     <td>
                                         <a category-id="{{$category->id}}" class="btn btn-sm btn-primary edit-click" title="Kategoriyi Düzenle"><i class="fa fa-edit text-white"></i></a>
                                         <a category-id="{{$category->id}}" category-name="{{$category->name}}" category-count="kategoriye ait makale sayısı" class="btn btn-sm btn-danger remove-click" title="Kategoriyi Sil"><i class="fa fa-times text-white"></i></a>
@@ -79,6 +76,7 @@
                             <input id="category" type="text" class="form-control" name="category">
                             <input type="hidden" name="id" id="category_id">
                         </div>
+
 {{--                        <div class="form-group">--}}
 {{--                            <label for="">Kategori Slug</label>--}}
 {{--                            <input id="slug" type="text" class="form-control" name="slug">--}}

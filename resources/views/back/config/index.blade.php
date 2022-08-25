@@ -11,33 +11,7 @@
 
                 <form action="{{route('config.update')}}" method="post" enctype="multipart/form-data">
                     @csrf
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Site Başlığı</label>
-                                <input type="text" name="title" required class="form-control" >
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Site Logo</label>
-                                <input type="file" class="form-control" name="logo">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Site Favicon</label>
-                                <input type="file" class="form-control" name="favicon">
-                            </div>
-                        </div>
-                    </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -55,8 +29,8 @@
                     <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Github</label>
-                                        <input type="text" class="form-control" name="github" value="">
+                                        <label>Facebook</label>
+                                        <input type="text" class="form-control" name="facebook" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">

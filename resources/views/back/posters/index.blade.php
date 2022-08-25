@@ -37,7 +37,7 @@
                         <td>{{$poster->country}}</td>
                         <td>{{$poster->created_at->diffForHumans()}}</td>
                         <td>
-                        <td>
+
                             <a href="{{route("poster.update.index", $poster->id)}}" title="Düzenle" class="btn btn-sm btn-primary"><i class="fa fa-pen"></i></a>
                             <a href="{{route("delete.poster", $poster->id)}}" title="Sil" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a>
 

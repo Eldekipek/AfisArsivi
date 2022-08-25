@@ -18,15 +18,12 @@ class ConfigController extends Controller
 
     public function update(Request $request){
         $config=Config::find(1);
-        $config->title=$request->title;
-        $config->active=$request->active;
         $config->twitter=$request->twitter;
         $config->instagram=$request->instagram;
-        $config->github=$request->github;
+        $config->facebook=$request->facebook;
         $config->linkedin=$request->linkedin;
 
-
-        if ($request->hasFile('logo')){
+       /* if ($request->hasFile('logo')){
             $logo=str_slug($request->title).'-logo.'.$request->logo->getClientOriginalExtension();
             $request->logo->move(public_path('uploads'),$logo);
             $config->logo='uploads/'.$logo;
@@ -35,7 +32,7 @@ class ConfigController extends Controller
             $favicon=str_slug($request->title).'-favicon.'.$request->favicon->getClientOriginalExtension();
             $request->favicon->move(public_path('uploads'),$favicon);
             $config->favicon='uploads/'.$favicon;
-        }
+        }*/
         $config->save();
         toastr()->success('Ayarlar başarıyla güncellendi');
         return redirect()->back();

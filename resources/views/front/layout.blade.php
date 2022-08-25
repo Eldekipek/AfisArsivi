@@ -65,13 +65,15 @@
             <div class="footer-img col-12 col-lg-6" >
                 <img src="{{asset('./images/afisfooterimg.png')}}" style="width: 400px; height: 80px;" alt="">
             </div>
+            @if(isset($config)&&!is_null($config))
             <div class="icons col-12 col-lg-6" style="display: flex;
             align-items: center;">
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-twitter">{{$config->twitter}}</i></a>
+                <a href=""><i class="fa-brands fa-facebook">{{$config->facebook}}</i></a>
+                <a href=""><i class="fa-brands fa-instagram">{{$config->instagram}}</i></a>
+                <a href=""><i class="fa-brands fa-linkedin">{{$config->linkedin}}</i></a>
             </div>
+            @endif
         </div>
     </div>
 </div>

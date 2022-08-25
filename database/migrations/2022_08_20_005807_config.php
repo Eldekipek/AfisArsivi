@@ -15,13 +15,10 @@ class Config extends Migration
     {
         Schema::create('configs', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('logo')->nullable();
-            $table->string('favicon')->nullable();
-            $table->integer('active')->default(1);
+            $table->string('title')->nullable();
             $table->string('twitter')->nullable();
             $table->string('instagram')->nullable();
-            $table->string('github')->nullable();
+            $table->string('facebook')->nullable();
             $table->string('linkedin')->nullable();
 
             $table->timestamps();
