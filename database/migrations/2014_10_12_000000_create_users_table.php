@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('image')->nullable();
             $table->string('website')->nullable();
-            $table->unsignedBigInteger('country_id')->nullable()->default(0);
+            $table->unsignedBigInteger('country_id')->nullable();
             $table->date('birthday')->nullable();
             $table->foreign('country_id')->references('id')->on('countries');
             $table->rememberToken();
