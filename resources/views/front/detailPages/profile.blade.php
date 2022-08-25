@@ -10,7 +10,7 @@
                 <div class="profile-img">
                     <div>
                         <picture>
-                            <img src="{{$designer->image}}" alt="">
+                            <img src="{{asset($designer->image)}}" alt="">
                         </picture>
                     </div>
                 </div>

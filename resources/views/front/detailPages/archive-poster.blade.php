@@ -5,38 +5,39 @@
     </div>
 
     <div class="poster-article">
+        @if(isset($posters)&&!is_null($posters))
+            @foreach($posters as $poster)
         <article class="poster-item ">
             <a href="" class="poster-items- w-imgs">
                 <div class="poster-card-top">
                     <picture>
                         <img
-                            src="{{asset('https://images.typographicposters.com/search-2x-p3/apeloig/0117738-tnt-affiche-saison-2012-13-rvb-01.jpg')}}"
+                            src="{{asset($poster->image)}}"
                             alt="">
                     </picture>
                 </div>
                 <div class="poster-item-info">
                 <span class="common-links">
                     <h2 class="title"><strong> <!--Tasarımcı adı--->
-                            <span><a href="" class="">İpek Eldek</a></span></strong>
+                            <span><a href="" class="">{{$poster->getUser->name}}</a></span></strong>
                     </h2>
                     <h2 class="title"><strong> <!--Proje adı--->
-                            <span><a class="">Studio Philippe Apeloig</a></span></strong>
+                            <span><a class="">{{$poster->title}}</a></span></strong>
                     </h2><!---->
-                    <h1 class="title"> 2012-2013”, 2012</h1> <!--Tarih--->
-                    <small class="caption lining-numbers">France |</small><!--Kullanıldığı yer-->
-                    <small class="caption lining-numbers">Offset,</small><!--Baskı tekniği-->
-                    <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
+                    <h1 class="title">{{$poster->date}}</h1> <!--Tarih--->
+                    <small class="caption lining-numbers">{{$poster->country}} |</small><!--Kullanıldığı yer-->
+                    <small class="caption lining-numbers">{{$poster->printing_technique}},</small><!--Baskı tekniği-->
+                    <small class="caption lining-numbers">{{$poster->dimensions}}</small><!--ebat-->
                 </span>
                     <div class="afis-buttons">
-                        <div class="icons">
 
-                        </div>
                         <div class="afis-detail">
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn- border" data-toggle="modal" data-target="#exampleModal">
                                 Detay
                             </button>
-
+                        @endforeach
+                        @endif
                             <!-- Modal -->
                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
@@ -56,10 +57,10 @@
                                                                          align-items: center;">
                                         <span class="common-links">
                                             <h2 class="title"><strong> <!--Tasarımcı adı--->
-                                                <span><a href="/apeloig" class="">İpek Eldek</a></span></strong>
+                                                <span><a href="" class="">İpek Eldek</a></span></strong>
                                             </h2>
                                             <h2 class="title"><strong> <!--Proje adı--->
-                                                <span><a href="/apeloig" class="">Studio Philippe Apeloig</a></span></strong>
+                                                <span><a href="" class="">Studio Philippe Apeloig</a></span></strong>
                                             </h2><!---->
                                             <h1 class="title"> 2012-2013”, 2012</h1> <!--Tarih--->
                                             <small class="caption lining-numbers">France |</small><!--Kullanıldığı yer-->

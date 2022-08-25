@@ -1,11 +1,11 @@
 @extends("front.layout")
 @section("content")
 
-<div class="posters-top">
-            @if(isset($posters)&&!is_null($posters))
+    <div class="posters-top">
+        @if(isset($posters)&&!is_null($posters))
 
-                <div class="poster-inner">
-                    @foreach($posters as $poster)
+            <div class="poster-inner">
+                @foreach($posters as $poster)
                     <a href="{{route('poster.archive')}}" class="poster-items-link w-imgs">
                         <div>
                             <picture>
@@ -15,20 +15,20 @@
                             </picture>
                         </div>
                     </a>
-                    @endforeach
-                    @endif
-                </div>
-</div>
+                @endforeach
+                @endif
+            </div>
+    </div>
 
 
-     <!--Giris sayfası--->
+    <!--Giris sayfası--->
 
     <div class="module-profiles gray-theme mt-5">
         <div class="row" style="display: flex">
             <div class="col-12 col-lg-2 pt-2">
                 <h1 class="big highlight tight side-title-home" style="color: white; font-size:50px">Yeni Tasarımcı</h1>
                 @if(isset($designers)&&!is_null($designers))
-                @foreach($designers as $designer)
+                    @foreach($designers as $designer)
             </div>
             <div class="col-12 col-lg-10 pt-3">
                 <a href="{{route('designer.profile',$designer->id)}}" class="module-profiles-link">
@@ -92,6 +92,7 @@
         </div>
     </div>
 
+
     <div class="module-collection white-theme">
         <div class="collection-info">
             <div class="collection-info-heading">
@@ -104,134 +105,149 @@
                 </div>
 
             </div>
+
             <div class="collection-info-footer">
                 <small>{{$advertisement_poster->count()}} Afiş</small>
             </div>
         </div>
     </div>
-    <div class="poster-article">
-    <article class="poster-item ">
-        <a href="{{route('poster.advertisement')}}" class="poster-items- w-imgs">
-            <div class="poster-card-top">
-                <picture>
-                    <img
-                        src="{{asset('https://images.typographicposters.com/search-2x-p3/apeloig/0117738-tnt-affiche-saison-2012-13-rvb-01.jpg')}}"
-                        alt="">
-                </picture>
-            </div>
-        </a>
-        <div class="poster-item-info">
+    @if(isset($advertisement_poster)&&!is_null($advertisement_poster))
+        @foreach($advertisement_poster as $adv)
+            <div class="poster-article">
+
+                <article class="poster-item ">
+                    <a href="{{route('poster.advertisement')}}" class="poster-items- w-imgs">
+                        <div class="poster-card-top">
+                            <picture>
+                                <img
+                                    src="{{asset($adv->image)}}"
+                                    alt="">
+                            </picture>
+                        </div>
+                    </a>
+                    <div class="poster-item-info">
                 <span class="common-links">
                     <h2 class="title"><strong> <!--Tasarımcı adı--->
-                            <span><a href="" class="">İpek Eldek</a></span></strong>
+                            <span><a href="{{route('designer.profile',$adv->getUser->id)}}"
+                                     class="">{{($adv->getUser->name)}}</a></span></strong>
                     </h2>
                     <h2 class="title"><strong> <!--Proje adı--->
-                            <span><a class="">Studio Philippe Apeloig</a></span></strong>
+                            <span><a class="">{{($adv->title)}}</a></span></strong>
                     </h2><!---->
-                    <h1 class="title"> 2012-2013”, 2012</h1> <!--Tarih--->
-                    <small class="caption lining-numbers">France |</small><!--Kullanıldığı yer-->
-                    <small class="caption lining-numbers">Offset,</small><!--Baskı tekniği-->
-                    <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
+                    <h1 class="title"> {{($adv->date)}}</h1> <!--Tarih--->
+                    <small class="caption lining-numbers">{{($adv->country)}} |</small><!--Kullanıldığı yer-->
+                    <small class="caption lining-numbers">{{($adv->printing_technique)}},</small><!--Baskı tekniği-->
+                    <small class="caption lining-numbers">{{($adv->dimensions)}}</small><!--ebat-->
                 </span>
-        </div>
-
-    </article>
-</div>
-
-
-    <div class="module-collection white-theme">
-        <div class="collection-info">
-            <div class="collection-info-heading">
-                <div class="collection-titles">
-                    <div>
-                        <br>
-                        <h1 class="big">Kültürel Afişler</h1>
                     </div>
 
-                </div>
+                </article>
+            </div>
+        @endforeach
+    @endif
 
+
+            <div class="module-collection white-theme">
+                <div class="collection-info">
+                    <div class="collection-info-heading">
+                        <div class="collection-titles">
+                            <div>
+                                <br>
+                                <h1 class="big">Kültürel Afişler</h1>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="collection-info-footer">
+                        <small>{{$culture_poster->count()}} Afiş</small>
+                    </div>
+                </div>
             </div>
-            <div class="collection-info-footer">
-                <small>{{$culture_poster->count()}} Afiş</small>
-            </div>
-        </div>
-    </div>
-    <div class="poster-article">
-    <article class="poster-item ">
-        <a href="{{route('poster.culture')}}" class="poster-items- w-imgs">
-            <div class="poster-card-top">
-                <picture>
-                    <img
-                        src="{{asset('https://images.typographicposters.com/search-2x-p3/apeloig/0117738-tnt-affiche-saison-2012-13-rvb-01.jpg')}}"
-                        alt="">
-                </picture>
-            </div>
-        </a>
-        <div class="poster-item-info">
+    @if(isset($culture_poster)&&!is_null($culture_poster))
+        @foreach($culture_poster as $culture)
+            <div class="poster-article">
+                <article class="poster-item ">
+                    <a href="{{route('poster.culture')}}" class="poster-items- w-imgs">
+                        <div class="poster-card-top">
+                            <picture>
+                                <img
+                                    src="{{asset($culture->image)}}"
+                                    alt="">
+                            </picture>
+                        </div>
+                    </a>
+                    <div class="poster-item-info">
                 <span class="common-links">
                     <h2 class="title"><strong> <!--Tasarımcı adı--->
-                            <span><a href="" class="">İpek Eldek</a></span></strong>
+                            <span><a href="{{route('designer.profile',$culture->getUser->id)}}" class="">{{($culture->getUser->name)}}</a></span></strong>
                     </h2>
                     <h2 class="title"><strong> <!--Proje adı--->
-                            <span><a class="">Studio Philippe Apeloig</a></span></strong>
+                            <span><a class="">{{($culture->title)}}</a></span></strong>
                     </h2><!---->
-                    <h1 class="title"> 2012-2013”, 2012</h1> <!--Tarih--->
-                    <small class="caption lining-numbers">France |</small><!--Kullanıldığı yer-->
-                    <small class="caption lining-numbers">Offset,</small><!--Baskı tekniği-->
-                    <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
+                    <h1 class="title"> {{($culture->date)}}</h1> <!--Tarih--->
+                    <small class="caption lining-numbers">{{($culture->country)}} |</small><!--Kullanıldığı yer-->
+                    <small class="caption lining-numbers">{{($culture->printing_technique)}},</small><!--Baskı tekniği-->
+                    <small class="caption lining-numbers">{{($culture->dimensions)}}</small><!--ebat-->
                 </span>
-        </div>
-
-    </article>
-
-</div>
-
-
-    <div class="module-collection white-theme">
-        <div class="collection-info">
-            <div class="collection-info-heading">
-                <div class="collection-titles">
-                    <div>
-                        <br>
-                        <h1 class="big">Sosyal Afişler</h1>
                     </div>
 
-                </div>
+                </article>
 
             </div>
-            <div class="collection-info-footer">
-                <small>{{$social_poster->count()}} Afiş</small>
+        @endforeach
+    @endif
+
+
+            <div class="module-collection white-theme">
+                <div class="collection-info">
+                    <div class="collection-info-heading">
+                        <div class="collection-titles">
+                            <div>
+                                <br>
+                                <h1 class="big">Sosyal Afişler</h1>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="collection-info-footer">
+                        <small>{{$social_poster->count()}} Afiş</small>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="poster-article">
-    <article class="poster-item ">
-        <a href="{{route('poster.social')}}" class="poster-items- w-imgs">
-            <div class="poster-card-top">
-                <picture>
-                    <img
-                        src="{{asset('https://images.typographicposters.com/search-2x-p3/apeloig/0117738-tnt-affiche-saison-2012-13-rvb-01.jpg')}}"
-                        alt="">
-                </picture>
-            </div>
-        </a>
-        <div class="poster-item-info">
+    @if(isset($social_poster)&&!is_null($social_poster))
+        @foreach($social_poster as $social)
+            <div class="poster-article">
+                <article class="poster-item ">
+                    <a href="{{route('poster.social')}}" class="poster-items- w-imgs">
+                        <div class="poster-card-top">
+                            <picture>
+                                <img
+                                    src="{{asset($social->image)}}"
+                                    alt="">
+                            </picture>
+                        </div>
+                    </a>
+                    <div class="poster-item-info">
                 <span class="common-links">
                     <h2 class="title"><strong> <!--Tasarımcı adı--->
-                            <span><a href="" class="">İpek Eldek</a></span></strong>
+                            <span><a href="{{route('designer.profile',$social->getUser->id)}}" class="">{{($social->getUser->name)}}</a></span></strong>
                     </h2>
                     <h2 class="title"><strong> <!--Proje adı--->
-                            <span><a class="">Studio Philippe Apeloig</a></span></strong>
+                            <span><a class="">{{($social->title)}}</a></span></strong>
                     </h2><!---->
-                    <h1 class="title"> 2012-2013”, 2012</h1> <!--Tarih--->
-                    <small class="caption lining-numbers">France |</small><!--Kullanıldığı yer-->
-                    <small class="caption lining-numbers">Offset,</small><!--Baskı tekniği-->
-                    <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
+                    <h1 class="title"> {{($social->date)}}</h1> <!--Tarih--->
+                    <small class="caption lining-numbers">{{($social->country)}} |</small><!--Kullanıldığı yer-->
+                    <small class="caption lining-numbers">{{($social->printing_technique)}},</small><!--Baskı tekniği-->
+                    <small class="caption lining-numbers">{{($social->dimensions)}}</small><!--ebat-->
                 </span>
-        </div>
+                    </div>
 
-    </article>
-</div>
+                </article>
+            </div>
+        @endforeach
+    @endif
 
 @endsection
 
