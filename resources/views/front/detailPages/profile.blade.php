@@ -9,9 +9,8 @@
                 @if(isset($designer)&&!is_null($designer))
                 <div class="profile-img">
                     <div>
-                        <picture>
                             <img src="{{asset($designer->image)}}" alt="">
-                        </picture>
+
                     </div>
                 </div>
                 <div class="profile-name">
@@ -28,32 +27,85 @@
         @endif
     </div>
 
-    <div class="container pt-1">
-        <div class="row">
-            <article class="poster-item col-6 col-md-2">
-                <a href="" class="poster-items-link w-imgs">
-                    <div>
-                        <picture>
-                            <img src="{{asset('https://images.typographicposters.com/search-2x-p3/erich-brechbuhl/filmpreis-2019.jpg')}}" alt="">
-                        </picture>
-                    </div>
-                </a>
-                <div class="poster-item-info">
-                  <span class="common-links">
+    <div class="container mb-5">
+        <!----if isset buraya gelecek sdfghj--->
+            <article class="poster-item ">
+                <!-----foreach buraya asdfgyhujı--->
+                    <div href="" class="poster-items- w-imgs">
+                        <div class="poster-card-top">
+                            <picture>
+                                <img
+                                    src="{{asset(')}}"
+                                    alt="">
+                            </picture>
+                        </div>
+                        <div class="poster-item-info" style="padding: 15px;">
+                <span class="common-links">
                     <h2 class="title"><strong> <!--Tasarımcı adı--->
-                            <span><a href="" class="">İpek Eldek</a></span></strong>
+                            <span><a href="" class="">tasarımcı ismi</a></span></strong>
                     </h2>
                     <h2 class="title"><strong> <!--Proje adı--->
-                            <span><a class="">Studio Philippe Apeloig</a></span></strong>
+                            <span><a class="">proje adı</a></span></strong>
                     </h2><!---->
-                    <h1 class="title"> 2012-2013”, 2012</h1> <!--Tarih--->
-                    <small class="caption lining-numbers">France |</small><!--Kullanıldığı yer-->
-                    <small class="caption lining-numbers">Offset,</small><!--Baskı tekniği-->
-                    <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
+                    <h1 class="title">tarih</h1> <!--Tarih--->
+                    <small class="caption lining-numbers">ülke |</small><!--Kullanıldığı yer-->
+                    <small class="caption lining-numbers">baskı tekniği,</small><!--Baskı tekniği-->
+                    <small class="caption lining-numbers">ebat</small><!--ebat-->
                 </span>
-                </div>
+                            <div class="afis-detail">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn- border" data-toggle="modal" data-target="#exampleModal">
+                                    Detay
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+               <!------end foreach-->
             </article>
+        <!----endif buraya---->
+    </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Afiş Başlığı</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <picture>
+                        <img style="width: 250px; height: 250px; margin: auto;display: flex" src="{{}}" alt="">
+                    </picture>
+                    <div class="mt-3" style="    display: flex;
+                                                                         flex-direction: column;
+                                                                         align-items: center;">
+                                        <span class="common-links">
+                                            <h2 class="title"><strong> <!--Tasarımcı adı--->
+                                                <span><a href="" class="">İpek Eldek</a></span></strong>
+                                            </h2>
+                                            <h2 class="title"><strong> <!--Proje adı--->
+                                                <span><a href="" class="">Studio Philippe Apeloig</a></span></strong>
+                                            </h2><!---->
+                                            <h1 class="title"> 2012-2013”, 2012</h1> <!--Tarih--->
+                                            <small class="caption lining-numbers">France |</small><!--Kullanıldığı yer-->
+                                            <small class="caption lining-numbers">Offset,</small><!--Baskı tekniği-->
+                                            <small class="caption lining-numbers">1000 x 700</small><!--ebat-->
+                                        </span>
+                        <div class="icons">
+                            <div class="like">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <div class="add-collection">
+                                <i class="fa-solid fa-folder-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 @endsection
