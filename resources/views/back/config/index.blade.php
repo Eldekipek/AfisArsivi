@@ -16,13 +16,13 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Twitter</label>
-                                <input type="text" class="form-control" name="twitter" value="">
+                                <input type="text" class="form-control" name="twitter" value="{{$config->twitter}}">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Instagram</label>
-                                <input type="text" class="form-control" name="instagram" value="">
+                                <input type="text" class="form-control" name="instagram" value="{{$config->instagram}}">
                             </div>
                         </div>
                     </div>
@@ -30,13 +30,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Facebook</label>
-                                        <input type="text" class="form-control" name="facebook" value="">
+                                        <input type="text" class="form-control" name="facebook" value="{{$config->facebook}}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>LinkedIn</label>
-                                        <input type="text" class="form-control" name="linkedin" value="">
+                                        <input type="text" class="form-control" name="linkedin" value="{{$config->linkedin}}">
                             </div>
                         </div>
                     </div>

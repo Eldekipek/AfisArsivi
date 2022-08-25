@@ -17,7 +17,16 @@ class ConfigController extends Controller
     }
 
     public function update(Request $request){
-        $config=Config::find(1);
+        $request->validate(
+            [
+                "twitter" => "string|max:255",
+                "instagram" => "string|max:255",
+                "facebook" => "string|max:255",
+                "linkedin" => "string|max:255",
+
+            ]
+        );
+        $config = new Config();
         $config->twitter=$request->twitter;
         $config->instagram=$request->instagram;
         $config->facebook=$request->facebook;
