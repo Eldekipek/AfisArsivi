@@ -57,7 +57,7 @@
                 </div>
                 <div class="modal-body">
                     <picture>
-                        <img style="width: 250px; height: 250px; margin: auto;display: flex" id="imageGet" src="{{asset('https://images.typographicposters.com/search-2x-p3/apeloig/0117738-tnt-affiche-saison-2012-13-rvb-01.jpg')}}" alt="">
+                        <img style="width: 250px; height: 250px; margin: auto;display: flex" id="imageGet" class="img-thumbnail" src="{{asset('https://images.typographicposters.com/search-2x-p3/apeloig/0117738-tnt-affiche-saison-2012-13-rvb-01.jpg')}}" alt="">
                     </picture>
                     <div class="mt-3" style="    display: flex;
                                                                          flex-direction: column;
