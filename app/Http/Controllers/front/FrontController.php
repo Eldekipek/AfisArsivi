@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\front;
 
 use App\Http\Controllers\Controller;
+use App\Models\AboutPage;
 use App\Models\Config;
 use App\Models\Designer;
 use App\Models\Poster;
@@ -33,8 +34,9 @@ class FrontController extends Controller
 
     public function about(){
         $config = Config::find(1);
+        $page = AboutPage::find(1);
 
-        return view('front.detailPages.about', compact('config'));
+        return view('front.detailPages.about', compact('config' , 'page'));
 
     }
 
