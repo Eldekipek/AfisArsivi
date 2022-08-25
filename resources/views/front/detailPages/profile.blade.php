@@ -23,6 +23,9 @@
             <div class="summary">
             <p style="text-align: center;"> Kullanıcının, Sitemiz Altında Bulunan Afişleri Aşağıdaki Gibidir. </p>
             </div>
+            <div class="number-posters">
+                <p style="text-align: center;"> 3 poster </p>
+            </div>
         </div>
         @endif
     </div>
