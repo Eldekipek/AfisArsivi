@@ -14,7 +14,12 @@ class DashboardController extends Controller
 {
     public function index(){
         $user = Auth::user();
-        return view("back.dashboard", compact('user'));
+        if (Auth::check()){
+            return view("back.dashboard", compact('user'));
+        }
+        else{
+            return redirect("/")->with('error', 'Lütfen panele gitmek için önce giriş yapınız');
+        }
     }
 
     public function userSettingsIndex(){

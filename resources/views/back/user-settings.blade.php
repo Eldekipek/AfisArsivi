@@ -21,7 +21,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Website</label>
-                            <input type="text" class="form-control" name="website">
+                            <input type="text" class="form-control" value="@if($user->website) {{$user->website}} @else @endif " name="website">
                         </div>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                         <div class="form-group">
                             <label>Ülke</label><br>
                             <select name="country_id" id="country_id">
-                                <option disabled selected>Seçiniz</option>
+                                <option readonly  value="@if($user->country) {{$user->country}} @else 1 @endif" >Seçiniz</option>
                             @foreach($countries as $country)
                                     <option value="{{$country->id}}">{{$country->name}}</option>
                                 @endforeach
@@ -40,7 +40,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Profil Resmi</label>
-                            <input type="file" class="form-control" name="image">
+                            <input type="file" class="form-control" value="@if($user->image) {{$user->image}} @else @endif" name="image">
                         </div>
                     </div>
                 </div>
