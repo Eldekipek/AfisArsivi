@@ -1,7 +1,12 @@
 @extends("front.layout")
 @section("content")
-    <div class="about-title" style="margin:30px;border-bottom: 1px solid #0e0e0e;">
-        <h2>Afiş Arşivi</h2>
+    <div class="about-title" style="display:flex;justify-content: space-between;margin:30px;border-bottom: 1px solid #0e0e0e;">
+        <div class="advertisement-title ">
+            <h2>Afiş Arşivi</h2>
+        </div>
+        <div class="advertisement-poster-title ">
+            <p> 3 poster</p>
+        </div>
     </div>
 
     <div class="container mb-5">
