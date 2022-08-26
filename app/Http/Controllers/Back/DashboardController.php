@@ -44,7 +44,7 @@ class DashboardController extends Controller
         if ($request->hasFile('image')){
         $imageName=$request->name.'.'.$request->image->getClientOriginalExtension();
         $request->image->move(public_path('uploads'),$imageName);
-        $user->image='uploads/'.$imageName;
+        $user->image='/uploads/'.$imageName;
         }
         $user->save();
         return back()->with('success','Kullanıcı ayarları başarıyla güncellendi');
@@ -72,7 +72,7 @@ class DashboardController extends Controller
         if ($request->hasFile('image')){
             $imageName=($request->title).'.'.$request->image->getClientOriginalExtension();
             $request->image->move(public_path('uploads'),$imageName);
-            $page->image='uploads/'.$imageName;
+            $page->image='/uploads/'.$imageName;
         }
         $page->save();
         toastr()->success( 'Sayfa başarıyla güncellendi');

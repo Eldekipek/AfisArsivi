@@ -70,7 +70,7 @@ class PosterController extends Controller
         if ($request->hasFile('image')){
             $imageName=$request->title.'.'.$request->image->getClientOriginalExtension();
             $request->image->move(public_path('uploads'),$imageName);
-            $poster->image='uploads/'.$imageName;
+            $poster->image='/uploads/'.$imageName;
         }
         $poster->save();
         return back()->with('success','Afiş başarıyla oluşturuldu');
@@ -145,7 +145,7 @@ class PosterController extends Controller
                     }
 
                     $imageName = $request->title . '.' . $request->image->getClientOriginalExtension();
-                    $img_path = 'uploads/';
+                    $img_path = '/uploads/';
                     $request->image->move(public_path($img_path), $imageName);
                     $poster->image = $img_path . $imageName;
 
