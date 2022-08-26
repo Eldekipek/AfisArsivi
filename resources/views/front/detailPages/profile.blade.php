@@ -31,47 +31,49 @@
     </div>
 
     <div class="container mb-5">
-        <!----if isset buraya gelecek sdfghj--->
+        @if(isset($posters)&&!is_null($posters))
+            @foreach($posters as $poster)
+
             <article class="poster-item ">
 
                     <div href="" class="poster-items- w-imgs">
                         <div class="poster-card-top">
                             <picture>
                                 <img
-                                    src="{{asset('')}}"
+                                    src="{{asset($poster->image)}}"
                                     alt="">
                             </picture>
                         </div>
                         <div class="poster-item-info" style="padding: 15px;">
                 <span class="common-links">
                     <h2 class="title"><strong> <!--Tasarımcı adı--->
-                            <span><a href="" class="">tasarımcı ismi</a></span></strong>
+                            <span><a class="">{{$poster->getUser->name}}</a></span></strong>
                     </h2>
                     <h2 class="title"><strong> <!--Proje adı--->
-                            <span><a class="">proje adı</a></span></strong>
+                            <span><a class="">{{$poster->title}}</a></span></strong>
                     </h2><!---->
-                    <h1 class="title">tarih</h1> <!--Tarih--->
+                    <h1 class="title">{{$poster->date}}</h1> <!--Tarih--->
                    <div style="white-space:nowrap;
                         width: 200px;
                         overflow: hidden;
                         text-overflow: ellipsis;">
-<small  class="caption lining-numbers">ülke |</small><!--Kullanıldığı yer-->
-<small  class="caption lining-numbers">baskı tekniği,</small><!--Baskı tekniği-->
+<small  class="caption lining-numbers">{{$poster->country}} |</small><!--Kullanıldığı yer-->
+<small  class="caption lining-numbers">{{$poster->printing_technique}},</small><!--Baskı tekniği-->
 </div>
 
-                    <small class="caption lining-numbers">ebat</small><!--ebat-->
+                    <small class="caption lining-numbers">{{$poster->dimensions}}</small><!--ebat-->
                 </span>
                             <div class="afis-detail">
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btn btn- border" {{--onclick="getPoster({{$poster->id}})" --}} data-toggle="modal" data-target="#exampleModal">
+                                <button type="button" class="btn btn- border" onclick="getPoster({{$poster->id}})"  data-toggle="modal" data-target="#exampleModal">
                                     Detay
                                 </button>
                             </div>
                         </div>
                     </div>
-               <!------end foreach-->
             </article>
-        <!----endif buraya---->
+            @endforeach
+        @endif
     </div>
 
     <!-- Modal -->

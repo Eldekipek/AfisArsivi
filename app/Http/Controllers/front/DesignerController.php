@@ -18,7 +18,6 @@ class DesignerController extends Controller
     public function profile($id){
         $designer = User::find($id);
         $posters = Poster::where('user_id',$designer->id)->get();
-/*        dd($posters);*/
 
 
 
