@@ -2,7 +2,9 @@
 @section("content")
     <div class="about-title" style="display:flex;justify-content: space-between;margin:30px;border-bottom: 1px solid #0e0e0e;">
         <div class="culture-title ">
-            <h2>Kültürel Afişler Arşivi</h2>
+            <h2 style="font-family: work-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;">Kültürel Afişler Arşivi</h2>
         </div>
         <div class="culture-poster-title ">
           <strong><p> {{$culture_poster->count()}} Afiş</p></strong>
@@ -58,8 +60,8 @@
             </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal fade" style="background: #00000075;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 900px">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Afiş Başlığı</h5>
@@ -69,7 +71,10 @@
                 </div>
                 <div class="modal-body">
                     <picture>
-                        <img style="width: 250px; height: 250px; margin: auto;display: flex" id="imageGet" class="img-thumbnail" src="{{asset('https://images.typographicposters.com/search-2x-p3/apeloig/0117738-tnt-affiche-saison-2012-13-rvb-01.jpg')}}" alt="">
+                        <img style="width: 450px; height: 600px; margin: auto;display: flex;    object-position: top;
+                             object-fit: cover;
+                             position: relative;
+                             transition: 400ms all;" id="imageGet" class="img-thumbnail" src="{{asset('https://images.typographicposters.com/search-2x-p3/apeloig/0117738-tnt-affiche-saison-2012-13-rvb-01.jpg')}}" alt="">
                     </picture>
                     <div class="mt-3" style="    display: flex;
                                                                          flex-direction: column;

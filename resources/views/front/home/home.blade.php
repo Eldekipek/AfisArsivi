@@ -25,8 +25,12 @@
 
     <div class="module-profiles gray-theme mt-5">
         <div class="row" style="display: flex">
-            <div class="col-12 col-lg-2 pt-2">
-                <h1 class="big highlight tight side-title-home" style=" color: #007ca2; font-size:50px">Yeni Tasarımcı</h1>
+            <div class="col-12 col-lg-2 pt-2" style="    display: flex;
+    align-items: center;">
+                <h1 class="big highlight tight side-title-home" style=" color: #007ca2; font-size:45px;font-family: work-sans, sans-serif;
+font-weight: 400;
+font-style: normal;
+   ">Tasarımcılar </h1>
                 @if(isset($designers)&&!is_null($designers))
                     @foreach($designers as $designer)
             </div>
@@ -36,7 +40,11 @@
                         <div class="col-12 col-lg-4-10" style="width: 40%;">
                             <div class="module-profiles-name">
                                 <div style="color: #1c1f23">
-                                    <h1>{{$designer->name}}</h1>
+                                    <h1 style="font-family: work-sans, sans-serif;
+
+font-weight: 400;
+
+font-style: normal;">{{$designer->name}}</h1>
                                     <h6>{{$designer->getCountry->name}}</h6>
                                 </div>
                                 <div>
@@ -95,10 +103,17 @@
     <div class="module-collection white-theme">
         <div class="collection-info">
             <div class="collection-info-heading">
-                <div class="collection-titles">
+
+                <div class="collection-titles" style="display: flex;
+    flex-direction: column;">
+                    <div class="collection">
+                        <p>Koleksiyon</p>
+                    </div>
                     <div>
-                        <br>
-                        <h1 class="big">Reklam Afişleri</h1>
+
+                        <h2 class="big" style="font-family: work-sans, sans-serif;
+font-weight: 400;
+font-style: normal;">Reklam Afişleri</h2>
                     </div>
 
                 </div>
@@ -148,10 +163,16 @@
     <div class="module-collection white-theme">
                 <div class="collection-info">
                     <div class="collection-info-heading">
-                        <div class="collection-titles">
+                        <div class="collection-titles"  style="display: flex;
+    flex-direction: column;">
+                            <div class="collection">
+                                <p>Koleksiyon</p>
+                            </div>
                             <div>
-                                <br>
-                                <h1 class="big">Kültürel Afişler</h1>
+
+                                <h2 class="big" style="font-family: work-sans, sans-serif;
+font-weight: 400;
+font-style: normal;">Kültürel Afişler</h2>
                             </div>
 
                         </div>
@@ -203,10 +224,16 @@
             <div class="module-collection white-theme">
                 <div class="collection-info">
                     <div class="collection-info-heading">
-                        <div class="collection-titles">
+                        <div class="collection-titles" style="display: flex;
+    flex-direction: column;">
+                            <div class="collection">
+                                <p>Koleksiyon</p>
+                            </div>
                             <div>
-                                <br>
-                                <h1 class="big">Sosyal Afişler</h1>
+
+                                <h2 class="big" style="font-family: work-sans, sans-serif;
+font-weight: 400;
+font-style: normal;">Sosyal Afişler</h2>
                             </div>
 
                         </div>

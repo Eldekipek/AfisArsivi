@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
     <link rel="stylesheet" href="{{asset('font-awesome/css/all.css')}}"/>
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="https://use.typekit.net/ogc7bca.css">
     <script src="{{asset('jquery/jquery-3.6.0.js')}}"></script>
     <script src="{{asset('jquery/wow.min.js')}}"></script>
     <script src="{{asset('bootstrap/js/bootstrap4.min.js')}}"></script>
@@ -85,7 +86,7 @@
         document.getElementById("mySidenav").style.width = "250px";
         document.getElementById("mySidenav").style.right = 0;
         document.getElementById("mySidenav").style.left = 'auto';
-        document.getElementById("mySidenav").style.backgroundColor = "#007ca2";
+        document.getElementById("mySidenav").style.backgroundColor = "#d5d5d5";
 
     }
 

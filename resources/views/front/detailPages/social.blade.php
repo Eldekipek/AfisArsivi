@@ -2,7 +2,9 @@
 @section("content")
     <div class="about-title" style="display:flex;justify-content: space-between;margin:30px;border-bottom: 1px solid #0e0e0e;">
         <div class="social-title ">
-            <h2>Sosyal Afişler Arşivi</h2>
+            <h2 style="font-family: work-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;">Sosyal Afişler Arşivi</h2>
         </div>
         <div class="social-poster-title ">
             <strong><p> {{$social_poster->count()}} Afiş</p></strong>
@@ -57,8 +59,8 @@ text-overflow: ellipsis;">
             </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal fade" style="background: #0000007d;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 900px">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Afiş Başlığı</h5>
@@ -68,7 +70,10 @@ text-overflow: ellipsis;">
                 </div>
                 <div class="modal-body">
                     <picture>
-                        <img style="width: 250px; height: 250px; margin: auto;display: flex" id="imageGet" class="img-thumbnail" src="{{asset('https://images.typographicposters.com/search-2x-p3/apeloig/0117738-tnt-affiche-saison-2012-13-rvb-01.jpg')}}" alt="">
+                        <img style="width: 450px; height: 600px; margin: auto;display: flex;    object-position: top;
+    object-fit: cover;
+    position: relative;
+    transition: 400ms all;" id="imageGet" class="img-thumbnail" src="{{asset('https://images.typographicposters.com/search-2x-p3/apeloig/0117738-tnt-affiche-saison-2012-13-rvb-01.jpg')}}"  alt="">
                     </picture>
                     <div class="mt-3" style="    display: flex;
                                                                          flex-direction: column;
@@ -78,7 +83,7 @@ text-overflow: ellipsis;">
                                                 <span><a id="designerGet" class="">İpek Eldek</a></span></strong>
                                             </h2>
                                             <h2 class="title"><strong> <!--Proje adı--->
-                                                <span><a id="nameGet" class="">Studio Philippe Apeloig</a></span></strong>
+                                                <span><a id="nameGet" class="">Studio Philippe Apeloig Studio Philippe Apeloig Studio Philippe Apeloig</a></span></strong>
                                             </h2><!---->
                                             <h1 class="title" id="tarihGet"> 2012-2013”, 2012</h1> <!--Tarih--->
                                             <small class="caption lining-numbers" id="yerGet">France |</small><!--Kullanıldığı yer-->

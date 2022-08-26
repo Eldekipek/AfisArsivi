@@ -3,7 +3,9 @@
     <div class="container">
         <div class="about-title" style="display:flex;justify-content: space-between;margin:30px;border-bottom: 0.5px solid #0e0e0e;">
             <div class="advertisement-title ">
-                <h2>Tasarımcılar</h2>
+                <h2 style="font-family: work-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;">Tasarımcılar</h2>
             </div>
             </div>
         <div class="designers-input m-5">
