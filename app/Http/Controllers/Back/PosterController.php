@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Back;
 
+use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Device;
@@ -118,7 +119,7 @@ class PosterController extends Controller
             'yer'=>'required | min:3',
             'tarih'=> 'required',
             'contentt'=> 'required | min:3',
-            'image'=>'required|image|mimes:jpeg,png,jpg|max:2048'
+            'image'=>'image|mimes:jpeg,png,jpg|max:2048'
         ]);
 
         $poster= Poster::findOrFail($id);
@@ -130,15 +131,36 @@ class PosterController extends Controller
         $poster->category_id=$request->category_id;
         $poster->explanation=$request->contentt;
 
-        if ($request->hasFile('image')){
-            $imageName=$request->title.'.'.$request->image->getClientOriginalExtension();
-            $request->image->move(public_path('uploads'),$imageName);
-            $poster->image='uploads/'.$imageName;
-        }
         $poster->save();
+
+        if (isset($request->image)) {
+            if ($request->image != null) {
+                $imageControl = $request->image;
+                if ($imageControl['status'] != 'ok') {
+                    return abort(500);
+                } else {
+                    $old_image = public_path() . $poster->image;
+                    if (file_exists($old_image) && !is_null($poster->image)) {
+                        unlink($old_image);
+                    }
+
+                    $imageName = $request->title . '.' . $request->image->getClientOriginalExtension();
+                    $img_path = 'uploads/';
+                    $request->image->move(public_path($img_path), $imageName);
+                    $poster->image = $img_path . $imageName;
+
+                    $poster->save();
+
+                }
+            }
+        }
         return back()->with('success','Poster başarıyla güncellendi');
 
     }
+
+
+
+
 
     /**
      * Remove the specified resource from storage.
