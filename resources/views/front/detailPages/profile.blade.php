@@ -32,10 +32,8 @@
 
     <div class="container mb-5">
         @if(isset($posters)&&!is_null($posters))
-            @foreach($posters as $poster)
-
             <article class="poster-item ">
-
+                @foreach($posters as $poster)
                     <div href="" class="poster-items- w-imgs">
                         <div class="poster-card-top">
                             <picture>
@@ -71,13 +69,14 @@
                             </div>
                         </div>
                     </div>
+                @endforeach
             </article>
-            @endforeach
+
         @endif
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" style="max-width: 900px" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade"  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" style="max-width: 900px">
             <div class="modal-content">
                 <div class="modal-header">

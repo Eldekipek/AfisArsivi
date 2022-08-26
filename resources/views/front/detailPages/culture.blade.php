@@ -10,8 +10,6 @@
           <strong><p> {{$culture_poster->count()}} Afiş</p></strong>
         </div>
     </div>
-
-
             <div class="container mb-5">
                 @if(isset($culture_poster)&&!is_null($culture_poster))
                 <article class="poster-item ">
