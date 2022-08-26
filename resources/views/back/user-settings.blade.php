@@ -15,13 +15,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Ad Soyad</label>
-                            <input type="text" name="name" required class="form-control" value="{{$user->name}}">
+                            <input type="text" name="name" required class="form-control" value="@if(isset($user_admin)&&!is_null($user_admin)) {{$user_admin->name}} @else {{$user->name}} @endif">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Website</label>
-                            <input type="text" class="form-control" value="@if($user->website) {{$user->website}} @else @endif " name="website">
+                            <input type="text" class="form-control" value="@if(isset($user_admin)&&!is_null($user_admin)) @if($user_admin->website) {{$user_admin->website}} @else @endif @else @if($user->website) {{$user->website}} @else @endif @endif " name="website">
                         </div>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                         <div class="form-group">
                             <label>Ülke</label><br>
                             <select name="country_id" id="country_id">
-                                <option readonly  value="@if($user->country) {{$user->country}} @else 1 @endif" >Seçiniz</option>
+                                <option readonly  value="@if(isset($user_admin)&&!is_null($user_admin)) @if($user_admin->country) {{$user_admin->country}} @else 1 @endif @else 1 @if($user->country) {{$user->country}} @else @endif @endif" >Seçiniz</option>
                             @foreach($countries as $country)
                                     <option value="{{$country->id}}">{{$country->name}}</option>
                                 @endforeach
@@ -40,7 +40,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Profil Resmi</label>
-                            <input type="file" class="form-control" value="@if($user->image) {{$user->image}} @else @endif" name="image">
+                            <input type="file" class="form-control" value="@if(isset($user_admin)&&!is_null($user_admin)) @if($user_admin->image) {{$user_admin->image}} @else @endif @else @if($user->image) {{$user->image}} @else @endif @endif" name="image">
                         </div>
                     </div>
                 </div>

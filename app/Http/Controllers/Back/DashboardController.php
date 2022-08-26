@@ -14,9 +14,15 @@ use Illuminate\Support\Facades\Auth;
 class DashboardController extends Controller
 {
     public function index(){
-        $user = Auth::user();
+
         if (Auth::check()){
-            return view("back.dashboard", compact('user'));
+            if (Auth::id() <= 3){
+                $user_admin = Auth::user();
+                return view("back.dashboard", compact('user_admin'));
+            } else {
+                $user = Auth::user();
+                return view("back.dashboard", compact('user'));
+            }
         }
         else{
             return redirect("/")->with('error', 'Lütfen panele gitmek için önce giriş yapınız');
@@ -25,9 +31,14 @@ class DashboardController extends Controller
 
     public function userSettingsIndex(){
         $id = Auth::id();
-        $user = User::find($id);
         $countries = Country::all();
-        return view("back.user-settings", compact('user' , 'countries'));
+        if (Auth::id() <= 3) {
+            $user_admin = User::find($id);
+            return view("back.user-settings", compact('user_admin' , 'countries'));
+        } else {
+            $user = User::find($id);
+            return view("back.user-settings", compact('user' , 'countries'));
+        }
     }
 
     public function userSettingsUpdate(Request $request){
@@ -54,8 +65,13 @@ class DashboardController extends Controller
     public function aboutIndex(){
         $page = AboutPage::find(1);
         $id = Auth::id();
-        $user = User::findOrFail($id);
-        return view('back.about.create', compact('user', 'page'));
+        if (Auth::id() <= 3){
+            $user_admin = User::findOrFail($id);
+            return view('back.about.create', compact('user_admin', 'page'));
+        } else {
+            $user = User::findOrFail($id);
+            return view('back.about.create', compact('user', 'page'));
+        }
     }
 
     public function aboutUpdate(Request $request){

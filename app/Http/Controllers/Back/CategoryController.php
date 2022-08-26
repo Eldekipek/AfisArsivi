@@ -17,9 +17,15 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
         $categories=Category::all();
-        return view('back.categories.index', compact('categories', 'user'));
+
+        if (Auth::id() <= 3){
+            $user_admin = Auth::user();
+            return view('back.categories.index', compact('categories', 'user_admin'));
+        } else {
+            $user = Auth::user();
+            return view('back.categories.index', compact('categories', 'user'));
+        }
     }
 
     /**

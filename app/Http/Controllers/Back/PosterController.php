@@ -22,9 +22,16 @@ class PosterController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-        $posters = Poster::orderBy('created_at', 'ASC')->get();
-        return view("back.posters.index", compact('posters' , 'user'));
+        if (Auth::id() <= 3){
+            $user_admin = Auth::user();
+            $posters = Poster::orderBy('created_at', 'ASC')->get();
+            return view("back.posters.index", compact('posters' , 'user_admin'));
+        }else{
+            $user = Auth::user();
+            $posters = Poster::where('user_id' , Auth::id())->orderBy('created_at', 'ASC')->get();
+            return view("back.posters.index", compact('posters' , 'user'));
+        }
+
     }
 
     /**
@@ -35,8 +42,13 @@ class PosterController extends Controller
     public function create()
     {
         $categories = Category::all();
-        $user = Auth::user();
-        return view("back.posters.create", compact('user', 'categories'));
+        if (Auth::id() <= 3){
+            $user_admin = Auth::user();
+            return view("back.posters.create", compact('user_admin', 'categories'));
+        } else {
+            $user = Auth::user();
+            return view("back.posters.create", compact('user', 'categories'));
+        }
     }
 
     /**

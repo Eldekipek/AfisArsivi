@@ -54,46 +54,51 @@
 
         </li>
 
-        <li class="nav-item">
-            <a class="nav-link" @if(Request::segment(2)=="hakkımızda") style="color:white !important;" @endif href="{{route("about.update.index")}}">
-                <i @if(Request::segment(2)=="hakkımızda") style="color:white !important;" @endif class="fas fa-fw fa-edit"></i>
-                <span>Hakkımızda Sayfası</span>
-            </a>
+        @if(isset($user_admin)&&!is_null($user_admin))
+            <li class="nav-item">
+                <a class="nav-link" @if(Request::segment(2)=="hakkımızda") style="color:white !important;" @endif href="{{route("about.update.index")}}">
+                    <i @if(Request::segment(2)=="hakkımızda") style="color:white !important;" @endif class="fas fa-fw fa-edit"></i>
+                    <span>Hakkımızda Sayfası</span>
+                </a>
 
-        </li>
+            </li>
 
-        <li class="nav-item">
-            <a class="nav-link @if(Request::segment(2)=='kullanıcılar') in @else collapsed @endif" href="#" data-toggle="collapse" data-target="#collapsePage"
-               aria-expanded="true" aria-controls="collapsePage">
-                <i class="fas fa-fw fa-folder"></i>
-                <span>Kullanıcılar</span>
-            </a>
-            <div id="collapsePage" class="collapse @if(Request::segment(2)=='kullanıcılar') show @endif" aria-labelledby="headingPage" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Sayfa İşlemleri:</h6>
-                    <a class="collapse-item @if(Request::segment(2)=='kullanıcılar' and !Request::segment(3)) active @endif" href="{{route("users.index")}}">Tüm Kullanıcılar</a>
-{{--                    <a class="collapse-item @if(Request::segment(2)=='sayfalar' and Request::segment(3)=='create') active @endif"  href="#"></a>--}}
+            <li class="nav-item">
+                <a class="nav-link @if(Request::segment(2)=='kullanıcılar') in @else collapsed @endif" href="#" data-toggle="collapse" data-target="#collapsePage"
+                   aria-expanded="true" aria-controls="collapsePage">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Kullanıcılar</span>
+                </a>
+                <div id="collapsePage" class="collapse @if(Request::segment(2)=='kullanıcılar') show @endif" aria-labelledby="headingPage" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Sayfa İşlemleri:</h6>
+                        <a class="collapse-item @if(Request::segment(2)=='kullanıcılar' and !Request::segment(3)) active @endif" href="{{route("users.index")}}">Tüm Kullanıcılar</a>
+                        {{--                    <a class="collapse-item @if(Request::segment(2)=='sayfalar' and Request::segment(3)=='create') active @endif"  href="#"></a>--}}
+                    </div>
                 </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+        @endif
+
+
+        @if(isset($user_admin)&&!is_null($user_admin))
+            <div class="sidebar-heading">
+                Site Ayarları
             </div>
-        </li>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('config.index')}}">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Ayarlar</span></a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+        @endif
         <!-- Heading -->
-        <div class="sidebar-heading">
-            Site Ayarları
-        </div>
-
-        <!-- Nav Item - Tables -->
-        <li class="nav-item">
-            <a class="nav-link" href="{{route('config.index')}}">
-                <i class="fas fa-fw fa-cog"></i>
-                <span>Ayarlar</span></a>
-        </li>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
 
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
@@ -132,14 +137,13 @@
                             @if(isset($user)&&!is_null($user))
                             <span class="mr-2 d-none d-lg-inline text-gray-600 ">{{$user->name}}</span>
                             @endif
+                            @if(isset($user_admin)&&!is_null($user_admin))
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 ">{{$user_admin->name}}</span>
+                            @endif
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Profil
-                            </a>
                             <a class="dropdown-item" href="{{route("user.settings.index")}}">
                                 <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Profil Ayarları
@@ -161,11 +165,21 @@
                 <!-- Page Heading -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800">@yield('title')</h1>
-                    @if($user->country_id)
+                    @if(isset($user->country_id))
+                        @if($user->country_id)
                     <a href="{{route( "front.home")}}" target="_blank" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                             class="fas fa-globe fa-sm text-white-50"></i> Siteyi Görüntüle</a>
-                    @else
+                        @else
                        <span style="color: red; font-size: larger;">Lütfen bilgilerinizi güncelleyiniz!</span>
+                        @endif
+                    @endif
+                    @if(isset($user_admin->country_id))
+                        @if($user_admin->country_id)
+                        <a href="{{route( "front.home")}}" target="_blank" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-globe fa-sm text-white-50"></i> Siteyi Görüntüle</a>
+                        @else
+                        <span style="color: red; font-size: larger;">Lütfen bilgilerinizi güncelleyiniz!</span>
+                        @endif
                     @endif
                 </div>
 

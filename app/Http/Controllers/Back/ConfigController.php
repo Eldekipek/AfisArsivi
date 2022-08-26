@@ -10,10 +10,14 @@ use Illuminate\Support\Facades\Auth;
 class ConfigController extends Controller
 {
     public function index(){
-        $user = Auth::user();
-
         $config=Config::find(1);
-        return view('back.config.index',compact('config' , 'user'));
+        if (Auth::id() <= 3){
+            $user_admin = Auth::user();
+            return view('back.config.index',compact('config' , 'user_admin'));
+        } else {
+            $user = Auth::user();
+            return view('back.config.index',compact('config' , 'user'));
+        }
     }
 
     public function update(Request $request){
