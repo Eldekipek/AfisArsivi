@@ -85,8 +85,8 @@
         document.getElementById("mySidenav").style.width = "250px";
         document.getElementById("mySidenav").style.right = 0;
         document.getElementById("mySidenav").style.left = 'auto';
-        document.getElementById("mySidenav").style.backgroundColor = "#007ca2";
-        document.getElementById("mySidenav").style.color = "white" ;
+        document.getElementById("mySidenav").style.backgroundColor = "white";
+        document.getElementById("mySidenav").style.color = "#007ca2" ;
     }
 
     function closeNav() {
