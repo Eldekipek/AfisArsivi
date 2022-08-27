@@ -45,7 +45,10 @@ font-style: normal;
 font-weight: 400;
 
 font-style: normal;">{{$designer->name}}</h1>
+                                    @if(isset($designer->getCountry->name)&&!is_null($designers->getCountry->name))
+
                                     <h6>{{$designer->getCountry->name}}</h6>
+                                    @endif
                                 </div>
                                 <div>
                                     <div class="profile-icon large">

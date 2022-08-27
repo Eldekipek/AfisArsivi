@@ -17,7 +17,12 @@
                     <h2>{{$designer->name}}</h2>
                 </div>
                 <div class="profile-birth">
-                    <h6>{{$designer->birthday}} / </h6><h6> {{$designer->getCountry->name}}</h6>
+                    <h6>{{$designer->birthday}} / </h6>
+                    @if(isset($designer->getCountry->name)&&!is_null($designer->getCountry->name))
+
+                        <h6>{{$designer->getCountry->name}}</h6>
+                    @endif
+
                 </div>
              </div>
             <div class="summary">

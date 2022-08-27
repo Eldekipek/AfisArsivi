@@ -45,7 +45,10 @@
                 </a>
 
                 <div class="col-12 col-md-2 list-item info">
-                    <h6>{{$designer->getCountry->name}}</h6>
+                    @if(isset($designer->getCountry->name)&&!is_null($designer->getCountry->name))
+
+                        <h6>{{$designer->getCountry->name}}</h6>
+                    @endif
                 </div>
 
                 <div class="col-12 col-md-1 list-item info">
