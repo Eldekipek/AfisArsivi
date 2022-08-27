@@ -9,7 +9,7 @@ use App\Models\User;
 class DesignerController extends Controller
 {
     public function index(){
-        $designers = User::all();
+        $designers = User::where('id' , '>', 3)->get();
 
 
         return view('front.detailPages.designers', compact('designers'));
