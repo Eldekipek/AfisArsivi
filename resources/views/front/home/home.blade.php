@@ -74,22 +74,22 @@ font-style: normal;">{{$designer->name}}</h1>
                                         alt="">
                                 </picture>
                                 <picture>
-                                    <img
+                                    <img class="resim3"
                                         src="{{asset('https://images.typographicposters.com/search-2x-p3/nicolebrugger/nicolebrugger-poster-62ecd0fb1aa91bf2a335dc4a.jpg')}}"
                                         alt="">
                                 </picture>
                                 <picture>
-                                    <img
+                                    <img class="resim4"
                                         src="{{asset('https://images.typographicposters.com/search-2x-p3/nicolebrugger/nicolebrugger-poster-62eccfad85798afc4e35d590.jpg')}}"
                                         alt="">
                                 </picture>
                                 <picture>
-                                    <img
+                                    <img class="resim5"
                                         src="{{asset('https://images.typographicposters.com/search-2x-p3/nicolebrugger/nicolebrugger-poster-62ecce9fc8769e1f0831937b.jpg')}}"
                                         alt="">
                                 </picture>
                                 <picture>
-                                    <img
+                                    <img class="resim6"
                                         src="{{asset('https://images.typographicposters.com/search-2x-p3/nicolebrugger/nicolebrugger-poster-62eccdd9cd006dbcb000b377.jpg')}}"
                                         alt="">
                                 </picture>

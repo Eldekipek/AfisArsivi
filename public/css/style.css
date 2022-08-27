@@ -2,6 +2,7 @@ body{
     font-family: work-sans, sans-serif;
     font-weight: 400;
     font-style: normal;
+    overflow-x: hidden;
 }
 .header{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -240,6 +241,7 @@ h1.big{
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
+    justify-content: center;
 }
 .poster-inner .poster-items-link{
     width: calc((100% - 60px) / 10);
@@ -261,6 +263,7 @@ h1.big{
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    justify-content: center;
 }
 .poster-item .poster-items-{
     width: calc((100% - 60px) / 4);
@@ -310,6 +313,15 @@ h1.big{
     }
     .title a .header-img{
         width: 200px;
+    }
+    picture .resim3,
+    .resim4,
+    .resim5,
+    .resim6{
+        display: none;
+    }
+    .module-profiles{
+        width: 100%;
     }
 }
 .title a .header-img{
