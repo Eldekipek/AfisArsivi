@@ -276,7 +276,6 @@ h1.big{
 .poster-item .poster-items- .poster-card-top picture>img{
     width: 100%;
     object-fit: cover;
-    height: 300px;
 }
 .poster-item .poster-items- .poster-card-top{
     width: 100%;
