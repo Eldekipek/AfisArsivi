@@ -45,6 +45,7 @@
             </div>
         </li>
 
+    @if(isset($user_admin)&&!is_null($user_admin))
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
             <a class="nav-link" @if(Request::segment(2)=="kategoriler") style="color:white !important;" @endif href="{{route("category.index")}}">
@@ -53,8 +54,10 @@
             </a>
 
         </li>
+    @endif
 
-        @if(isset($user_admin)&&!is_null($user_admin))
+
+    @if(isset($user_admin)&&!is_null($user_admin))
             <li class="nav-item">
                 <a class="nav-link" @if(Request::segment(2)=="hakkımızda") style="color:white !important;" @endif href="{{route("about.update.index")}}">
                     <i @if(Request::segment(2)=="hakkımızda") style="color:white !important;" @endif class="fas fa-fw fa-edit"></i>
