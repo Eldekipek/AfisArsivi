@@ -31,14 +31,16 @@ class DashboardController extends Controller
 
     public function userSettingsIndex(){
         $id = Auth::id();
-        $countries = Country::all();
         if (Auth::id() <= 3) {
             $user_admin = User::find($id);
+            $countries = Country::where('id' , 'not like' , "%{$user_admin->country_id}%")->get();
             return view("back.user-settings", compact('user_admin' , 'countries'));
         } else {
             $user = User::find($id);
+            $countries = Country::where('id' , 'not like' , "%{$user->country_id}%")->get();
             return view("back.user-settings", compact('user' , 'countries'));
         }
+
     }
 
     public function userSettingsUpdate(Request $request){

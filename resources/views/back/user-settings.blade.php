@@ -30,7 +30,7 @@
                         <div class="form-group">
                             <label>Ülke</label><br>
                             <select name="country_id" id="country_id">
-                                <option readonly  value="@if(isset($user_admin)&&!is_null($user_admin)) @if($user_admin->country) {{$user_admin->country}} @else 1 @endif @else 1 @if($user->country) {{$user->country}} @else @endif @endif" >Seçiniz</option>
+                                <option selected value="@if(isset($user_admin)&&!is_null($user_admin)) @if(isset($user_admin->country_id)) {{$user_admin->country_id}} @else  @endif @else @if($user->country_id) {{$user->country_id}} @else @endif @endif" >@if(isset($user_admin)&&!is_null($user_admin)) @if(($user_admin->country_id)) {{$cr = \App\Models\Country::where('id' ,$user_admin->country_id)->first()->name}} @else  @endif @else @if($user->country_id) {{$cr = \App\Models\Country::where('id' ,$user->country_id)->first()->name}} @else @endif @endif</option>
                             @foreach($countries as $country)
                                     <option value="{{$country->id}}">{{$country->name}}</option>
                                 @endforeach
@@ -48,7 +48,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Doğum Tarihi</label>
-                            <input type="date" class="form-control" name="birthday">
+                            <input type="date" value="@if(isset($user_admin)&&!is_null($user_admin)) @if(isset($user_admin->birthday)) {{$user_admin->birthday}} @else @endif @else @if($user->birthday) {{$user->birthday}} @else @endif @endif " class="form-control" name="birthday">
                         </div>
                     </div>
                 </div>
