@@ -276,6 +276,7 @@ h1.big{
 .poster-item .poster-items- .poster-card-top picture>img{
     width: 100%;
     object-fit: cover;
+    height: auto;
 }
 .poster-item .poster-items- .poster-card-top{
     width: 100%;
@@ -342,6 +343,10 @@ h1.big{
 }
 .modal-body .common-links{
     font-size: 20px;
+}
+.poster-card-top{
+    display: block;
+    position: relative;
 }
 
 
