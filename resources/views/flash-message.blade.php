@@ -26,10 +26,10 @@
     </div>
 @endif
 
-@if ($errors->any())
+{{--@if ($errors->any())
     <div class="alert alert-danger">
         <button type="button" class="close" data-dismiss="alert">×</button>
         <strong>{{ $errors }}</strong>
         <strong>Lütfen Form Bilgilerini Uygun Giriniz</strong>
     </div>
-@endif
+@endif--}}

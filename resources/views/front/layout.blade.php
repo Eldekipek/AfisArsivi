@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{asset('font-awesome/css/all.css')}}"/>
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.css')}}">
     <link rel="stylesheet" href="https://use.typekit.net/ogc7bca.css">
+    <link rel="icon" href="{{asset('./images/afislogo2.png')}}" type="image/x-icon">
     <script src="{{asset('jquery/jquery-3.6.0.js')}}"></script>
     <script src="{{asset('jquery/wow.min.js')}}"></script>
     <script src="{{asset('bootstrap/js/bootstrap4.min.js')}}"></script>
