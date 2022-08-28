@@ -40,11 +40,11 @@ font-style: normal;
                         <div class="col-12 col-lg-4-10" style="width: 40%;">
                             <div class="module-profiles-name">
                                 <div style="color: #1c1f23">
-                                    <h1 style="font-family: work-sans, sans-serif;
+                                    <h2 style="font-family: work-sans, sans-serif;
 
 font-weight: 400;
 
-font-style: normal;">{{$designer->name}}</h1>
+font-style: normal;">{{$designer->name}}</h2>
                                     @if(isset($designer->getCountry->name)&&!is_null($designer->getCountry->name))
 
                                     <h6>{{$designer->getCountry->name}}</h6>
