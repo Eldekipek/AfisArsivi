@@ -48,7 +48,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Doğum Tarihi</label>
-                            <input type="date" value="@if(isset($user_admin)&&!is_null($user_admin)) @if(isset($user_admin->birthday)) {{$user_admin->birthday}} @else @endif @else @if($user->birthday) {{$user->birthday}} @else @endif @endif " class="form-control" name="birthday">
+                            <input type="date" required value="@if(isset($user_admin)&&!is_null($user_admin)) @if(isset($user_admin->birthday)) {{$user_admin->birthday}} @else @endif @else @if($user->birthday) {{$user->birthday}} @else @endif @endif " class="form-control" name="birthday">
                         </div>
                     </div>
                 </div>
