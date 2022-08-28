@@ -41,16 +41,20 @@
                             </thead>
                             <tbody>
                             @if(isset($users)&&!is_null($users))
-                                @foreach($users as $user)
+                                @foreach($users as $user_gelen)
                                 <tr>
-                                    <td>{{$user->name}}</td>
-                                    <td>{{$user->email}}</td>
-                                    <td>ROL</td>
+                                    <td>{{$user_gelen->name}}</td>
+                                    <td>{{$user_gelen->email}}</td>
+                                    @if($user_gelen->id <= 3)
+                                        <td>Admin</td>
+                                    @else
+                                    <td>Yazar</td>
+                                    @endif
 
                                     <td>
 
 {{--                                        <a user-id="{{$user->id}}" class="btn btn-sm btn-primary edit-click" title="Kullanıcı Ayarları"><i class="fa fa-edit text-white"></i></a>--}}
-                                        <a user-id="{{$user->id}}" user-name="{{$user->name}}" class="btn btn-sm btn-danger remove-click" title="Kullanıcıyı Sil"><i class="fa fa-times text-white"></i></a>
+                                        <a user-id="{{$user_gelen->id}}" user-name="{{$user_gelen->name}}" class="btn btn-sm btn-danger remove-click" title="Kullanıcıyı Sil"><i class="fa fa-times text-white"></i></a>
                                     </td>
                                 </tr>
                             @endforeach
