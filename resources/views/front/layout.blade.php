@@ -14,6 +14,7 @@
     <script src="{{asset('jquery/jquery-3.6.0.js')}}"></script>
     <script src="{{asset('jquery/wow.min.js')}}"></script>
     <script src="{{asset('bootstrap/js/bootstrap4.min.js')}}"></script>
+    <link rel="shortcut icon" href="{{asset('./images/faviconafis2.png')}}" type="image/png">
     <title>Afiş Arşivi</title>
 </head>
 
