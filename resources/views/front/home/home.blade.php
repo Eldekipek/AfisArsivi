@@ -10,7 +10,7 @@
                         <div>
                             <picture>
                                 <img
-                                    src="{{$poster->image}}"
+                                    src="/uploads/thumbnail/{{$poster->image}}"
                                     alt="">
                             </picture>
                         </div>
@@ -137,7 +137,7 @@ font-style: normal;">Reklam Afişleri</h2>
                             <div class="poster-card-top">
                                 <picture>
                                     <img
-                                        src="{{asset($adv->image)}}"
+                                        src="/uploads/thumbnail/{{$adv->image}}"
                                         alt="">
                                 </picture>
                             </div>
@@ -196,7 +196,7 @@ font-style: normal;">Kültürel Afişler</h2>
                         <div class="poster-card-top">
                             <picture>
                                 <img
-                                    src="{{asset($culture->image)}}"
+                                    src="/uploads/thumbnail/{{$culture->image}}"
                                     alt="">
                             </picture>
                         </div>
@@ -257,7 +257,7 @@ font-style: normal;">Sosyal Afişler</h2>
                         <div class="poster-card-top">
                             <picture>
                                 <img
-                                    src="{{asset($social->image)}}"
+                                    src="/uploads/thumbnail/{{$social->image}}"
                                     alt="">
                             </picture>
                         </div>

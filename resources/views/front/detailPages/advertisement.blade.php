@@ -21,7 +21,7 @@
                         <div class="poster-card-top">
                             <picture>
                                 <img
-                                    src="{{asset($adv->image)}}"
+                                    src="/uploads/thumbnail/{{$adv->image}}"
                                     alt="">
                             </picture>
                         </div>

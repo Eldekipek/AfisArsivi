@@ -27,7 +27,7 @@
                     @foreach($posters as $poster)
                     <tr>
                         <td>
-                            <img src="{{asset($poster->image)}}" width="200" alt="">
+                            <img src="/uploads/thumbnail/{{$poster->image}}" width="200" alt="">
                         </td>
                         <td>{{$poster->getUser->name}}</td>
                         <td>{{$poster->title}}</td>

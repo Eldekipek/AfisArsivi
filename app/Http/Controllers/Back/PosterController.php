@@ -79,10 +79,16 @@ class PosterController extends Controller
         $poster->category_id=$request->category_id;
         $poster->explanation=$request->contentt;
 
+
         if ($request->hasFile('image')){
             $imageName=$request->title.'.'.$request->image->getClientOriginalExtension();
-            $request->image->move(public_path('uploads'),$imageName);
-            $poster->image='/uploads/'.$imageName;
+
+            $request->image->move(public_path('uploads/original/'),$imageName);
+            $poster->image= $imageName;
+
+            //Resize fonk yazacaksın
+            copy(public_path().'/uploads/original/'.$imageName,
+                public_path().'/uploads/thumbnail/'.$imageName);
         }
         $poster->save();
         return back()->with('success','Afiş başarıyla oluşturuldu');
