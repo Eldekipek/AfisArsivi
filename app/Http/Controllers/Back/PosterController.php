@@ -66,7 +66,7 @@ class PosterController extends Controller
             'yer'=>'required | min:3',
             'tarih'=> 'required',
             'contentt'=> 'required | min:3',
-            'image'=>'required|image|mimes:jpeg,png,jpg|max:2048'
+            'image'=>'required|image|mimes:jpeg,png,jpg'
         ]);
 
         $poster=new Poster();
