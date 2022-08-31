@@ -18,7 +18,7 @@
                         <div class="poster-card-top">
                             <picture>
                                 <img
-                                    src="/uploads/thumbnail/{{$culture->image}}"
+                                    src="{{asset('uploads/thumbnail/'.$culture->image)}}"
                                     alt="">
                             </picture>
                         </div>
