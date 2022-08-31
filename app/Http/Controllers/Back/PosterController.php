@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers\Back;
 
-use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
-use App\Models\Device;
 use App\Models\Poster;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
+use Intervention\Image\ImageManagerStatic as img;
 use function Termwind\renderUsing;
 
 class PosterController extends Controller
@@ -79,16 +78,16 @@ class PosterController extends Controller
         $poster->category_id=$request->category_id;
         $poster->explanation=$request->contentt;
 
-
         if ($request->hasFile('image')){
             $imageName=$request->title.'.'.$request->image->getClientOriginalExtension();
-
             $request->image->move(public_path('uploads/original/'),$imageName);
-            $poster->image= $imageName;
+            $poster->image = $imageName;
+            $size=getimagesize('uploads/original/'.$poster->image);
+            $oran = array_values($size)[0]/768;
+            $poster=img::make(public_path().'/uploads/original/'.$poster->image)->resize(768,(int)(array_values($size)[1]/$oran));
 
-            //Resize fonk yazacaksın
-            copy(public_path().'/uploads/original/'.$imageName,
-                public_path().'/uploads/thumbnail/'.$imageName);
+            $poster->save(public_path().'/uploads/thumbnail/'.$imageName , 100);
+
         }
         $poster->save();
         return back()->with('success','Afiş başarıyla oluşturuldu');
@@ -137,7 +136,7 @@ class PosterController extends Controller
             'yer'=>'required | min:3',
             'tarih'=> 'required',
             'contentt'=> 'required | min:3',
-            'image'=>'image|mimes:jpeg,png,jpg|max:2048'
+            'image'=>'image|mimes:jpeg,png,jpg'
         ]);
 
         $poster= Poster::findOrFail($id);
@@ -163,7 +162,7 @@ class PosterController extends Controller
                     }
 
                     $imageName = $request->title . '.' . $request->image->getClientOriginalExtension();
-                    $img_path = '/uploads/';
+                    $img_path = '/uploads/original/';
                     $request->image->move(public_path($img_path), $imageName);
                     $poster->image = $img_path . $imageName;
 
