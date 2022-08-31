@@ -19,9 +19,6 @@
             <form action="{{route('poster.update' , $poster->id)}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label for="">Tasarımcı Adı</label>
-                    <!-- otomatik alinacak -->
-                    <input type="text" name="tasarimci" class="form-control" required value="{{$user->name}}">
                     <label for="">Poster Başlığı</label>
                     <input type="text" name="title" class="form-control" required value="{{$poster->title}}">
                     <div class="form-group">

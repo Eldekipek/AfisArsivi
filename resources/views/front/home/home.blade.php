@@ -63,36 +63,13 @@ font-style: normal;">{{$designer->name}}</h2>
                         </div>
                         <div class="col-12 col-lg-6-10" style="width: calc(100% * 6 / 10);">
                             <div class="module-profiles-posters">
+                                @foreach($designer_posters as $designer_poster)
                                 <picture>
                                     <img
-                                        src="{{asset('https://images.typographicposters.com/search-2x-p3/nicolebrugger/nicolebrugger-poster-62ecdd354ac43f38a54b50ee.jpg')}}"
+                                        src="{{asset('uploads/thumbnail/'.$designer_poster->image)}}"
                                         alt="">
                                 </picture>
-                                <picture>
-                                    <img
-                                        src="{{asset('https://images.typographicposters.com/search-2x-p3/nicolebrugger/nicolebrugger-poster-62ecd24577a3b04347b58415.jpg')}}"
-                                        alt="">
-                                </picture>
-                                <picture>
-                                    <img class="resim3"
-                                        src="{{asset('https://images.typographicposters.com/search-2x-p3/nicolebrugger/nicolebrugger-poster-62ecd0fb1aa91bf2a335dc4a.jpg')}}"
-                                        alt="">
-                                </picture>
-                                <picture>
-                                    <img class="resim4"
-                                        src="{{asset('https://images.typographicposters.com/search-2x-p3/nicolebrugger/nicolebrugger-poster-62eccfad85798afc4e35d590.jpg')}}"
-                                        alt="">
-                                </picture>
-                                <picture>
-                                    <img class="resim5"
-                                        src="{{asset('https://images.typographicposters.com/search-2x-p3/nicolebrugger/nicolebrugger-poster-62ecce9fc8769e1f0831937b.jpg')}}"
-                                        alt="">
-                                </picture>
-                                <picture>
-                                    <img class="resim6"
-                                        src="{{asset('https://images.typographicposters.com/search-2x-p3/nicolebrugger/nicolebrugger-poster-62eccdd9cd006dbcb000b377.jpg')}}"
-                                        alt="">
-                                </picture>
+                                @endforeach
                             </div>
                         </div>
                         @endforeach
