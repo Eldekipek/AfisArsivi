@@ -66,7 +66,17 @@ class PosterController extends Controller
             'tarih'=> 'required',
             'contentt'=> 'required | min:3',
             'image'=>'required|image|mimes:jpeg,png,jpg'
-        ]);
+            ],
+            [
+            '   title.required' => 'Afiş Başlığı boş bırakılamaz.',
+                'image.required' => 'Fotoğraf alanı boş bırakılamaz.',
+                'contentt.required' => 'Açıklama boş bırakılamaz.',
+                'tarih.required' => 'Tarih boş bırakılamaz.',
+                'baski.required' => 'Baskı Tekniği boş bırakılamaz.',
+                'ebat.required' => 'Ebat boş bırakılamaz.',
+
+            ]
+        );
 
         $poster=new Poster();
         $poster->user_id = Auth::id();
