@@ -29,9 +29,9 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Ülke</label><br>
-                            <select name="country_id" id="country_id">
-                                <option selected value="@if(isset($user_admin)&&!is_null($user_admin)) @if(isset($user_admin->country_id)) {{$user_admin->country_id}} @else  @endif @else @if($user->country_id) {{$user->country_id}} @else @endif @endif" >@if(isset($user_admin)&&!is_null($user_admin)) @if(($user_admin->country_id)) {{$cr = \App\Models\Country::where('id' ,$user_admin->country_id)->first()->name}} @else  @endif @else @if($user->country_id) {{$cr = \App\Models\Country::where('id' ,$user->country_id)->first()->name}} @else @endif @endif</option>
-                            @foreach($countries as $country)
+                            <select name="country_id" id="country_id" required>
+                                <option selected value="" >Seçiniz</option>
+                                @foreach($countries as $country)
                                     <option value="{{$country->id}}">{{$country->name}}</option>
                                 @endforeach
                             </select>
