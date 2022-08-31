@@ -133,7 +133,7 @@ font-style: normal;">Reklam Afişleri</h2>
 
                     <article class="poster-item ">
                         @foreach($advertisement_poster as $adv)
-                        <a href="{{route('poster.advertisement')}}" class="poster-items- w-imgs" style="color: #464646;  height: 470px;">
+                        <a href="{{route('poster.advertisement')}}" class="poster-items- w-imgs" style="color: #464646; ">
                             <div class="poster-card-top">
                                 <picture>
                                     <img
@@ -192,7 +192,7 @@ font-style: normal;">Kültürel Afişler</h2>
                 @if(isset($culture_poster)&&!is_null($culture_poster))
                 <article class="poster-item ">
                     @foreach($culture_poster as $culture)
-                    <a href="{{route('poster.culture')}}" class="poster-items- w-imgs" style="color: #464646;  height: 470px;">
+                    <a href="{{route('poster.culture')}}" class="poster-items- w-imgs" style="color: #464646; ">
                         <div class="poster-card-top">
                             <picture>
                                 <img
@@ -253,7 +253,7 @@ font-style: normal;">Sosyal Afişler</h2>
                 @if(isset($social_poster)&&!is_null($social_poster))
                 <article class="poster-item ">
                     @foreach($social_poster as $social)
-                    <a href="{{route('poster.social')}}" class="poster-items- w-imgs" style="color: #464646;  height: 470px;">
+                    <a href="{{route('poster.social')}}" class="poster-items- w-imgs" style="color: #464646; ">
                         <div class="poster-card-top">
                             <picture>
                                 <img
