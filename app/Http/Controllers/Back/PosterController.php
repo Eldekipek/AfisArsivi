@@ -82,11 +82,10 @@ class PosterController extends Controller
             $imageName=$request->title.'.'.$request->image->getClientOriginalExtension();
             $request->image->move(public_path('uploads/original/'),$imageName);
             $poster->image = $imageName;
-            $size=getimagesize('uploads/original/'.$poster->image);
-            $oran = array_values($size)[0]/768;
-            $poster=img::make(public_path().'/uploads/original/'.$poster->image)->resize(768,(int)(array_values($size)[1]/$oran));
-
-            $poster->save(public_path().'/uploads/thumbnail/'.$imageName , 100);
+            $size=getimagesize('uploads/original/'.$imageName);
+            $oran = array_values($size)[0]/300;
+            $imageName2=img::make(public_path().'/uploads/original/'.$imageName)->resize(300,(int)(array_values($size)[1]/$oran));
+            $imageName2->save(public_path().'/uploads/thumbnail/'.$imageName , 100);
 
         }
         $poster->save();
