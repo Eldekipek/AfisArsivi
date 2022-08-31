@@ -30,7 +30,7 @@
                 <h1 class="big highlight tight side-title-home" style=" color: #007ca2; font-size:33px;font-family: work-sans, sans-serif;
 font-weight: 400;
 font-style: normal;
-   ">Tasarımcılar </h1>
+   "><a class="big highlight tight side-title-home" style="text-decoration: none" href="{{route('designer.index')}}">Tasarımcılar</a> </h1>
                 @if(isset($designers)&&!is_null($designers))
                     @foreach($designers as $designer)
             </div>
@@ -116,7 +116,7 @@ font-style: normal;">{{$designer->name}}</h2>
 
                         <h2 class="big" style="font-family: work-sans, sans-serif;
 font-weight: 400;
-font-style: normal;">Reklam Afişleri</h2>
+font-style: normal;"><a class="big highlight tight side-title-home" style="text-decoration: none; color: #0e0e0e" href="{{route('poster.advertisement')}}">Reklam Afişleri</a></h2>
                     </div>
 
                 </div>
@@ -175,7 +175,7 @@ font-style: normal;">Reklam Afişleri</h2>
 
                                 <h2 class="big" style="font-family: work-sans, sans-serif;
 font-weight: 400;
-font-style: normal;">Kültürel Afişler</h2>
+font-style: normal;"><a class="big highlight tight side-title-home" style="text-decoration: none; color: #0e0e0e" href="{{route('poster.culture')}}">Kültürel Afişler</a></h2>
                             </div>
 
                         </div>
@@ -222,8 +222,6 @@ font-style: normal;">Kültürel Afişler</h2>
             </div>
 
 
-
-
             <div class="module-collection white-theme">
                 <div class="collection-info">
                     <div class="collection-info-heading">
@@ -236,7 +234,7 @@ font-style: normal;">Kültürel Afişler</h2>
 
                                 <h2 class="big" style="font-family: work-sans, sans-serif;
 font-weight: 400;
-font-style: normal;">Sosyal Afişler</h2>
+font-style: normal;"><a class="big highlight tight side-title-home" style="text-decoration: none; color: #0e0e0e" href="{{route('poster.social')}}">Sosyal Afişler</a></h2>
                             </div>
 
                         </div>
