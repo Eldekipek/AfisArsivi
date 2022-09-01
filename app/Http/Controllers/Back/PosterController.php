@@ -94,7 +94,7 @@ class PosterController extends Controller
             $poster->image = $imageName;
             $size=getimagesize('uploads/original/'.$imageName);
             $oran = array_values($size)[0]/300;
-            $imageName2=img::make(public_path().'/uploads/original/'.$imageName)->resize(300,(int)(array_values($size)[1]/$oran));
+            $imageName2=img::make(public_path().'/uploads/original/'.$imageName)->resize(330,(int)(array_values($size)[1]/$oran));
             $imageName2->save(public_path().'/uploads/thumbnail/'.$imageName , 100);
 
         }
