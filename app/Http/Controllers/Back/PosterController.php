@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Back;
 
+use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Poster;
@@ -80,12 +81,12 @@ class PosterController extends Controller
 
         $poster=new Poster();
         $poster->user_id = Auth::id();
-        $poster->title=$request->title;
-        $poster->printing_technique=$request->baski;
-        $poster->dimensions=$request->ebat;
-        $poster->country=$request->yer;
-        $poster->date=$request->tarih;
-        $poster->category_id=$request->category_id;
+        $poster->title=Helper::scriptStripper($request->title);
+        $poster->printing_technique=Helper::scriptStripper($request->baski);
+        $poster->dimensions=Helper::scriptStripper($request->ebat);
+        $poster->country=Helper::scriptStripper($request->yer);
+        $poster->date=Helper::scriptStripper($request->tarih);
+        $poster->category_id=Helper::scriptStripper($request->category_id);
         $poster->explanation=$request->contentt;
 
         if ($request->hasFile('image')){
@@ -149,12 +150,12 @@ class PosterController extends Controller
         ]);
 
         $poster= Poster::findOrFail($id);
-        $poster->title=$request->title;
-        $poster->printing_technique=$request->baski;
-        $poster->dimensions=$request->ebat;
-        $poster->country=$request->yer;
-        $poster->date=$request->tarih;
-        $poster->category_id=$request->category_id;
+        $poster->title=Helper::scriptStripper($request->title);
+        $poster->printing_technique=Helper::scriptStripper($request->baski);
+        $poster->dimensions=Helper::scriptStripper($request->ebat);
+        $poster->country=Helper::scriptStripper($request->yer);
+        $poster->date=Helper::scriptStripper($request->tarih);
+        $poster->category_id=Helper::scriptStripper($request->category_id);
         $poster->explanation=$request->contentt;
 
         $poster->save();

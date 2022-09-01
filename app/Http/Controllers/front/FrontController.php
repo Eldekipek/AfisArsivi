@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\front;
 
+use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
 use App\Models\AboutPage;
 use App\Models\Config;
@@ -73,8 +74,8 @@ class FrontController extends Controller
 
         if($validatedData){
             $user = new User();
-            $user->name = $request->name;
-            $user->email = $request->email;
+            $user->name = Helper::scriptStripper($request->name);
+            $user->email = Helper::scriptStripper($request->email);
             $user->password = bcrypt($request->password);
             $user->save();
             if ($user->save()){
