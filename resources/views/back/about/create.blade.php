@@ -25,13 +25,13 @@
 
                 <div class="form-group">
                     <label for="">Sayfa Fotoğrafı</label>
-                    <input type="file" name="image" value="{{$page->image}}" class="form-control" required>
+                    <input type="file" name="image" value="{{$page->image}}" class="form-control" >
                 </div>
                 <div class="form-group">
                     <label for="">Sayfa İçeriği</label>
                     <textarea id="editor" name="contentt" class="form-control" rows="6">{!! $page->content !!}</textarea>
                 </div>
-k
+
 
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">Sayfayı Güncelle</button>
