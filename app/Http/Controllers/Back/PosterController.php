@@ -160,29 +160,32 @@ class PosterController extends Controller
         $poster->save();
 
         if (isset($request->image)) {
-            if ($request->image != null) {
-                $imageControl = $request->image;
-                if ($imageControl['status'] != 'ok') {
-                    return abort(500);
-                } else {
+
                     $old_image = public_path() . $poster->image;
                     if (file_exists($old_image) && !is_null($poster->image)) {
                         unlink($old_image);
                     }
 
-                    $imageName = $request->title . '.' . $request->image->getClientOriginalExtension();
-                    $img_path = '/uploads/original/';
-                    $request->image->move(public_path($img_path), $imageName);
-                    $poster->image = $img_path . $imageName;
+                    if ($request->hasFile('image')){
+                        $imageName=$request->title.'.'.$request->image->getClientOriginalExtension();
+                        $request->image->move(public_path('uploads/original/'),$imageName);
+                        $poster->image = $imageName;
+                        $size=getimagesize('uploads/original/'.$imageName);
+                        $oran = array_values($size)[0]/300;
+                        $imageName2=img::make(public_path().'/uploads/original/'.$imageName)->resize(330,(int)(array_values($size)[1]/$oran));
+                        $imageName2->save(public_path().'/uploads/thumbnail/'.$imageName , 100);
+
+                    }
 
                     $poster->save();
 
                 }
-            }
-        }
-        return back()->with('success','Poster başarıyla güncellendi');
 
-    }
+            return back()->with('success','Poster başarıyla güncellendi');
+
+        }
+
+
 
 
 
