@@ -359,6 +359,12 @@ h1,h2,h3,h4,h5,h6{
 .title strong span div{
     font-weight: 800;
 }
+p{
+    word-break: break-word;
+}
+small{
+    word-break: break-word;
+}
 
 
 

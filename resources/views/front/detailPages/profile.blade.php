@@ -92,7 +92,7 @@
                 </div>
                 <div class="modal-body">
                     <picture>
-                        <img style="width: 550px; height: 600px; margin: auto;display: flex;    object-position: top;
+                        <img style="width: 500px;  margin: auto;display: flex;    object-position: top;
     object-fit: cover;
     position: relative;
     transition: 400ms all;" id="imageGet" class="img-thumbnail" src="{{asset('https://images.typographicposters.com/search-2x-p3/apeloig/0117738-tnt-affiche-saison-2012-13-rvb-01.jpg')}}" alt="">
