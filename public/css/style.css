@@ -365,6 +365,12 @@ p{
 small{
     word-break: break-word;
 }
+@media only screen and (max-width: 800px){
+    .modal-body{
+    display: flex;
+        flex-direction: column;
+    }
+}
 
 
 
