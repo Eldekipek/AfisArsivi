@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Back;
 
+use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Config;
@@ -31,10 +32,10 @@ class ConfigController extends Controller
             ]
         );
         $config = new Config();
-        $config->twitter=$request->twitter;
-        $config->instagram=$request->instagram;
-        $config->facebook=$request->facebook;
-        $config->linkedin=$request->linkedin;
+        $config->twitter=Helper::scriptStripper($request->twitter);
+        $config->instagram=Helper::scriptStripper($request->instagram);
+        $config->facebook=Helper::scriptStripper($request->facebook);
+        $config->linkedin=Helper::scriptStripper($request->linkedin);
 
        /* if ($request->hasFile('logo')){
             $logo=str_slug($request->title).'-logo.'.$request->logo->getClientOriginalExtension();

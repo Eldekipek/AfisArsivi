@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Back;
 
+use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Poster;
@@ -80,12 +81,12 @@ class PosterController extends Controller
 
         $poster=new Poster();
         $poster->user_id = Auth::id();
-        $poster->title=$request->title;
-        $poster->printing_technique=$request->baski;
-        $poster->dimensions=$request->ebat;
-        $poster->country=$request->yer;
-        $poster->date=$request->tarih;
-        $poster->category_id=$request->category_id;
+        $poster->title=Helper::scriptStripper($request->title);
+        $poster->printing_technique=Helper::scriptStripper($request->baski);
+        $poster->dimensions=Helper::scriptStripper($request->ebat);
+        $poster->country=Helper::scriptStripper($request->yer);
+        $poster->date=Helper::scriptStripper($request->tarih);
+        $poster->category_id=Helper::scriptStripper($request->category_id);
         $poster->explanation=$request->contentt;
 
         if ($request->hasFile('image')){
@@ -94,7 +95,7 @@ class PosterController extends Controller
             $poster->image = $imageName;
             $size=getimagesize('uploads/original/'.$imageName);
             $oran = array_values($size)[0]/300;
-            $imageName2=img::make(public_path().'/uploads/original/'.$imageName)->resize(300,(int)(array_values($size)[1]/$oran));
+            $imageName2=img::make(public_path().'/uploads/original/'.$imageName)->resize(330,(int)(array_values($size)[1]/$oran));
             $imageName2->save(public_path().'/uploads/thumbnail/'.$imageName , 100);
 
         }
@@ -149,40 +150,43 @@ class PosterController extends Controller
         ]);
 
         $poster= Poster::findOrFail($id);
-        $poster->title=$request->title;
-        $poster->printing_technique=$request->baski;
-        $poster->dimensions=$request->ebat;
-        $poster->country=$request->yer;
-        $poster->date=$request->tarih;
-        $poster->category_id=$request->category_id;
+        $poster->title=Helper::scriptStripper($request->title);
+        $poster->printing_technique=Helper::scriptStripper($request->baski);
+        $poster->dimensions=Helper::scriptStripper($request->ebat);
+        $poster->country=Helper::scriptStripper($request->yer);
+        $poster->date=Helper::scriptStripper($request->tarih);
+        $poster->category_id=Helper::scriptStripper($request->category_id);
         $poster->explanation=$request->contentt;
 
         $poster->save();
 
         if (isset($request->image)) {
-            if ($request->image != null) {
-                $imageControl = $request->image;
-                if ($imageControl['status'] != 'ok') {
-                    return abort(500);
-                } else {
+
                     $old_image = public_path() . $poster->image;
                     if (file_exists($old_image) && !is_null($poster->image)) {
                         unlink($old_image);
                     }
 
-                    $imageName = $request->title . '.' . $request->image->getClientOriginalExtension();
-                    $img_path = '/uploads/original/';
-                    $request->image->move(public_path($img_path), $imageName);
-                    $poster->image = $img_path . $imageName;
+                    if ($request->hasFile('image')){
+                        $imageName=$request->title.'.'.$request->image->getClientOriginalExtension();
+                        $request->image->move(public_path('uploads/original/'),$imageName);
+                        $poster->image = $imageName;
+                        $size=getimagesize('uploads/original/'.$imageName);
+                        $oran = array_values($size)[0]/300;
+                        $imageName2=img::make(public_path().'/uploads/original/'.$imageName)->resize(330,(int)(array_values($size)[1]/$oran));
+                        $imageName2->save(public_path().'/uploads/thumbnail/'.$imageName , 100);
+
+                    }
 
                     $poster->save();
 
                 }
-            }
-        }
-        return back()->with('success','Poster başarıyla güncellendi');
 
-    }
+            return back()->with('success','Poster başarıyla güncellendi');
+
+        }
+
+
 
 
 
@@ -207,9 +211,10 @@ class PosterController extends Controller
 
     function getDetail(Request $request)
     {
+
         $posters = Poster::where('id', $request->id)->first();
         $user = User::find($posters->user_id);
-        return response()->json(['image' => $posters->image,'designer_name' => $posters->user_id, 'title' => $posters->title, 'name' => $user->name, 'user_id' => $user->id,
+        return response()->json(['image' => '/uploads/original/'.$posters->image,'designer_name' => $posters->user_id, 'title' => $posters->title, 'name' => $user->name, 'user_id' => $user->id,
             'yer' => $posters->country,'baski' => $posters->printing_technique,'ebat' => $posters->dimensions, 'tarih' => $posters->date,'contentt' => $posters->explanation]);
 
     }

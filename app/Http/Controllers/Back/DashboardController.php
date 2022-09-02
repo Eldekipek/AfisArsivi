@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Back;
 
+use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
 use App\Models\AboutPage;
 use App\Models\Country;
@@ -46,9 +47,9 @@ class DashboardController extends Controller
     public function userSettingsUpdate(Request $request){
         $id = Auth::id();
         $user = User::findOrFail($id);
-        $user->name = $request->name;
-        $user->website = $request->website;
-        $user->country_id = $request->country_id;
+        $user->name = Helper::scriptStripper($request->name);
+        $user->website = Helper::scriptStripper($request->website);
+        $user->country_id = Helper::scriptStripper($request->country_id);
         $a=Carbon::create( $request->birthday);
         $a=$a->format('d-m-Y H:i:s.u');
         $newDate =Carbon::parse($a);
@@ -84,7 +85,7 @@ class DashboardController extends Controller
         ]);
 
         $page = AboutPage::find(1);
-        $page->title=$request->title;
+        $page->title=Helper::scriptStripper($request->title);
         $page->content=$request->contentt;
 
         if ($request->hasFile('image')){
