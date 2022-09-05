@@ -24,7 +24,7 @@ class FrontController extends Controller
 
     public function home(){
         $config = Config::find(1);
-        $posters=Poster::all()->take(30);
+        $posters=Poster::orderBy('created_at', 'DESC')->get()->take(30);
         $designers=User::orderBy('created_at', 'DESC')->get()->take(1);
         $designer_last=User::orderBy('created_at', 'DESC')->first();
         $social_poster=Poster::where('category_id',3)->get()->take(8);
