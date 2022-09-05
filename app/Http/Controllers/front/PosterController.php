@@ -34,7 +34,7 @@ class PosterController extends Controller
 
     public function archive(){
         $config = Config::find(1);
-        $posters=Poster::all();
+        $posters=Poster::orderBy('created_at', 'DESC')->get();
 
         return view('front.detailPages.archive-poster', compact('config','posters'));
 
