@@ -388,7 +388,7 @@ span,a{
 }
 @media only screen and (min-width: 3000px){
     .poster-inner .poster-items-link picture>img{
-        height: 650px;
+        height: 800px;
     }
 }
 
