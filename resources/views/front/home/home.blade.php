@@ -263,6 +263,70 @@ font-style: normal;"><a class="big highlight tight side-title-home" style="text-
             </div>
 
 
+    <div class="module-collection white-theme">
+        <div class="collection-info">
+            <div class="collection-info-heading">
+                <div class="collection-titles" style="display: flex;
+    flex-direction: column;">
+                    <div class="collection">
+                        <p>Koleksiyon</p>
+                    </div>
+                    <div>
+
+                        <h2 class="big" style="font-family: work-sans, sans-serif;
+font-weight: 400;
+font-style: normal;"><a class="big highlight tight side-title-home" style="text-decoration: none; color: #0e0e0e" href="{{route('poster.tipografi')}}">Tipografik Afişler</a></h2>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="collection-info-footer">
+                <small>{{$tipografi_poster->count()}} Afiş</small>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mb-5">
+        @if(isset($tipografi_poster)&&!is_null($tipografi_poster))
+            <article class="poster-item ">
+                @foreach($tipografi_poster as $tipografi)
+                    <a href="{{route('poster.tipografi')}}" class="poster-items- w-imgs" style="color: #464646; ">
+                        <div class="poster-card-top">
+                            <picture>
+                                <img
+                                    src="/uploads/thumbnail/{{$tipografi->image}}"
+                                    alt="">
+                            </picture>
+                        </div>
+
+                        <div class="poster-item-info" style="padding: 30px;">
+                <span class="common-links">
+                    <h2 class="title"><strong> <!--Tasarımcı adı--->
+                            <span><div href="{{route('designer.profile',$tipografi->getUser->id)}}" class="">{{($tipografi->getUser->name)}}</div></span></strong>
+                    </h2>
+                    <h2 class="title"><strong> <!--Proje adı--->
+                            <span><div class="">{{($tipografi->title)}}</div></span></strong>
+                    </h2><!---->
+                    <h1 class="title"> {{($tipografi->date)}}</h1> <!--Tarih--->
+                    <div style="white-space:nowrap;
+                                            width: 200px;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;">
+                    <small  class="caption lining-numbers">{{($tipografi->country)}} |</small><!--Kullanıldığı yer-->
+                    <small  class="caption lining-numbers">{{($tipografi->printing_technique)}},</small><!--Baskı tekniği-->
+                    </div>
+                    <small class="caption lining-numbers">{{($tipografi->dimensions)}}</small><!--ebat-->
+                </span>
+                        </div>
+                    </a>
+                @endforeach
+            </article>
+        @endif
+    </div>
+
+
 
 @endsection
 

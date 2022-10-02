@@ -39,6 +39,7 @@ Route::group(['prefix' => 'poster'], function () {
         Route::get('/culture', 'culture')->name('poster.culture');
         Route::get('/social', 'social')->name('poster.social');
         Route::get('/advertisement', 'advertisement')->name('poster.advertisement');
+        Route::get('/tipografi', 'tipografi')->name('poster.tipografi');
         Route::get('/archive', 'archive')->name('poster.archive');
 
     });

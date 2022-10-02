@@ -18,7 +18,8 @@ class CategorySeeder extends Seeder
         DB::table('categories')->insert([
             ['id'  => 1, 'name' => 'Reklam Afişleri'],
             ['id'  => 2, 'name' => 'Kültürel Afişler'],
-            ['id'  => 3, 'name' => 'Sosyal Afişler']
+            ['id'  => 3, 'name' => 'Sosyal Afişler'],
+            ['id'  => 4, 'name' => 'Tipografik Afişler'],
         ]);
 
     }

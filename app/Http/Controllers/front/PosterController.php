@@ -39,4 +39,12 @@ class PosterController extends Controller
         return view('front.detailPages.archive-poster', compact('config','posters'));
 
     }
+
+    public function tipografi(){
+        $config = Config::find(1);
+        $tipografi_poster=Poster::where('category_id',4)->get();
+
+        return view('front.detailPages.tipografi', compact('config','tipografi_poster'));
+
+    }
 }
