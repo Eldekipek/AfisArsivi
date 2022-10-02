@@ -392,7 +392,24 @@ span,a{
     }
 }
 
-
+/*.module-profiles:hover{*/
+/*    background: #e8e8e8;*/
+/*}*/
+.highlight:hover{
+    font-size:35px;
+}
+.module-profiles{
+    cursor: pointer;
+}
+.module-profiles .highlight{
+    color: #000000; font-size:33px;font-family: work-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.module-profiles .highlight:hover{
+    font-size:35px;
+    color: #51585e;
+}
 
 
 

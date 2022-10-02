@@ -26,12 +26,12 @@
     </div>
     <div class="right-header">
         <div class="profile">
-            <a href="{{route("designer.index")}}" style="color: #007ca2;">
+            <a href="{{route("designer.index")}}" style="color: #000000;">
                 <i class="fa-solid fa-users"></i>
             </a>
         </div>
         <div class="archive ">
-            <a href="{{route('poster.archive')}}"  style="color: #007ca2;">
+            <a href="{{route('poster.archive')}}"  style="color: #000000;">
                 <i class="fa-solid fa-box-archive"></i>
             </a>
         </div>
@@ -53,12 +53,13 @@
 
             </div>
             <div id="main">
-                <span style="color: #007ca2;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+                <span style="color: #000000;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
             </div>
         </div>
 
     </div>
 </div>
+
 
 @yield("content")
 
