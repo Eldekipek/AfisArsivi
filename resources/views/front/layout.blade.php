@@ -30,9 +30,9 @@
                 <i class="fa-solid fa-users"></i>
             </a>
         </div>
-        <div class="archive ">
+        <div class="archive " style="margin:0 0 0 5px;">
             <a href="{{route('poster.archive')}}"  style="color: #000000;">
-                <i class="fa-solid fa-box-archive"></i>
+                <i class="fa-sharp fa-solid fa-suitcase"></i>
             </a>
         </div>
         <div class="menu ml-2">
