@@ -24,7 +24,16 @@
             <img class="header-img" src="{{asset('./images/afislogo2.png')}}"  alt="">
         </a>
     </div>
+
     <div class="right-header">
+        <div class="search-button">
+        <div class="input-group rounded mr-2">
+            <input type="search" class="form-control rounded" placeholder="Ara" aria-label="Search" aria-describedby="search-addon" />
+            <span class="input-group-text border-0" id="search-addon">
+    <i class="fas fa-search"></i>
+  </span>
+        </div>
+        </div>
         <div class="profile">
             <a href="{{route("designer.index")}}" style="color: #000000;">
                 <i class="fa-solid fa-users"></i>
