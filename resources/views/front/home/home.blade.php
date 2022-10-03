@@ -6,10 +6,10 @@
 
             <div class="poster-inner">
                 @foreach($posters as $poster)
-                    <a href="{{route('poster.archive')}}" class="poster-items-link w-imgs">
+                    <a href="{{URL::current().'/designer/profile'.$poster->user_id}}" class="poster-items-link w-imgs">
                         <div>
                             <picture>
-                                <img
+                                    <img
                                     src="/uploads/thumbnail/{{$poster->image}}"
                                     alt="">
                             </picture>
