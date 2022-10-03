@@ -30,7 +30,7 @@
                 <h1 class="big highlight tight side-title-home" style=" color: #000000; font-size:33px;font-family: work-sans, sans-serif;
 font-weight: 400;
 font-style: normal;
-   "><a class="big highlight tight side-title-home" style="text-decoration: none; color:#464646;" href="{{route('designer.index')}}"><strong>Tasarımcılar</strong></a> </h1>
+   "><a class="big highlight tight side-title-home" style="text-decoration: none; color:#000000;" href="{{route('designer.index')}}">Tasarımcılar</a> </h1>
                 @if(isset($designers)&&!is_null($designers))
                     @foreach($designers as $designer)
             </div>

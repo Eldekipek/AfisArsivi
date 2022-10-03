@@ -16,7 +16,7 @@ class CountrySeeder extends Seeder
     public function run()
     {
         DB::table('countries')->insert([
-             ['id'  => 1, 'name' => 'Turkey'],
+             ['id'  => 1, 'name' => 'Türkiye'],
              ['id'  => 2, 'name' => 'Afghanistan'],
              ['id'  => 3, 'name' => 'Albania'],
              ['id'  => 4, 'name' => 'Algeria'],
