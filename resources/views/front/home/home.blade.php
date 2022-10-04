@@ -128,7 +128,7 @@ font-style: normal;"><a class="big highlight tight side-title-home" style="text-
                                 <h2 class="title"><strong> <!--Proje adı--->
                                         <span><div class="">{{($adv->title)}}</div></span></strong>
                                 </h2><!---->
-                                <h1 class="title"> {{($adv->date)}}</h1> <!--Tarih--->
+                                <h1 class="title"> {{$adv->date = date('d-m-Y', strtotime($adv->date))}}</h1> <!--Tarih--->
                                 <small class="caption lining-numbers">{{($adv->country)}} |</small><!--Kullanıldığı yer-->
                                 <small class="caption lining-numbers">{{($adv->printing_technique)}},</small><!--Baskı tekniği-->
                                 <small class="caption lining-numbers">{{($adv->dimensions)}}</small><!--ebat-->
@@ -186,7 +186,7 @@ font-style: normal;"><a class="big highlight tight side-title-home" style="text-
                     <h2 class="title"><strong> <!--Proje adı--->
                             <span><div class="">{{($culture->title)}}</div></span></strong>
                     </h2><!---->
-                    <h1 class="title"> {{($culture->date)}}</h1> <!--Tarih--->
+                    <h1 class="title"> {{$culture->date = date('d-m-Y', strtotime($culture->date))}}</h1> <!--Tarih--->
                     <small class="caption lining-numbers">{{($culture->country)}} |</small><!--Kullanıldığı yer-->
                     <small class="caption lining-numbers">{{($culture->printing_technique)}},</small><!--Baskı tekniği-->
                     <small class="caption lining-numbers">{{($culture->dimensions)}}</small><!--ebat-->
@@ -245,7 +245,7 @@ font-style: normal;"><a class="big highlight tight side-title-home" style="text-
                     <h2 class="title"><strong> <!--Proje adı--->
                             <span><div class="">{{($social->title)}}</div></span></strong>
                     </h2><!---->
-                    <h1 class="title"> {{($social->date)}}</h1> <!--Tarih--->
+                    <h1 class="title">{{$social->date = date('d-m-Y', strtotime($social->date))}}</h1> <!--Tarih--->
                     <div style="white-space:nowrap;
                                             width: 200px;
                                             overflow: hidden;
@@ -309,7 +309,7 @@ font-style: normal;"><a class="big highlight tight side-title-home" style="text-
                     <h2 class="title"><strong> <!--Proje adı--->
                             <span><div class="">{{($tipografi->title)}}</div></span></strong>
                     </h2><!---->
-                    <h1 class="title"> {{($tipografi->date)}}</h1> <!--Tarih--->
+                    <h1 class="title">{{$tipografi->date = date('d-m-Y', strtotime($tipografi->date))}}</h1> <!--Tarih--->
                     <div style="white-space:nowrap;
                                             width: 200px;
                                             overflow: hidden;

@@ -31,7 +31,7 @@
                     <h2 class="title"><strong> <!--Proje adı--->
                             <span><a class="">{{$poster->title}}</a></span></strong>
                     </h2><!---->
-                    <h1 class="title">{{$poster->date}}</h1> <!--Tarih--->
+                    <h1 class="title">{{$poster->date = date('d-m-Y', strtotime($poster->date))}}</h1> <!--Tarih--->
                     <div style="white-space:nowrap;
                         width: 200px;
                         overflow: hidden;

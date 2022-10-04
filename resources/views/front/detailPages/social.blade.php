@@ -32,7 +32,7 @@
                     <h2 class="title"><strong> <!--Proje adı--->
                             <span><a class="">{{($social->title)}}</a></span></strong>
                     </h2><!---->
-                    <h1 class="title"> {{($social->date)}}</h1> <!--Tarih--->
+                    <h1 class="title">{{$social->date = date('d-m-Y', strtotime($social->date))}}</h1> <!--Tarih--->
                     <div style="white-space:nowrap;
 width: 200px;
 overflow: hidden;

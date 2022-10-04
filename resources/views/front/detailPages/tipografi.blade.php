@@ -32,7 +32,7 @@
                     <h2 class="title"><strong> <!--Proje adı--->
                             <span><a class="">{{($tipografi->title)}}</a></span></strong>
                     </h2><!---->
-                    <h1 class="title"> {{($tipografi->date)}}</h1> <!--Tarih--->
+                    <h1 class="title">{{$tipografi->date = date('d-m-Y', strtotime($tipografi->date))}}</h1> <!--Tarih--->
                     <div style="white-space:nowrap;
 width: 200px;
 overflow: hidden;

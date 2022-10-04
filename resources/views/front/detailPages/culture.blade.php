@@ -31,7 +31,7 @@
                                 <h2 class="title"><strong> <!--Proje adı--->
                                 <span><a class="">{{($culture->title)}}</a></span></strong>
                                 </h2><!---->
-                                <h1 class="title"> {{($culture->date)}}</h1> <!--Tarih--->
+                                <h1 class="title">{{$culture->date = date('d-m-Y', strtotime($culture->date))}}</h1> <!--Tarih--->
                                 <div style="white-space:nowrap;
             width: 200px;
             overflow: hidden;

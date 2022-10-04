@@ -34,7 +34,7 @@
                                 <h2 class="title"><strong> <!--Proje adı--->
                                     <span><div class="">{{($adv->title)}}</div></span></strong>
                                 </h2><!---->
-                                <h1 class="title"> {{($adv->date)}}</h1> <!--Tarih--->
+                                <h1 class="title"> {{$adv->date = date('d-m-Y', strtotime($adv->date))}}</h1> <!--Tarih--->
                                 <div style="white-space:nowrap;
 width: 200px;
 overflow: hidden;
