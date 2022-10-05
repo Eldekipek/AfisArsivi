@@ -28,7 +28,7 @@
     <div class="right-header">
         <div class="search-button">
         <div class="input-group rounded mr-2">
-            <input type="search" class="form-control rounded" placeholder="Ara" aria-label="Search" aria-describedby="search-addon" />
+            <input type="search" style="width:170px;" class="form-control rounded" placeholder="Ara" aria-label="Search" aria-describedby="search-addon" />
             <span class="input-group-text border-0" id="search-addon">
     <i class="fas fa-search"></i>
   </span>
