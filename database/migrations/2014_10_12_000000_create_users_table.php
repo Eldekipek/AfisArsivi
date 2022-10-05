@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('website')->nullable();
             $table->unsignedBigInteger('country_id')->nullable();
             $table->date('birthday')->nullable();
+            $table->text('explanation')->nullable();
             $table->foreign('country_id')->references('id')->on('countries');
             $table->rememberToken();
             $table->timestamps();

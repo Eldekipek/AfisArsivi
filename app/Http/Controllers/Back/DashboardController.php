@@ -49,6 +49,7 @@ class DashboardController extends Controller
         $user = User::findOrFail($id);
         $user->name = Helper::scriptStripper($request->name);
         $user->website = Helper::scriptStripper($request->website);
+        $user->explanation =$request->contentt;
         $user->country_id = Helper::scriptStripper($request->country_id);
         $a=Carbon::create( $request->birthday);
         $a=$a->format('d-m-Y H:i:s.u');

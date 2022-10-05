@@ -53,9 +53,29 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label for="">Özgeçmiş</label>
+                    <textarea id="editor" name="contentt" class="form-control" rows="6"></textarea>
+                </div>
+                <div class="form-group">
                     <button type="submit" class="btn btn-block btn-md btn-success">Güncelle</button>
                 </div>
             </form>
         </div>
     </div>
+@endsection
+
+@section('css')
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+@endsection
+@section('js')
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#editor').summernote(
+                {
+                    'height':300
+                }
+            );
+        });
+    </script>
 @endsection
