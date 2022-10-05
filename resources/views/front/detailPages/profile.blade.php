@@ -26,7 +26,17 @@
                 </div>
              </div>
             <div class="summary">
-            <p style="text-align: center;"> Kullanıcının, Sitemiz Altında Bulunan Afişleri Aşağıdaki Gibidir. </p>
+                <div class="caticerik">
+                    Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının
+                    bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri
+                    standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek
+                    değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının
+                    yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları
+                    ile popüler olmuştur.
+                </div>
+                <div class="devaminioku">
+                    <div class="devamyazi btn" style="font-weight: 600;border-bottom: 1px solid #000000">DEVAMINI OKU</div>
+                </div>
             </div>
             <div class="number-posters">
                 <strong><p style="text-align: center;">{{$designer->getPoster->count()}} Afiş</p></strong>
@@ -161,6 +171,23 @@
                 }
             });
         }
+    </script>
+    <script>
+        jQuery(function($){
+            //ANA SAYFA DEVAMINI OKU
+            $('.devamyazi').on('click',function(){
+
+                if($(this).hasClass('aktif')){
+                    $('.caticerik').css({'height':'50px'});
+                    $(this).removeClass('aktif');
+                }else{
+                    $('.caticerik').css({'height':'auto'});
+                    $(this).addClass('aktif');
+                }
+
+            });
+            //ANA SAYFA DEVAMINI OKU
+        });
     </script>
 
 @endsection
