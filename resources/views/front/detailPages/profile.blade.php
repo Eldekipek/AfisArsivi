@@ -29,9 +29,15 @@
                 <div class="caticerik">
                     {{$designer->explanation}}
                 </div>
+                @if(isset($designer->explanation))
                 <div class="devaminioku">
                     <div class="devamyazi btn" style="font-weight: 600;border-bottom: 1px solid #000000">DEVAMINI OKU</div>
                 </div>
+                @else
+                    <div class="devaminioku">
+                        <div class="devamyazi btn" style="font-weight: 600;border-bottom: 1px solid #000000; display: none">DEVAMINI OKU</div>
+                    </div>
+                @endif
             </div>
             <div class="number-posters">
                 <strong><p style="text-align: center;">{{$designer->getPoster->count()}} Afiş</p></strong>
