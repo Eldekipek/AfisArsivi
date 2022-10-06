@@ -13,7 +13,6 @@
 
         </nav>
     </div>
-
         <div class="profile-list-item">
             <div class="list-row header-list" style="display: flex">
                 <div class="col-12 col-md-6 list-item name" style="display: flex; gap: 20px;">

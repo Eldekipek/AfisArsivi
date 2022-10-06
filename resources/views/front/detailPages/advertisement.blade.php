@@ -73,22 +73,26 @@ text-overflow: ellipsis;">
                     </button>
                 </div>
                 <div class="modal-body">
-                    <picture>
-                        <img style="width: 500px; margin: auto;display: flex;    object-position: top;
+                    <div class="row modal-row">
+                        <div class="col-6">
+                            <picture>
+                                <img style="width: 500px; margin: auto;display: flex;    object-position: top;
     object-fit: cover;
     position: relative;
     transition: 400ms all;" id="imageGet" class="img-thumbnail" src="{{asset('https://images.typographicposters.com/search-2x-p3/apeloig/0117738-tnt-affiche-saison-2012-13-rvb-01.jpg')}}" alt="">
-                    </picture>
-                    <div class="mt-3" style="    display: flex;
+                            </picture>
+                        </div>
+                        <div class="col-6">
+                            <div class="mt-3" style="    display: flex;
                                                                          flex-direction: column;
                                                                          align-items: center;">
-                                        <span class="common-links">
-                                            <h2 class="title"><strong> <!--Tasarımcı adı--->
-                                                <span><a id="designerGet" class="">İpek Eldek</a></span></strong>
-                                            </h2>
-                                            <h2 class="title"><strong> <!--Proje adı--->
-                                                <span><a id="nameGet" class="">Studio Philippe Apeloig</a></span></strong>
-                                            </h2><!---->
+                                <span class="common-links">
+                                    <h2 class="title"><strong> <!--Tasarımcı adı--->
+                                            <span><a id="designerGet" class="">İpek Eldek</a></span></strong>
+                                    </h2>
+                                    <h2 class="title"><strong> <!--Proje adı--->
+                                            <span><a id="nameGet" class="">Studio Philippe Apeloig</a></span></strong>
+                                    </h2><!---->
                                             <h1 class="title" id="tarihGet"> 2012-2013”, 2012</h1> <!--Tarih--->
                                             <small class="caption lining-numbers" id="yerGet">France |</small><!--Kullanıldığı yer-->
                                             <small class="caption lining-numbers" id="baskıGet">Offset,</small><!--Baskı tekniği-->
@@ -98,7 +102,8 @@ text-overflow: ellipsis;">
                                                 çıklamaq açıklama açıklama açıklama</p>
                                             </div>
                                         </span>
-
+                            </div>
+                        </div>
                     </div>
                 </div>
 
