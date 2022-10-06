@@ -27,7 +27,7 @@
              </div>
             <div class="summary">
                 <div class="caticerik">
-                    {{$designer->explanation}}
+                    {!!$designer->explanation!!}
                 </div>
                 @if(isset($designer->explanation))
                 <div class="devaminioku">
