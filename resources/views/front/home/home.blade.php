@@ -19,15 +19,10 @@
                 @endif
             </div>
     </div>
-
-
     <!--Giris sayfası--->
-
     <div class="module-profiles gray-theme mt-5">
         <div class="row" style="display: flex">
-            <div class="col-12 col-lg-2 pt-2" style="    display: flex;
-    align-items: center;">
-
+            <div class="col-12 col-lg-2 pt-2" style="display: flex;align-items: center;margin-top: 60px;">
                 <h1 class="big highlight tight side-title-home" style=" color: #000000; font-size:33px;font-family: work-sans, sans-serif;
 font-weight: 400;
 font-style: normal;
@@ -127,16 +122,12 @@ font-style: normal;
                         <p>Koleksiyon</p>
                     </div>
                     <div>
-
                         <h2 class="big" style="font-family: work-sans, sans-serif;
 font-weight: 400;
 font-style: normal;"><a class="big highlight tight side-title-home" style="text-decoration: none; color: #0e0e0e" href="{{route('poster.advertisement')}}">Reklam Afişleri</a></h2>
                     </div>
-
                 </div>
-
             </div>
-
             <div class="collection-info-footer">
                 <small>{{$advertisement_poster->count()}} Afiş</small>
             </div>
@@ -186,22 +177,17 @@ font-style: normal;"><a class="big highlight tight side-title-home" style="text-
                                 <p>Koleksiyon</p>
                             </div>
                             <div>
-
                                 <h2 class="big" style="font-family: work-sans, sans-serif;
 font-weight: 400;
 font-style: normal;"><a class="big highlight tight side-title-home" style="text-decoration: none; color: #0e0e0e" href="{{route('poster.culture')}}">Kültürel Afişler</a></h2>
                             </div>
-
                         </div>
-
                     </div>
                     <div class="collection-info-footer">
                         <small>{{$culture_poster->count()}} Afiş</small>
                     </div>
                 </div>
             </div>
-
-
             <div class="container">
                 @if(isset($culture_poster)&&!is_null($culture_poster))
                 <article class="poster-item ">
