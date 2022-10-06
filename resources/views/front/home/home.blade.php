@@ -47,10 +47,15 @@ font-style: normal;
                                                          <div>
                                                             <div class="profile-icon large">
                                                                 <picture>
+                                                                    @if(isset($designer->image)&&!is_null($designer->image))
+
                                                                     <img
                                                                         src="{{$designer->image}}"
                                                                         alt="">
+                                                                    @endif
+
                                                                 </picture>
+
                                                             </div>
                                                         </div>
                                                     </div>
