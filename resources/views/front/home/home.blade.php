@@ -31,52 +31,88 @@
 font-weight: 400;
 font-style: normal;
    "><a class="big highlight tight side-title-home" style="text-decoration: none; color:#000000;" href="{{route('designer.index')}}">Tasarımcılar</a> </h1>
-                @if(isset($designers)&&!is_null($designers))
-                    @foreach($designers as $designer)
-            </div>
-            <div class="col-12 col-lg-10 pt-3">
-                <a href="{{route('designer.profile',$designer->id)}}" class="module-profiles-link">
-                    <div class="row module-profiles-row">
-                        <div class="col-12 col-lg-4-10" style="width: 40%;">
-                            <div class="module-profiles-name">
-                                <div style="color: #1c1f23">
-                                    <h2 style="font-family: work-sans, sans-serif;
 
-font-weight: 400;
-
-font-style: normal;">{{$designer->name}}</h2>
-                                    @if(isset($designer->getCountry->name)&&!is_null($designer->getCountry->name))
-
-                                    <h6>{{$designer->getCountry->name}}</h6>
-                                    @endif
-                                </div>
-                                <div>
-                                    <div class="profile-icon large">
-                                        <picture>
-                                            <img
-                                                src="{{$designer->image}}"
-                                                alt="">
-                                        </picture>
+                </div>
+                    <div class="col-12 col-lg-10 pt-3">
+                        <div id="slideshow">
+                            @if(isset($designers)&&!is_null($designers))
+                                @foreach($designers as $designer)
+                                    <div>
+                                        <a href="{{route('designer.profile',$designer->id)}}" class="module-profiles-link">
+                                            <div class="row module-profiles-row">
+                                                <div class="col-12 col-lg-4-10" style="width: 40%;">
+                                                    <div class="module-profiles-name">
+                                                        <div style="color: #1c1f23">
+                                                            <h2 style="font-family: work-sans, sans-serif;font-weight: 400;font-style: normal;">{{$designer->name}}</h2>
+                                                            @if(isset($designer->getCountry->name)&&!is_null($designer->getCountry->name))
+                                                                <h6>{{$designer->getCountry->name}}</h6>
+                                                            @endif
+                                                        </div>
+                                                         <div>
+                                                            <div class="profile-icon large">
+                                                                <picture>
+                                                                    <img
+                                                                        src="{{$designer->image}}"
+                                                                        alt="">
+                                                                </picture>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6-10" style="width: calc(100% * 6 / 10);">
+                                                    <div class="module-profiles-posters">
+                                                        @foreach($designer_posters as $designer_poster)
+                                                            <picture>
+                                                                <img src="{{asset('uploads/thumbnail/'.$designer_poster->image)}}" alt="">
+                                                            </picture>
+                                                        @endforeach
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6-10" style="width: calc(100% * 6 / 10);">
-                            <div class="module-profiles-posters">
-                                @foreach($designer_posters as $designer_poster)
-                                <picture>
-                                    <img
-                                        src="{{asset('uploads/thumbnail/'.$designer_poster->image)}}"
-                                        alt="">
-                                </picture>
                                 @endforeach
-                            </div>
+                            @endif
                         </div>
-                        @endforeach
-                        @endif
                     </div>
-                </a>
-            </div>
+{{--            <div class="col-12 col-lg-10 pt-3">--}}
+{{--                <a href="{{route('designer.profile',$designer->id)}}" class="module-profiles-link">--}}
+{{--                    <div class="row module-profiles-row">--}}
+{{--                        <div class="col-12 col-lg-4-10" style="width: 40%;">--}}
+{{--                            <div class="module-profiles-name">--}}
+{{--                                <div style="color: #1c1f23">--}}
+{{--                                    <h2 style="font-family: work-sans, sans-serif;font-weight: 400;font-style: normal;">{{$designer->name}}</h2>--}}
+{{--                                    @if(isset($designer->getCountry->name)&&!is_null($designer->getCountry->name))--}}
+{{--                                    <h6>{{$designer->getCountry->name}}</h6>--}}
+{{--                                    @endif--}}
+{{--                                </div>--}}
+{{--                                <div>--}}
+{{--                                    <div class="profile-icon large">--}}
+{{--                                        <picture>--}}
+{{--                                            <img--}}
+{{--                                                src="{{$designer->image}}"--}}
+{{--                                                alt="">--}}
+{{--                                        </picture>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-12 col-lg-6-10" style="width: calc(100% * 6 / 10);">--}}
+{{--                            <div class="module-profiles-posters">--}}
+{{--                                @foreach($designer_posters as $designer_poster)--}}
+{{--                                <picture>--}}
+{{--                                    <img--}}
+{{--                                        src="{{asset('uploads/thumbnail/'.$designer_poster->image)}}"--}}
+{{--                                        alt="">--}}
+{{--                                </picture>--}}
+{{--                                @endforeach--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        @endforeach--}}
+{{--                        @endif--}}
+{{--                    </div>--}}
+{{--                </a>--}}
+{{--            </div>--}}
         </div>
     </div>
 
@@ -309,7 +345,7 @@ font-style: normal;"><a class="big highlight tight side-title-home" style="text-
                     <h2 class="title"><strong> <!--Proje adı--->
                             <span><div class="">{{($tipografi->title)}}</div></span></strong>
                     </h2><!---->
-                    <h1 class="title">{{$tipografi->date = date('d-m-Y', strtotime($tipografi->date))}}</h1> <!--Tarih--->
+                    <h1 class="title">{{$tipografi->date = date('d-m-Y', strtotime($tipografi->date))}} {{($tipografi->date)}}</h1> <!--Tarih--->
                     <div style="white-space:nowrap;
                                             width: 200px;
                                             overflow: hidden;
@@ -326,7 +362,18 @@ font-style: normal;"><a class="big highlight tight side-title-home" style="text-
         @endif
     </div>
 
+    <script>
+        $("#slideshow > div:gt(0)").hide();
 
+        setInterval(function() {
+            $('#slideshow > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+        }, 3000);
+    </script>
 
 @endsection
 

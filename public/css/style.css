@@ -493,6 +493,18 @@ a.control_next {
 .devamyazi{
     cursor:pointer;
 }
+#slideshow {
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#slideshow > div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
 
 
 
