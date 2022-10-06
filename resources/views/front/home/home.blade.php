@@ -23,9 +23,7 @@
     <div class="module-profiles gray-theme mt-5">
         <div class="row" style="display: flex">
             <div class="col-12 col-lg-2 pt-2" style="display: flex;align-items: center;margin-top: 60px;">
-                <h1 class="big highlight tight side-title-home" style=" color: #000000; font-size:33px;font-family: work-sans, sans-serif;
-font-weight: 400;
-font-style: normal;
+                <h1 class="big highlight tight side-title-home" style=" color: #000000; font-size:33px;font-family: work-sans, sans-serif;font-weight: 400;font-style: normal;
    "><a class="big highlight tight side-title-home" style="text-decoration: none; color:#000000;" href="{{route('designer.index')}}">Tasarımcılar</a> </h1>
 
                 </div>
