@@ -62,11 +62,21 @@ font-style: normal;
                                                 </div>
                                                 <div class="col-12 col-lg-6-10" style="width: calc(100% * 6 / 10);">
                                                     <div class="module-profiles-posters">
-                                                        @foreach($designer_posters as $designer_poster)
-                                                            <picture>
-                                                                <img src="{{asset('uploads/thumbnail/'.$designer_poster->image)}}" alt="">
-                                                            </picture>
-                                                        @endforeach
+                                                        <div class="col-12 col-lg-6-10" style="width: calc(100% * 6 / 10);">
+                                                            <div class="module-profiles-posters">
+                                                                @foreach($postersArray as $designer_poster)
+                                                                    @foreach($designer_poster as $key=>$value)
+                                                                        @foreach($value as $poster)
+                                                                            @if($poster->user_id == $designer->id )
+                                                                                <picture>
+                                                                                    <img src="{{asset('uploads/thumbnail/'.$poster->image)}}" alt="">
+                                                                                </picture>
+                                                                            @endif
+                                                                        @endforeach
+                                                                    @endforeach
+                                                                @endforeach
+                                                            </div>
+                                                            </div>
                                                     </div>
                                                 </div>
                                             </div>

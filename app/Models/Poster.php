@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Poster extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'user_id',
+    ];
     protected $table = 'posters';
     protected $guarded=['id'];
 

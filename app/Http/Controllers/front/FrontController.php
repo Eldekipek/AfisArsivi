@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use function view;
 
 class FrontController extends Controller
@@ -23,16 +24,20 @@ class FrontController extends Controller
     }
 
     public function home(){
+        $postersArray = array();
         $config = Config::find(1);
         $posters=Poster::inRandomOrder()->get()->take(30);
-        $designers=User::orderBy('created_at', 'DESC')->get()->take(1);
+        $designers=User::orderBy('created_at', 'DESC')->get();
         $designer_last=User::orderBy('created_at', 'DESC')->first();
         $social_poster=Poster::where('category_id',3)->get()->take(8);
         $tipografi_poster=Poster::where('category_id',4)->get()->take(8);
         $culture_poster=Poster::where('category_id',2)->get()->take(8);
         $advertisement_poster=Poster::where('category_id',1)->get()->take(8);
-        $designer_posters = Poster::where('user_id' , $designer_last->id)->get()->take(7);
-        return view('front.home.home', compact('config', 'posters','culture_poster','social_poster','advertisement_poster','designers','designer_posters','tipografi_poster'));
+        foreach ($designers as $designer){
+            $designer_posters = Poster::where('user_id' , $designer->id)->get();
+                array_push($postersArray,[$designer->name => $designer_posters]);
+        }
+        return view('front.home.home', compact('config', 'posters','culture_poster','social_poster','advertisement_poster','designers','designer_posters','tipografi_poster','postersArray'));
 
     }
 
