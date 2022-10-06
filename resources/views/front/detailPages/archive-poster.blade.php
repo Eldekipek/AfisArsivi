@@ -28,7 +28,8 @@
                     <h2 class="title"><strong> <!--Tasarımcı adı--->
                             <span><a href="{{route('designer.profile',$poster->getUser->id)}}" class="">{{$poster->getUser->name}}</a></span></strong>
                     </h2>
-                    <h2 class="title"><strong> <!--Proje adı--->
+                    <h2 class="title modal-sub-title" style="    width: 231px;
+    font-size: 22px;"><strong> <!--Proje adı--->
                             <span><a class="">{{$poster->title}}</a></span></strong>
                     </h2><!---->
                     <h1 class="title">{{$poster->date = date('d-m-Y', strtotime($poster->date))}}</h1> <!--Tarih--->

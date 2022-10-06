@@ -29,7 +29,7 @@
                             <span><a href="{{route('designer.profile',$tipografi->getUser->id)}}"
                                      class="">{{($tipografi->getUser->name)}}</a></span></strong>
                     </h2>
-                    <h2 class="title"><strong> <!--Proje adı--->
+                    <h2 class="title modal-sub-title" ><strong> <!--Proje adı--->
                             <span><a class="">{{($tipografi->title)}}</a></span></strong>
                     </h2><!---->
                     <h1 class="title">{{$tipografi->date = date('d-m-Y', strtotime($tipografi->date))}}</h1> <!--Tarih--->
@@ -37,11 +37,11 @@
 width: 200px;
 overflow: hidden;
 text-overflow: ellipsis;">
-<small  class="caption lining-numbers">{{($tipografi->country)}} |</small>
+                        <small  class="caption lining-numbers">{{($tipografi->country)}} |</small>
                         <!--Kullanıldığı yer-->
-<small class="caption lining-numbers">{{($tipografi->printing_technique)}},</small>
+                        <small class="caption lining-numbers">{{($tipografi->printing_technique)}},</small>
                         <!--Baskı tekniği-->
- </div>
+                    </div>
                     <small class="caption lining-numbers">{{($tipografi->dimensions)}}</small><!--ebat-->
                 </span>
                             <div class="afis-detail">
@@ -78,7 +78,7 @@ text-overflow: ellipsis;">
                     <div class="mt-3" style="    display: flex;
                                                                          flex-direction: column;
                                                                          align-items: center;">
-                                        <span class="common-links">
+                                            <span class="common-links">
                                             <h2 class="title"><strong> <!--Tasarımcı adı--->
                                                 <span><a id="designerGet" class="">İpek Eldek</a></span></strong>
                                             </h2>
@@ -120,10 +120,7 @@ text-overflow: ellipsis;">
                     $('#baskıGet').html(data.baski);
                     $('#açıklamaGet').html(data.contentt);
 
-
                     $('#detail-poster').modal('toggle');
-
-
                 },
                 error: function (data) {
                     var errors = '';

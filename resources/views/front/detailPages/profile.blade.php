@@ -115,7 +115,7 @@
                                             <h2 class="title"><strong> <!--Tasarımcı adı--->
                                                 <span><a href="" id="designerGet" class="">İpek Eldek</a></span></strong>
                                             </h2>
-                                            <h2 class="title"><strong> <!--Proje adı--->
+                                            <h2 class="title modal-sub-title"><strong> <!--Proje adı--->
                                                 <span><a href="" id="nameGet" class="">Studio Philippe Apeloig</a></span></strong>
                                             </h2><!---->
                                             <h1 class="title" id="tarihGet"> 2012-2013”, 2012</h1> <!--Tarih--->

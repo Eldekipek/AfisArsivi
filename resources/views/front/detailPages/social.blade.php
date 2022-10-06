@@ -29,7 +29,7 @@
                             <span><a href="{{route('designer.profile',$social->getUser->id)}}"
                                      class="">{{($social->getUser->name)}}</a></span></strong>
                     </h2>
-                    <h2 class="title"><strong> <!--Proje adı--->
+                    <h2 class="title modal-sub-title"><strong> <!--Proje adı--->
                             <span><a class="">{{($social->title)}}</a></span></strong>
                     </h2><!---->
                     <h1 class="title">{{$social->date = date('d-m-Y', strtotime($social->date))}}</h1> <!--Tarih--->

@@ -166,7 +166,7 @@ font-style: normal;"><a class="big highlight tight side-title-home" style="text-
                                         <span><div href="{{route('designer.profile',$adv->getUser->id)}}"
                                                  class="">{{($adv->getUser->name)}}</div></span></strong>
                                 </h2>
-                                <h2 class="title"><strong> <!--Proje adı--->
+                                <h2 class="title modal-sub-title"><strong> <!--Proje adı--->
                                         <span><div class="">{{($adv->title)}}</div></span></strong>
                                 </h2><!---->
                                 <h1 class="title"> {{$adv->date = date('d-m-Y', strtotime($adv->date))}}</h1> <!--Tarih--->

@@ -505,6 +505,10 @@ a.control_next {
     right: 10px;
     bottom: 10px;
 }
+.modal-sub-title{
+    width: 230px;
+    font-size: 22px;
+}
 
 
 
