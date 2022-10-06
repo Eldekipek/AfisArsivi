@@ -54,7 +54,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">Özgeçmiş</label>
-                    <textarea id="editor" name="contentt" class="form-control" rows="6"></textarea>
+                    <textarea id="editor" name="contentt" class="form-control" rows="6" >@if(isset($user_admin)&&!is_null($user_admin)) @if(isset($user_admin->explanation)) {{$user_admin->explanation}} @else @endif @else @if($user->explanation) {{$user->explanation}} @else @endif @endif</textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-block btn-md btn-success">Güncelle</button>
