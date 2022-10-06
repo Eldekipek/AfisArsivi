@@ -17,7 +17,7 @@
     <title>Afiş Arşivi</title>
 </head>
 
-<body>
+<body style="background-color: #f2f2f2">
 <div class="header">
     <div class="title">
         <a href="{{route("front.home")}}">
