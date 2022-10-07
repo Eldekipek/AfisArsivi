@@ -507,11 +507,11 @@ a.control_next {
     bottom: 10px;
 }
 .modal-sub-title{
-    width: 230px;
-    font-size: 22px;
+    width: 100%;
 }
 .modal-row{
     margin:auto;
+    width: 100%;
 }
 
 
