@@ -11,7 +11,6 @@ class DesignerController extends Controller
     public function index(){
         $designers = User::where('id' , '>', 2)->get();
 
-
         return view('front.detailPages.designers', compact('designers'));
 
     }
@@ -27,9 +26,8 @@ class DesignerController extends Controller
     public function search(){
     if(\request('search_query')){
         $search_key = strip_tags(trim(\request('search_query')));
-        $designer = User::where('name','like','%'.$search_key.'%')->get();
-        dd($designer);
-        return view('front.detailPages.designers', compact('designer'));
+        $designerr = User::where('name','like','%'.$search_key.'%')->get();
+        return view('front.detailPages.designers', compact('designerr'));
 
     }
 

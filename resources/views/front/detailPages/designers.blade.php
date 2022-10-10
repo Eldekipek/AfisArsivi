@@ -29,7 +29,37 @@
                 </div>
             </div>
         </div>
+        @if(isset($designerr)&&!is_null($designerr))
+            @foreach($designerr as $designer)
+                <article class="profile-list-item" style="    border-top: 1px solid #0e0e0e;  ">
+                    <div class="list-row">
+                        <a href="{{route('designer.profile',$designer->id)}}"  class="col-12 col-md-6 list-item name" style="display: flex;text-decoration: none;color:black">
+                            <div class="profile-icon large">
+                                <picture>
+                                    <img src="{{$designer->image}}" alt="">
+                                </picture>
+                            </div>
+                            <h1 class="title">{{$designer->name}}</h1>
+                        </a>
 
+                        <div class="col-12 col-md-2 list-item info">
+                            @if(isset($designer->getCountry->name)&&!is_null($designer->getCountry->name))
+
+                                <h6>{{$designer->getCountry->name}}</h6>
+                            @endif
+                        </div>
+
+                        <div class="col-12 col-md-1 list-item info">
+                            <h6>{{$designer->created_at}}</h6>
+                        </div>
+                        <div class="col-12 col-md-2 list-item info common-links">
+                            <h6><a href="{{$designer->website}}" target="_blank" rel="noopener">{{$designer->website}}</a>
+                            </h6>
+                        </div>
+                    </div>
+                </article>
+            @endforeach
+        @endif
         @if(isset($designers)&&!is_null($designers))
             @foreach($designers as $designer)
         <article class="profile-list-item" style="    border-top: 1px solid #0e0e0e;  ">
@@ -61,5 +91,6 @@
         </article>
             @endforeach
         @endif
+
     </div>
 @endsection
