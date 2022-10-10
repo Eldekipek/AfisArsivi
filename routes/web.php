@@ -49,6 +49,7 @@ Route::group(['prefix' => 'poster'], function () {
 Route::group(['prefix' => 'designer'], function () {
     Route::controller(DesignerController::class)->group(function () {
         Route::get('/', 'index')->name('designer.index');
+        Route::get('/search', "search")->name('index');
         Route::get('/profile{id}', 'profile')->name('designer.profile');
 
     });

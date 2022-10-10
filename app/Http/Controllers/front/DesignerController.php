@@ -13,16 +13,25 @@ class DesignerController extends Controller
 
 
         return view('front.detailPages.designers', compact('designers'));
+
     }
 
     public function profile($id){
         $designer = User::find($id);
         $posters = Poster::where('user_id',$designer->id)->get();
 
-
-
         return view('front.detailPages.profile', compact('designer','posters'));
 
     }
 
+    public function search(){
+    if(\request('search_query')){
+        $search_key = strip_tags(trim(\request('search_query')));
+        $designer = User::where('name','like','%'.$search_key.'%')->get();
+        dd($designer);
+        return view('front.detailPages.designers', compact('designer'));
+
+    }
+
+}
 }
