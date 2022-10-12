@@ -40,7 +40,7 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Afiş İşlemleri:</h6>
                     <a class="collapse-item @if(Request::segment(2)=='posterler' and !Request::segment(3)) active @endif" href="{{route("poster.index")}}">Tüm Afişler</a>
-                    <a class="collapse-item @if(Request::segment(2)=='posterler' and Request::segment(3)=='create') active @endif"  href="{{route("poster.create.index")}}">Afiş Oluştur</a>
+                    <a class="collapse-item @if(Request::segment(2)=='posterler' and Request::segment(3)=='create') active @endif"  href="{{route("poster.create.index")}}">Afiş Yükle</a>
                 </div>
             </div>
         </li>
