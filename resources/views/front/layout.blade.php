@@ -29,7 +29,7 @@
         <form method="GET" action="{{route('index')}}">
         <div class="search-button">
         <div class="input-group rounded mr-2">
-            <input type="text" name="search_query" style="width:170px;" class="form-control rounded" placeholder="Tasarımcı Ara" aria-label="Search" aria-describedby="search-addon" />
+            <input type="text" name="search_query"  class="form-control rounded" placeholder="Tasarımcı Ara" aria-label="Search" aria-describedby="search-addon" />
             <span class="input-group-text border-0" id="search-addon">
                         <a type="submit"><i class="far fa-search"></i></a>
   </span>

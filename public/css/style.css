@@ -513,7 +513,20 @@ a.control_next {
     margin:auto;
     width: 100%;
 }
-
+@media only screen and (max-width: 400px){
+    .input-group input{
+        width: 129px;
+    }
+    .module-profiles-name>div h2{
+        font-size: 15px;
+    }
+    .module-profiles-name>div h6{
+        font-size: 10px;
+    }
+}
+.input-group input{
+    width: 170px;
+}
 
 
 
