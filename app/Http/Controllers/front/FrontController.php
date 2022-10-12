@@ -31,13 +31,14 @@ class FrontController extends Controller
         $designer_last=User::orderBy('created_at', 'DESC')->first();
         $social_poster=Poster::where('category_id',3)->get()->take(8);
         $tipografi_poster=Poster::where('category_id',4)->get()->take(8);
+        $other_poster=Poster::where('category_id',5)->get()->take(8);
         $culture_poster=Poster::where('category_id',2)->get()->take(8);
         $advertisement_poster=Poster::where('category_id',1)->get()->take(8);
         foreach ($designers as $designer){
             $designer_posters = Poster::where('user_id' , $designer->id)->get()->take(7);
                 array_push($postersArray,[$designer->name => $designer_posters]);
         }
-        return view('front.home.home', compact('config', 'posters','culture_poster','social_poster','advertisement_poster','designers','designer_posters','tipografi_poster','postersArray'));
+        return view('front.home.home', compact('config', 'posters','culture_poster','social_poster','advertisement_poster','designers','designer_posters','tipografi_poster','postersArray','other_poster'));
 
     }
 

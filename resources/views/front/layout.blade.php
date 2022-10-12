@@ -55,6 +55,7 @@
                 <a href="{{route('poster.social')}}">Sosyal Afişler</a>
                 <a href="{{route('poster.culture')}}">Kültürel Afişler</a>
                 <a href="{{route('poster.tipografi')}}">Tipografik Afişler</a>
+                <a href="{{route('poster.other')}}">Diğer Afişler</a>
                 @if(\Illuminate\Support\Facades\Auth::check())
                     <a href="{{route("logout")}}">Çıkış Yap</a>
                     <a href="{{route("admin.panel")}}" target="_blank">Panel</a>

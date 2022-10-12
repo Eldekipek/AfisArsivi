@@ -20,6 +20,7 @@ class CategorySeeder extends Seeder
             ['id'  => 2, 'name' => 'Kültürel Afişler'],
             ['id'  => 3, 'name' => 'Sosyal Afişler'],
             ['id'  => 4, 'name' => 'Tipografik Afişler'],
+            ['id'  => 5, 'name' => 'Diğer Afişler'],
         ]);
 
     }

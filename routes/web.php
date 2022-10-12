@@ -40,6 +40,7 @@ Route::group(['prefix' => 'poster'], function () {
         Route::get('/social', 'social')->name('poster.social');
         Route::get('/advertisement', 'advertisement')->name('poster.advertisement');
         Route::get('/tipografi', 'tipografi')->name('poster.tipografi');
+        Route::get('/other', 'other')->name('poster.other');
         Route::get('/archive', 'archive')->name('poster.archive');
 
     });

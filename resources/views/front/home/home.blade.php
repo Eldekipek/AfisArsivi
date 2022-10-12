@@ -362,6 +362,69 @@ font-style: normal;"><a class="big highlight tight side-title-home" style="text-
         @endif
     </div>
 
+    <div class="module-collection white-theme">
+        <div class="collection-info">
+            <div class="collection-info-heading">
+                <div class="collection-titles" style="display: flex;
+    flex-direction: column;">
+                    <div class="collection">
+                        <p>Koleksiyon</p>
+                    </div>
+                    <div>
+
+                        <h2 class="big" style="font-family: work-sans, sans-serif;
+font-weight: 400;
+font-style: normal;"><a class="big highlight tight side-title-home" style="text-decoration: none; color: #0e0e0e" href="{{route('poster.other')}}">Diğer Afişler</a></h2>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="collection-info-footer">
+                <small>{{$other_poster->count()}} Afiş</small>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mb-5">
+        @if(isset($other_poster)&&!is_null($other_poster))
+            <article class="poster-item ">
+                @foreach($other_poster as $other)
+                    <a href="{{route('poster.other')}}" class="poster-items- w-imgs" style="color: #464646; ">
+                        <div class="poster-card-top">
+                            <picture>
+                                <img
+                                    src="/uploads/thumbnail/{{$other->image}}"
+                                    alt="">
+                            </picture>
+                        </div>
+
+                        <div class="poster-item-info" style="padding: 30px;">
+                <span class="common-links">
+                    <h2 class="title"><strong> <!--Tasarımcı adı--->
+                            <span><div href="{{route('designer.profile',$other->getUser->id)}}" class="">{{($other->getUser->name)}}</div></span></strong>
+                    </h2>
+                    <h2 class="title"><strong> <!--Proje adı--->
+                            <span><div class="">{{($other->title)}}</div></span></strong>
+                    </h2><!---->
+                    <h1 class="title">{{$other->date = date('d-m-Y', strtotime($other->date))}} {{($other->date)}}</h1> <!--Tarih--->
+                    <div style="white-space:nowrap;
+                                            width: 200px;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;">
+                    <small  class="caption lining-numbers">{{($other->country)}} |</small><!--Kullanıldığı yer-->
+                    <small  class="caption lining-numbers">{{($other->printing_technique)}},</small><!--Baskı tekniği-->
+                    </div>
+                    <small class="caption lining-numbers">{{($other->dimensions)}}</small><!--ebat-->
+                </span>
+                        </div>
+                    </a>
+                @endforeach
+            </article>
+        @endif
+    </div>
+
     <script>
         $("#slideshow > div:gt(0)").hide();
 
