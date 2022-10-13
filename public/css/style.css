@@ -533,6 +533,11 @@ a.control_next {
     margin-top: -5px;
 
 }
+@media only screen and (max-width:450px){
+    .poster-inner .poster-items-link{
+        height: 125px;
+    }
+}
 
 
 
