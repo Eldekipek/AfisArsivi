@@ -435,7 +435,7 @@ font-style: normal;"><a class="big highlight tight side-title-home" style="text-
                 .fadeIn(1000)
                 .end()
                 .appendTo('#slideshow');
-        }, 3000);
+        }, 5000);
     </script>
 
 @endsection

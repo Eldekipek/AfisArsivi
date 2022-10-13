@@ -28,6 +28,7 @@ Route::group(['prefix' => '/'], function () {
         Route::get('/logout', 'logout')->name("logout");
         Route::get('/register', 'loginregister')->name("register.index");
         Route::get('/about', 'about')->name("about.index");
+        Route::get('/contact', 'contact')->name("contact.index");
         Route::get('/designers', 'designerpage')->name('designers.index');
         Route::post('/register', 'registerUser')->name("register.user.create");
     });

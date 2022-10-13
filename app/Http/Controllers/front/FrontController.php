@@ -6,6 +6,7 @@ use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
 use App\Models\AboutPage;
 use App\Models\Config;
+use App\Models\Contact;
 use App\Models\Designer;
 use App\Models\Poster;
 use App\Models\User;
@@ -35,7 +36,7 @@ class FrontController extends Controller
         $culture_poster=Poster::where('category_id',2)->get()->take(8);
         $advertisement_poster=Poster::where('category_id',1)->get()->take(8);
         foreach ($designers as $designer){
-            $designer_posters = Poster::where('user_id' , $designer->id)->get()->take(7);
+            $designer_posters = Poster::where('user_id', $designer->id)->get()->take(6);
                 array_push($postersArray,[$designer->name => $designer_posters]);
         }
         return view('front.home.home', compact('config', 'posters','culture_poster','social_poster','advertisement_poster','designers','designer_posters','tipografi_poster','postersArray','other_poster'));
@@ -47,6 +48,14 @@ class FrontController extends Controller
         $page = AboutPage::find(1);
 
         return view('back.about', compact('config' , 'page'));
+
+    }
+
+    public function contact(){
+        $config = Config::find(1);
+        $contact = Contact::find(1);
+
+        return view('back.about', compact('config' , 'contact'));
 
     }
 
