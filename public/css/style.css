@@ -1,5 +1,5 @@
 body,html{
-    font-family: work-sans, sans-serif;
+    font-family: 'Calibri', serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -353,7 +353,7 @@ p,
 span,
 a,
 h1,h2,h3,h4,h5,h6{
-    font-family: work-sans, sans-serif;
+    font-family: 'calibri', serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -403,7 +403,8 @@ span,a{
     cursor: pointer;
 }
 .module-profiles .highlight{
-    color: #000000; font-size:33px;font-family: work-sans, sans-serif;
+    color: #000000; font-size:33px;
+    font-family: 'Calibri', serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -481,7 +482,6 @@ a.control_next {
     right: 0;
     border-radius: 2px 0 0 2px;
 }
-
 .slider_option {
     position: relative;
     margin: 10px auto;
@@ -526,6 +526,12 @@ a.control_next {
 }
 .input-group input{
     width: 170px;
+}
+.archive>a>img{
+    width: 40px;
+    height: 45px;
+    margin-top: -5px;
+
 }
 
 

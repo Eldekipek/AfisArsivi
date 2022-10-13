@@ -14,6 +14,9 @@
     <script src="{{asset('jquery/wow.min.js')}}"></script>
     <script src="{{asset('bootstrap/js/bootstrap4.min.js')}}"></script>
     <link rel="shortcut icon" href="{{asset('./images/faviconafis2.png')}}" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&display=swap" rel="stylesheet">
     <title>Afiş Arşivi</title>
 </head>
 
@@ -44,7 +47,8 @@
         </div>
         <div class="archive " style="margin:0 0 0 5px;">
             <a href="{{route('poster.archive')}}"  style="color: #000000;">
-                <i class="fa-sharp fa-solid fa-suitcase"></i>
+{{--                <i class="fa-sharp fa-solid fa-suitcase"></i>--}}
+                <img src="{{asset('../images/fileicon.png')}}" alt="">
             </a>
         </div>
         <div class="menu ml-2">
