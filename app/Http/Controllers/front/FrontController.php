@@ -36,7 +36,7 @@ class FrontController extends Controller
         $culture_poster=Poster::where('category_id',2)->get()->take(8);
         $advertisement_poster=Poster::where('category_id',1)->get()->take(8);
         foreach ($designers as $designer){
-            $designer_posters = Poster::where('user_id', $designer->id)->get()->take(6);
+            $designer_posters = Poster::where('user_id', $designer->id)->get()->take(5);
                 array_push($postersArray,[$designer->name => $designer_posters]);
         }
         return view('front.home.home', compact('config', 'posters','culture_poster','social_poster','advertisement_poster','designers','designer_posters','tipografi_poster','postersArray','other_poster'));
