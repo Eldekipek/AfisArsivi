@@ -53,8 +53,8 @@ class FrontController extends Controller
     }
 
     public function contact(){
-
-        return view('front.detailPages.contact');
+        $contact = Contact::find(1);
+        return view('front.detailPages.contact', compact('contact'));
 
     }
 

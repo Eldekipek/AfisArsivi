@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Back;
 use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
 use App\Models\AboutPage;
+use App\Models\Contact;
 use App\Models\Country;
 use App\Models\User;
 use Carbon\Carbon;
@@ -16,7 +17,6 @@ class DashboardController extends Controller
 {
     public function index()
     {
-
         if (Auth::check()) {
             if (Auth::id() <= 3) {
                 $user_admin = Auth::user();
@@ -104,20 +104,30 @@ class DashboardController extends Controller
         return redirect()->route('about.update.index');
     }
 
-    public function contactCreate()
-    {
-
-    }
-
     public function contactIndex()
     {
-        return view('back.contact.index');
+        $id = Auth::id();
+        if (Auth::id() <= 3) {
+            $user_admin = User::findOrFail($id);
+            return view('back.contact.index', compact('user_admin'));
+        } else {
+            $user = User::findOrFail($id);
+            return view('back.contact.index', compact('user'));
+        }
 
     }
 
-    public function contactUpdate()
+    public function contactUpdate(Request $request)
     {
 
+        $contact =Contact::find(1);
+        $contact->address = $request->address;
+        $contact->email = $request->email;
+        $contact->phone_number = $request->tel;
 
+        $contact->save();
+        toastr()->success('Sayfa başarıyla güncellendi');
+
+        return redirect()->route('panel.contact.index');
     }
 }
