@@ -55,6 +55,7 @@
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="{{route("about.index")}}">Hakkımızda</a>
+                <a href="{{route("contact.index")}}">İletişim</a>
                 <a href="{{route('poster.advertisement')}}">Reklam Afişleri</a>
                 <a href="{{route('poster.social')}}">Sosyal Afişler</a>
                 <a href="{{route('poster.culture')}}">Kültürel Afişler</a>

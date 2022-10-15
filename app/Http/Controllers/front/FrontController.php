@@ -15,6 +15,7 @@ use Illuminate\Routing\Route;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use function GuzzleHttp\Promise\all;
 use function view;
 
 class FrontController extends Controller
@@ -47,15 +48,13 @@ class FrontController extends Controller
         $config = Config::find(1);
         $page = AboutPage::find(1);
 
-        return view('back.about', compact('config' , 'page'));
+        return view('front.detailPages.about', compact('config' , 'page'));
 
     }
 
     public function contact(){
-        $config = Config::find(1);
-        $contact = Contact::find(1);
 
-        return view('back.about', compact('config' , 'contact'));
+        return view('front.detailPages.contact');
 
     }
 

@@ -78,6 +78,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/user/settings', 'userSettingsUpdate')->name("user.settings.update");
         Route::get('/about/update/index' , 'aboutIndex')->name('about.update.index');
         Route::post('/about/update','aboutUpdate' )->name('about.page.update');
+        Route::get('/contact/index','contactIndex' )->name('panel.contact.index');
     });
     Route::controller(\App\Http\Controllers\Back\PosterController::class)->group(function () {
         Route::get('/poster', 'index')->name("poster.index");

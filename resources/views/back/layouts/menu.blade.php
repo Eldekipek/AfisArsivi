@@ -31,59 +31,75 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link @if(Request::segment(2)=='posterler') in @else collapsed @endif" href="#" data-toggle="collapse" data-target="#collapseTwo"
+            <a class="nav-link @if(Request::segment(2)=='posterler') in @else collapsed @endif" href="#"
+               data-toggle="collapse" data-target="#collapseTwo"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-edit"></i>
                 <span>Afişler</span>
             </a>
-            <div id="collapseTwo" class="collapse @if(Request::segment(2)=='posterler') show @endif" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapseTwo" class="collapse @if(Request::segment(2)=='posterler') show @endif"
+                 aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Afiş İşlemleri:</h6>
-                    <a class="collapse-item @if(Request::segment(2)=='posterler' and !Request::segment(3)) active @endif" href="{{route("poster.index")}}">Tüm Afişler</a>
-                    <a class="collapse-item @if(Request::segment(2)=='posterler' and Request::segment(3)=='create') active @endif"  href="{{route("poster.create.index")}}">Afiş Yükle</a>
+                    <a class="collapse-item @if(Request::segment(2)=='posterler' and !Request::segment(3)) active @endif"
+                       href="{{route("poster.index")}}">Tüm Afişler</a>
+                    <a class="collapse-item @if(Request::segment(2)=='posterler' and Request::segment(3)=='create') active @endif"
+                       href="{{route("poster.create.index")}}">Afiş Yükle</a>
                 </div>
             </div>
         </li>
 
     @if(isset($user_admin)&&!is_null($user_admin))
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link" @if(Request::segment(2)=="kategoriler") style="color:white !important;" @endif href="{{route("category.index")}}">
-                <i @if(Request::segment(2)=="kategoriler") style="color:white !important;" @endif class="fas fa-fw fa-list"></i>
-                <span>Kategoriler</span>
-            </a>
-
-        </li>
-    @endif
-
-
-    @if(isset($user_admin)&&!is_null($user_admin))
             <li class="nav-item">
-                <a class="nav-link" @if(Request::segment(2)=="hakkımızda") style="color:white !important;" @endif href="{{route("about.update.index")}}">
-                    <i @if(Request::segment(2)=="hakkımızda") style="color:white !important;" @endif class="fas fa-fw fa-edit"></i>
+                <a class="nav-link" @if(Request::segment(2)=="kategoriler") style="color:white !important;"
+                   @endif href="{{route("category.index")}}">
+                    <i @if(Request::segment(2)=="kategoriler") style="color:white !important;"
+                       @endif class="fas fa-fw fa-list"></i>
+                    <span>Kategoriler</span>
+                </a>
+
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" @if(Request::segment(2)=="hakkımızda") style="color:white !important;"
+                   @endif href="{{route("about.update.index")}}">
+                    <i @if(Request::segment(2)=="hakkımızda") style="color:white !important;"
+                       @endif class="fas fa-fw fa-edit"></i>
                     <span>Hakkımızda Sayfası</span>
                 </a>
 
             </li>
 
+        <li class="nav-item">
+            <a class="nav-link" @if(Request::segment(2)=="iletisim") style="color:white !important;"
+               @endif href="{{route("panel.contact.index")}}">
+                <i @if(Request::segment(2)=="iletisim") style="color:white !important;"
+                   @endif class="fas fa-fw fa-edit"></i>
+                <span>İletişim Sayfası</span>
+            </a>
+
+        </li>
+
             <li class="nav-item">
-                <a class="nav-link @if(Request::segment(2)=='kullanıcılar') in @else collapsed @endif" href="#" data-toggle="collapse" data-target="#collapsePage"
+                <a class="nav-link @if(Request::segment(2)=='kullanıcılar') in @else collapsed @endif" href="#"
+                   data-toggle="collapse" data-target="#collapsePage"
                    aria-expanded="true" aria-controls="collapsePage">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Kullanıcılar</span>
                 </a>
-                <div id="collapsePage" class="collapse @if(Request::segment(2)=='kullanıcılar') show @endif" aria-labelledby="headingPage" data-parent="#accordionSidebar">
+                <div id="collapsePage" class="collapse @if(Request::segment(2)=='kullanıcılar') show @endif"
+                     aria-labelledby="headingPage" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sayfa İşlemleri:</h6>
-                        <a class="collapse-item @if(Request::segment(2)=='kullanıcılar' and !Request::segment(3)) active @endif" href="{{route("users.index")}}">Tüm Kullanıcılar</a>
+                        <a class="collapse-item @if(Request::segment(2)=='kullanıcılar' and !Request::segment(3)) active @endif"
+                           href="{{route("users.index")}}">Tüm Kullanıcılar</a>
                         {{--                    <a class="collapse-item @if(Request::segment(2)=='sayfalar' and Request::segment(3)=='create') active @endif"  href="#"></a>--}}
                     </div>
                 </div>
             </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
+    <!-- Divider -->
+        <hr class="sidebar-divider">
         @endif
 
 
@@ -100,8 +116,8 @@
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
-        @endif
-        <!-- Heading -->
+    @endif
+    <!-- Heading -->
 
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
@@ -138,7 +154,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             @if(isset($user)&&!is_null($user))
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 ">{{$user->name}}</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 ">{{$user->name}}</span>
                             @endif
                             @if(isset($user_admin)&&!is_null($user_admin))
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 ">{{$user_admin->name}}</span>
@@ -170,18 +186,20 @@
                     <h1 class="h3 mb-0 text-gray-800">@yield('title')</h1>
                     @if(isset($user->country_id))
                         @if($user->country_id)
-                    <a href="{{route( "front.home")}}" target="_blank" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-globe fa-sm text-white-50"></i> Siteyi Görüntüle</a>
+                            <a href="{{route( "front.home")}}" target="_blank"
+                               class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                    class="fas fa-globe fa-sm text-white-50"></i> Siteyi Görüntüle</a>
                         @else
-                       <span style="color: red; font-size: larger;">Lütfen bilgilerinizi güncelleyiniz!</span>
+                            <span style="color: red; font-size: larger;">Lütfen bilgilerinizi güncelleyiniz!</span>
                         @endif
                     @endif
                     @if(isset($user_admin->country_id))
                         @if($user_admin->country_id)
-                        <a href="{{route( "front.home")}}" target="_blank" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-globe fa-sm text-white-50"></i> Siteyi Görüntüle</a>
+                            <a href="{{route( "front.home")}}" target="_blank"
+                               class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                    class="fas fa-globe fa-sm text-white-50"></i> Siteyi Görüntüle</a>
                         @else
-                        <span style="color: red; font-size: larger;">Lütfen bilgilerinizi güncelleyiniz!</span>
+                            <span style="color: red; font-size: larger;">Lütfen bilgilerinizi güncelleyiniz!</span>
                         @endif
                     @endif
                 </div>
