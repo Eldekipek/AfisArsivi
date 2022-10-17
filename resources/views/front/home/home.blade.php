@@ -84,6 +84,8 @@
                             @endif
                         </div>
                     </div>
+
+
 {{--            <div class="col-12 col-lg-10 pt-3">--}}
 {{--                <a href="{{route('designer.profile',$designer->id)}}" class="module-profiles-link">--}}
 {{--                    <div class="row module-profiles-row">--}}
