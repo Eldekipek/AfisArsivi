@@ -16,7 +16,7 @@ class ContactSeeder extends Seeder
     public function run()
     {
         DB::table('contact')->insert([
-            'address' => "Fırat Üniversitesi Basım ve Yayın Evi",
+            'address' => "Firat Universitesi Basim ve Yayin Evi",
             'email' => 'kainatozpolat@gmail.com',
             'phone_number' =>'+905383013186',
         ]);
