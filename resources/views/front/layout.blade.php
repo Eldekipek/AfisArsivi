@@ -84,18 +84,22 @@
 <div class="footer">
     <div class="container">
         <div class="row">
-            <div class="footer-img col-12 col-lg-6" >
+            <div class="footer-img col-12 col-lg-4" >
                 <img src="{{asset('./images/afisfooterimg.png')}}" style="width: 400px; height: 80px;" alt="">
             </div>
-            @if(isset($config)&&!is_null($config))
-            <div class="icons col-12 col-lg-6" style="display: flex;
-            align-items: center;">
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+
+            <div class="col-12 col-lg-8" style=" margin-top: 4vh;">
+                <p>Bu web sitesi <strong> “Dijital Arşiv: Erişime Açık Afiş” </strong> isimli sanatta yeterlik tezi kapsamında tasarlanmıştır.</p>
             </div>
-            @endif
+{{--            @if(isset($config)&&!is_null($config))--}}
+{{--            <div class="icons col-12 col-lg-6" style="display: flex;--}}
+{{--            align-items: center;">--}}
+{{--                <a href=""><i class="fa-brands fa-twitter"></i></a>--}}
+{{--                <a href=""><i class="fa-brands fa-facebook"></i></a>--}}
+{{--                <a href=""><i class="fa-brands fa-instagram"></i></a>--}}
+{{--                <a href=""><i class="fa-brands fa-linkedin"></i></a>--}}
+{{--            </div>--}}
+{{--            @endif--}}
         </div>
     </div>
 </div>
