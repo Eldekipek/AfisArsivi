@@ -17,8 +17,7 @@ class ContactSeeder extends Seeder
     {
         DB::table('contact')->insert([
             'address' => "Firat Üniversitesi Teknik Bilimler Meslek Yüksekokulu Grafik Tasarim",
-            'email' => 'kainatozpolat@gmail.com',
-            'phone_number' =>'+905383013186',
+            'email' => 'kainatozpolat@gmail.com'
         ]);
     }
 }

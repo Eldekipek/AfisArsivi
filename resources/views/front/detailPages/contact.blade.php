@@ -22,11 +22,12 @@
                     <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">@if($contact->address) {!! $contact->address !!} @else
                                 @endif</span></i></li>
 
+                    <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email"> @if($contact->email) {!! $contact->email !!} @else
+                                    @endif</a></span></i></li>
+
                     <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call"> @if($contact->phone_number) {!! $contact->phone_number !!} @else
                                     @endif</a></span></i></li>
 
-                    <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email"> @if($contact->email) {!! $contact->email !!} @else
-                                    @endif</a></span></i></li>
 
                 </ul>
 
